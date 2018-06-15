@@ -1,0 +1,16 @@
+PODS:
+  - PoporFoundation (0.1.0)
+
+DEPENDENCIES:
+  - PoporFoundation (from `../`)
+
+EXTERNAL SOURCES:
+  PoporFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PoporFoundation: 1e36521bc01c40e123e6209e068462631a420c49
+
+PODFILE CHECKSUM: fc41e9127ab537f2e99fe1fbb9e493aee87e9cff
+
+COCOAPODS: 1.5.3
