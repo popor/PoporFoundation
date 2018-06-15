@@ -59,13 +59,14 @@ Pod::Spec.new do |s|
     s.subspec 'NSString' do |ss|
         ss.public_header_files = 'PoporFoundation/Classes/NSString+Tool.h'
         #        ss.public_header_files = "QLTool/Category/QLMacros.h"
-        #        ss.dependency = 'PoporFoundation/prefix'
+        ss.dependency = 'PoporFoundation/Classes'
         #        ss.public_header_files =
         # ss.public_header_files = 'PoporFoundation/Classes/ColorPrefix.h'
         ss.source_files = 'PoporFoundation/Classes/NSString*.{h,m}'
     end
     
     s.subspec 'NSArray' do |ss|
+        ss.dependency = 'PoporFoundation/Classes'
         #        ss.dependency = 'PoporFoundation/NSObject'
         ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
     end
