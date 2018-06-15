@@ -8,6 +8,8 @@
 
 #import "PoporFoundationViewController.h"
 
+#import <PoporFoundation/PoporFoundation.h>
+
 @interface PoporFoundationViewController ()
 
 @end

@@ -1,7 +1,7 @@
 {
   "name": "PoporFoundation",
   "version": "0.0.1",
-  "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc.\n2.Some useful tools",
+  "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
     "type": "MIT",
@@ -14,6 +14,7 @@
     "git": "https://github.com/popor/PoporFoundation.git",
     "tag": "0.0.1"
   },
+  "requires_arc": true,
   "platforms": {
     "ios": "8.0"
   },
@@ -25,20 +26,27 @@
   "subspecs": [
     {
       "name": "NSObject",
+      "public_header_files": "PoporFoundation/Classes/NSObject*.h",
       "source_files": "PoporFoundation/Classes/NSObject*.{h,m}"
     },
     {
       "name": "prefix",
+      "public_header_files": [
+        "PoporFoundation/Classes/SizePrefix.h",
+        "PoporFoundation/Classes/ColorPrefix.h",
+        "PoporFoundation/Classes/FunctionPrefix.h"
+      ],
       "source_files": [
-        "PoporFoundation/Classes/BlockMacroDefines.{h}",
-        "PoporFoundation/Classes/ColorPrefix.{h}",
-        "PoporFoundation/Classes/FontPrefix.{h}",
-        "PoporFoundation/Classes/FunctionPrefix.{h}",
-        "PoporFoundation/Classes/SizePrefix.{h}"
+        "PoporFoundation/Classes/BlockMacroDefines.h",
+        "PoporFoundation/Classes/ColorPrefix.h",
+        "PoporFoundation/Classes/FontPrefix.h",
+        "PoporFoundation/Classes/FunctionPrefix.h",
+        "PoporFoundation/Classes/SizePrefix.h"
       ]
     },
     {
       "name": "NSString",
+      "public_header_files": "PoporFoundation/Classes/NSString+Tool.h",
       "source_files": "PoporFoundation/Classes/NSString*.{h,m}"
     },
     {
