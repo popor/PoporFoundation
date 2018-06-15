@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSArray' do |ss|
-        ss.public_header_files = 'PoporFoundation/Classes/NSObject*.h'
+        ss.public_header_files = 'PoporFoundation/NSObject/NSObject*.h'
         #        ss.dependency = 'PoporFoundation/NSObject'
         ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
     end
@@ -85,7 +85,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSDictionary' do |ss|
-        ss.public_header_files = 'PoporFoundation/Classes/NSObject*.h'
+        ss.public_header_files = 'PoporFoundation/NSObject/NSObject*.h'
         ss.source_files = 'PoporFoundation/Classes/NSDictionary*.{h,m}'
     end
     
