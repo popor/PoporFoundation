@@ -42,31 +42,33 @@ Pod::Spec.new do |s|
     # s.dependency 'AFNetworking', '~> 2.3'
     
     s.source_files = 'PoporFoundation/Classes/PoporFoundation.h'
+    s.public_header_files = 'PoporFoundation/Classes/PoporFoundation.h'
+    
     
     # base 1 : runtime
     s.subspec 'NSObject' do |ss|
-        ss.public_header_files = 'PoporFoundation/Classes/NSObject*.h'
+        #ss.public_header_files = 'PoporFoundation/Classes/NSObject*.h'
         ss.source_files = 'PoporFoundation/Classes/NSObject*.{h,m}'
     end
     
     # base 2 : prefix
     s.subspec 'prefix' do |ss|
-        ss.public_header_files = 'PoporFoundation/Classes/SizePrefix.h', 'PoporFoundation/Classes/ColorPrefix.h', 'PoporFoundation/Classes/FunctionPrefix.h'
+        #ss.public_header_files = 'PoporFoundation/Classes/SizePrefix.h', 'PoporFoundation/Classes/ColorPrefix.h', 'PoporFoundation/Classes/FunctionPrefix.h'
         ss.source_files = 'PoporFoundation/Classes/BlockMacroDefines.h', 'PoporFoundation/Classes/ColorPrefix.h', 'PoporFoundation/Classes/FontPrefix.h', 'PoporFoundation/Classes/FunctionPrefix.h', 'PoporFoundation/Classes/SizePrefix.h'
     end
     
     # base 3 : prefix
     s.subspec 'NSString' do |ss|
         ss.public_header_files = 'PoporFoundation/Classes/NSString+Tool.h'
-        #        ss.public_header_files = "QLTool/Category/QLMacros.h"
-        ss.dependency = 'PoporFoundation/Classes'
+        
+        #        ss.dependency = 'prefix'
         #        ss.public_header_files =
         # ss.public_header_files = 'PoporFoundation/Classes/ColorPrefix.h'
         ss.source_files = 'PoporFoundation/Classes/NSString*.{h,m}'
     end
     
     s.subspec 'NSArray' do |ss|
-        ss.dependency = 'PoporFoundation/Classes'
+        ss.public_header_files = 'PoporFoundation/Classes/NSObject*.h'
         #        ss.dependency = 'PoporFoundation/NSObject'
         ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
     end
@@ -83,7 +85,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSDictionary' do |ss|
-        #        ss.dependency = 'PoporFoundation/NSObject'
+        ss.public_header_files = 'PoporFoundation/Classes/NSObject*.h'
         ss.source_files = 'PoporFoundation/Classes/NSDictionary*.{h,m}'
     end
     
