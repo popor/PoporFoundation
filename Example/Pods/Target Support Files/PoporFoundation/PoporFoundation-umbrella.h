@@ -25,9 +25,11 @@
 #import "NSString+Tool.h"
 #import "NSURL+Swizzling.h"
 #import "ScreenCommonSize.h"
-#import "SizePrefix.h"
+#import "BlockMacroDefines.h"
 #import "ColorPrefix.h"
+#import "FontPrefix.h"
 #import "FunctionPrefix.h"
+#import "SizePrefix.h"
 
 FOUNDATION_EXPORT double PoporFoundationVersionNumber;
 FOUNDATION_EXPORT const unsigned char PoporFoundationVersionString[];

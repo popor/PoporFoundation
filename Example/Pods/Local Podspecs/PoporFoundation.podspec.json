@@ -23,19 +23,14 @@
     "Foundation"
   ],
   "source_files": "PoporFoundation/Classes/PoporFoundation.h",
+  "public_header_files": "PoporFoundation/Classes/PoporFoundation.h",
   "subspecs": [
     {
       "name": "NSObject",
-      "public_header_files": "PoporFoundation/Classes/NSObject*.h",
       "source_files": "PoporFoundation/Classes/NSObject*.{h,m}"
     },
     {
       "name": "prefix",
-      "public_header_files": [
-        "PoporFoundation/Classes/SizePrefix.h",
-        "PoporFoundation/Classes/ColorPrefix.h",
-        "PoporFoundation/Classes/FunctionPrefix.h"
-      ],
       "source_files": [
         "PoporFoundation/Classes/BlockMacroDefines.h",
         "PoporFoundation/Classes/ColorPrefix.h",
@@ -51,6 +46,13 @@
     },
     {
       "name": "NSArray",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
       "source_files": [
         "PoporFoundation/Classes/NSArray*.{h,m}",
         "PoporFoundation/Classes/NSMutableArray*.{h,m}"
@@ -70,6 +72,13 @@
     },
     {
       "name": "NSDictionary",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSDictionary*.{h,m}"
     },
     {

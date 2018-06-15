@@ -68,29 +68,34 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSArray' do |ss|
-        ss.public_header_files = 'PoporFoundation/NSObject/NSObject*.h'
+        #ss.public_header_files = 'PoporFoundation/NSObject/NSObject*.h'
+        ss.ios.dependency 'PoporFoundation/NSObject'
+        #ss.ios.dependency 'PoporFoundation/Classes/NSObject+Swizzling.{h,m}'
+        
         #        ss.dependency = 'PoporFoundation/NSObject'
         ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
     end
     s.subspec 'NSAssistant' do |ss|
         #        ss.dependency = 'PoporFoundation/prefix'
+        ss.ios.dependency 'PoporFoundation/prefix'
         ss.source_files = 'PoporFoundation/Classes/NSAssistant.{h,m}'
     end
     s.subspec 'NSData' do |ss|
         ss.source_files = 'PoporFoundation/Classes/NSData*.{h,m}'
     end
     s.subspec 'NSDate' do |ss|
+        ss.ios.dependency 'PoporFoundation/NSString'
         #        ss.dependency = 'PoporFoundation/NSString'
         ss.source_files = 'PoporFoundation/Classes/NSDate*.{h,m}'
     end
     
     s.subspec 'NSDictionary' do |ss|
-        ss.public_header_files = 'PoporFoundation/NSObject/NSObject*.h'
+        ss.ios.dependency 'PoporFoundation/NSObject'
         ss.source_files = 'PoporFoundation/Classes/NSDictionary*.{h,m}'
     end
     
     s.subspec 'NSURL' do |ss|
-        #        ss.dependency = 'PoporFoundation/NSObject'
+        ss.ios.dependency 'PoporFoundation/NSObject'
         ss.source_files = 'PoporFoundation/Classes/NSURL*.{h,m}'
     end
     

@@ -10,11 +10,13 @@ PODS:
     - PoporFoundation/NSURL (= 0.0.1)
     - PoporFoundation/prefix (= 0.0.1)
     - PoporFoundation/ScreenCommonSize (= 0.0.1)
-  - PoporFoundation/NSArray (0.0.1)
+  - PoporFoundation/NSArray (0.0.1):
+    - PoporFoundation/NSObject
   - PoporFoundation/NSAssistant (0.0.1)
   - PoporFoundation/NSData (0.0.1)
   - PoporFoundation/NSDate (0.0.1)
-  - PoporFoundation/NSDictionary (0.0.1)
+  - PoporFoundation/NSDictionary (0.0.1):
+    - PoporFoundation/NSObject
   - PoporFoundation/NSObject (0.0.1)
   - PoporFoundation/NSString (0.0.1)
   - PoporFoundation/NSURL (0.0.1)
@@ -29,8 +31,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: 408d6af84687d950c0bae5e9f03e0e9c5df2869a
+  PoporFoundation: 04c2e57a3bf32c744c5493bce30cb43c15d934c3
 
-PODFILE CHECKSUM: fc41e9127ab537f2e99fe1fbb9e493aee87e9cff
+PODFILE CHECKSUM: 910a1ba85303ac4cc36e933f5a37600fe00b6896
 
 COCOAPODS: 1.5.3
