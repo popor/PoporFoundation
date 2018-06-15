@@ -45,14 +45,14 @@ Pod::Spec.new do |s|
     
     # base 1 : runtime
     s.subspec 'NSObject' do |ss|
-        ss.public_header_files = 'PoporFoundation/Classes/NSObject+Swizzling.h'
+        ss.public_header_files = 'PoporFoundation/Classes/NSObject*.h'
         ss.source_files = 'PoporFoundation/Classes/NSObject*.{h,m}'
     end
     
     # base 2 : prefix
     s.subspec 'prefix' do |ss|
         ss.public_header_files = 'PoporFoundation/Classes/SizePrefix.h', 'PoporFoundation/Classes/ColorPrefix.h', 'PoporFoundation/Classes/FunctionPrefix.h'
-        ss.source_files = 'PoporFoundation/Classes/BlockMacroDefines.{h}', 'PoporFoundation/Classes/ColorPrefix.{h}', 'PoporFoundation/Classes/FontPrefix.{h}', 'PoporFoundation/Classes/FunctionPrefix.{h}', 'PoporFoundation/Classes/SizePrefix.{h}'
+        ss.source_files = 'PoporFoundation/Classes/BlockMacroDefines.h', 'PoporFoundation/Classes/ColorPrefix.h', 'PoporFoundation/Classes/FontPrefix.h', 'PoporFoundation/Classes/FunctionPrefix.h', 'PoporFoundation/Classes/SizePrefix.h'
     end
     
     # base 3 : prefix
