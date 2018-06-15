@@ -69,7 +69,7 @@ Pod::Spec.new do |s|
     
     s.subspec 'NSArray' do |ss|
         #ss.public_header_files = 'PoporFoundation/NSObject/NSObject*.h'
-        ss.ios.dependency 'PoporFoundation/NSObject'
+        ss.ios.dependency 'PoporFoundation/NSObject', 'PoporFoundation/prefix'
         #ss.ios.dependency 'PoporFoundation/Classes/NSObject+Swizzling.{h,m}'
         
         #        ss.dependency = 'PoporFoundation/NSObject'
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSDictionary' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSObject'
+        ss.ios.dependency 'PoporFoundation/NSObject', 'PoporFoundation/prefix'
         ss.source_files = 'PoporFoundation/Classes/NSDictionary*.{h,m}'
     end
     
