@@ -50,6 +50,9 @@
         "dependencies": {
           "PoporFoundation/NSObject": [
 
+          ],
+          "PoporFoundation/prefix": [
+
           ]
         }
       },
@@ -60,6 +63,13 @@
     },
     {
       "name": "NSAssistant",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSAssistant.{h,m}"
     },
     {
@@ -68,6 +78,13 @@
     },
     {
       "name": "NSDate",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/NSString": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSDate*.{h,m}"
     },
     {
@@ -83,6 +100,13 @@
     },
     {
       "name": "NSURL",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSURL*.{h,m}"
     },
     {

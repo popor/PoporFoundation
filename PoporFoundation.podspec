@@ -55,14 +55,16 @@ Pod::Spec.new do |s|
         ss.source_files = 'PoporFoundation/Classes/BlockMacroDefines.h', 'PoporFoundation/Classes/ColorPrefix.h', 'PoporFoundation/Classes/FontPrefix.h', 'PoporFoundation/Classes/FunctionPrefix.h', 'PoporFoundation/Classes/SizePrefix.h'
     end
     
-    # base 3 : prefix
+    # base 3 : NSString
     s.subspec 'NSString' do |ss|
-        ss.public_header_files = 'PoporFoundation/Classes/NSString+Tool.h'
+        ss.ios.dependency 'PoporFoundation/prefix'
+        
         ss.source_files = 'PoporFoundation/Classes/NSString*.{h,m}'
     end
     
     s.subspec 'NSArray' do |ss|
         ss.ios.dependency 'PoporFoundation/NSObject'
+        ss.ios.dependency 'PoporFoundation/prefix'
         
         ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
     end
@@ -81,7 +83,9 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSDictionary' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSObject', 'PoporFoundation/prefix'
+        ss.ios.dependency 'PoporFoundation/NSObject'
+        ss.ios.dependency 'PoporFoundation/prefix'
+        
         ss.source_files = 'PoporFoundation/Classes/NSDictionary*.{h,m}'
     end
     

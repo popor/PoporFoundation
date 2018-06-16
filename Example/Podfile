@@ -1,8 +1,8 @@
 use_frameworks!
 
 target 'PoporFoundation_Example' do
-    pod 'PoporFoundation', :path => '../'
-    #pod 'PoporFoundation/NSArray', :path => '../'
+    #pod 'PoporFoundation', :path => '../'
+    pod 'PoporFoundation/NSArray', :path => '../'
     
   target 'PoporFoundation_Tests' do
     inherit! :search_paths
