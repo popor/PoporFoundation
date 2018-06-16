@@ -65,7 +65,6 @@ Pod::Spec.new do |s|
         ss.ios.dependency 'PoporFoundation/NSObject'
         ss.ios.dependency 'PoporFoundation/prefix'
         
-        ss.
         ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
     end
     s.subspec 'NSAssistant' do |ss|
