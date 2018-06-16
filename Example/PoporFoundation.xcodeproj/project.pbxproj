@@ -63,7 +63,7 @@
 		75CE04B825F65AD63CDC662A /* Pods-PoporFoundation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Tests/Pods-PoporFoundation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AF18C123667655E3560497C /* Pods-PoporFoundation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Tests/Pods-PoporFoundation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7F75326025564657249F938B /* PoporFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PoporFoundation.podspec; path = ../PoporFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D8DF27F2DCBE6AF686353637 /* Pods-PoporFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E7557B07A6B58E89C88005FC /* Pods-PoporFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1FED7CC3C5636B98157B3F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -143,14 +143,9 @@
 		6003F593195388D20070C39A /* Example for PoporFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* PoporFoundationAppDelegate.h */,
-				6003F59D195388D20070C39A /* PoporFoundationAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				E406A9D820D4A672003B128F /* other */,
 				6003F5A5195388D20070C39A /* PoporFoundationViewController.h */,
 				6003F5A6195388D20070C39A /* PoporFoundationViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for PoporFoundation";
 			path = PoporFoundation;
@@ -194,6 +189,19 @@
 				2212B2D6CC4EC4A6BAA5CE72 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E406A9D820D4A672003B128F /* other */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* PoporFoundationAppDelegate.h */,
+				6003F59D195388D20070C39A /* PoporFoundationAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -39,7 +39,6 @@ Pod::Spec.new do |s|
     
     # s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit', 'Foundation'
-    # s.dependency 'AFNetworking', '~> 2.3'
     
     s.source_files = 'PoporFoundation/Classes/PoporFoundation.h'
     s.public_header_files = 'PoporFoundation/Classes/PoporFoundation.h'
@@ -66,6 +65,7 @@ Pod::Spec.new do |s|
         ss.ios.dependency 'PoporFoundation/NSObject'
         ss.ios.dependency 'PoporFoundation/prefix'
         
+        ss.
         ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
     end
     s.subspec 'NSAssistant' do |ss|

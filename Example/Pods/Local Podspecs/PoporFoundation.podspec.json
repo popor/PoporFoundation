@@ -41,7 +41,13 @@
     },
     {
       "name": "NSString",
-      "public_header_files": "PoporFoundation/Classes/NSString+Tool.h",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSString*.{h,m}"
     },
     {
@@ -92,6 +98,9 @@
       "ios": {
         "dependencies": {
           "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/prefix": [
 
           ]
         }

@@ -9,6 +9,8 @@
 #import "PoporFoundationViewController.h"
 
 //#import <PoporFoundation/PoporFoundation.h>
+//@import PoporFoundation;
+#import <PoporFoundation/NSArray+jsonDic.h>
 
 @interface PoporFoundationViewController ()
 
@@ -20,6 +22,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSArray * array = @[@"1", @"2"];
+    
+    NSLog(@"jsonString : %@", [array toJSONString]);
 }
 
 - (void)didReceiveMemoryWarning
