@@ -25,6 +25,8 @@
     NSArray * array = @[@"1", @"2"];
     
     NSLog(@"jsonString : %@", [array toJSONString]);
+    
+    // 1
 }
 
 - (void)didReceiveMemoryWarning
