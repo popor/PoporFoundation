@@ -41,4 +41,6 @@
 
 - (NSData *)toData;
 
+- (NSInteger)countOccurencesOfString:(NSString*)searchString;
+
 @end

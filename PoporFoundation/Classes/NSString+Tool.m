@@ -218,4 +218,10 @@
 - (NSData *)toData {
     return [self dataUsingEncoding:NSUTF8StringEncoding];
 }
+
+- (NSInteger)countOccurencesOfString:(NSString*)searchString {
+    NSInteger strCount = [self length] - [[self stringByReplacingOccurrencesOfString:searchString withString:@""] length];
+    return strCount / [searchString length];
+}
+
 @end
