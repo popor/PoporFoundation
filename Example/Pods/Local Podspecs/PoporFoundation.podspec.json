@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "requires_arc": true,
   "platforms": {
@@ -121,6 +121,17 @@
     {
       "name": "ScreenCommonSize",
       "source_files": "PoporFoundation/Classes/ScreenCommonSize.{h,m}"
+    },
+    {
+      "name": "NSDecimalNumber",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
+      "source_files": "PoporFoundation/Classes/NSDecimalNumber*.{h,m}"
     }
   ]
 }

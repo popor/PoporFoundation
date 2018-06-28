@@ -18,6 +18,8 @@
 #import "NSAssistant.h"
 #import "NSData+dic.h"
 #import "NSDate+Tool.h"
+#import "NSDecimalNumber+chain.h"
+#import "NSDecimalNumber+Swizzling.h"
 #import "NSDictionary+Swizzling.h"
 #import "NSDictionary+tool.h"
 #import "NSObject+Swizzling.h"

@@ -7,7 +7,6 @@
 //
 
 #import "NSURL+Swizzling.h"
-#import <objc/runtime.h>
 
 #import "NSObject+Swizzling.h"
 

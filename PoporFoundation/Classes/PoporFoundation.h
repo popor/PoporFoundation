@@ -25,6 +25,9 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 //#import "NSMutableArray+Swizzling.h"
 #import "NSMutableArray+chain.h"
 
+// NSDecimalNumber
+#import "NSDecimalNumber+chain.h"
+
 // NSData
 #import "NSData+dic.h"
 
