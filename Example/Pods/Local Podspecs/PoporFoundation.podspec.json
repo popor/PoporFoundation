@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.7"
+    "tag": "0.0.8"
   },
   "requires_arc": true,
   "ios": {
@@ -71,6 +71,26 @@
           ]
         }
       },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
+      "tvos": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
       "source_files": [
         "PoporFoundation/Classes/NSArray*.{h,m}",
         "PoporFoundation/Classes/NSMutableArray*.{h,m}"
@@ -79,6 +99,20 @@
     {
       "name": "NSAssistant",
       "ios": {
+        "dependencies": {
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
+      "tvos": {
         "dependencies": {
           "PoporFoundation/prefix": [
 
@@ -100,11 +134,45 @@
           ]
         }
       },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/NSString": [
+
+          ]
+        }
+      },
+      "tvos": {
+        "dependencies": {
+          "PoporFoundation/NSString": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSDate*.{h,m}"
     },
     {
       "name": "NSDictionary",
       "ios": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/prefix": [
+
+          ]
+        }
+      },
+      "tvos": {
         "dependencies": {
           "PoporFoundation/NSObject": [
 
@@ -125,6 +193,20 @@
           ]
         }
       },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
+      "tvos": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSURL*.{h,m}"
     },
     {
@@ -134,6 +216,20 @@
     {
       "name": "NSDecimalNumber",
       "ios": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
+      "tvos": {
         "dependencies": {
           "PoporFoundation/NSObject": [
 

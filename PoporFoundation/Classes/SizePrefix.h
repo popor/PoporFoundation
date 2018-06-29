@@ -20,7 +20,11 @@
 
 #pragma mark - macOX
 #elif TARGET_OS_MAC
+#define ScreenBounds   [[NSScreen mainScreen] bounds]
+#define ScreenSize     [[NSScreen mainScreen] bounds].size
 
+#define SCREEN_WIDTH   [NSScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT  [NSScreen mainScreen].bounds.size.height
 
 #endif
 
