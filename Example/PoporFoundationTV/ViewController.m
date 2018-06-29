@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import <PoporFoundation/NSString+Tool.h>
+
 @interface ViewController ()
 
 @end
@@ -17,13 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString * url = @"http://www.baidu.com/王凯庆";
+    NSLog(@"%@", url.toUrlEncode);
+    NSLog(@"%@", url.toUtf8Encode);
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

@@ -18,3 +18,8 @@ target 'PoporFoundationMac' do
     
 end
 
+target 'PoporFoundationTV' do
+    pod 'PoporFoundation', :path => '../'
+    #pod 'PoporFoundation/NSArray', :path => '../'
+    
+end

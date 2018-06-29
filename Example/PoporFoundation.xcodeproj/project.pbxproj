@@ -34,6 +34,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		8CF1CA9887146ED5A8543A21 /* Pods_PoporFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */; };
+		B383ACED1A84DC32DD588624 /* Pods_PoporFoundationTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCA7CB6D389CC21897C4DDE /* Pods_PoporFoundationTV.framework */; };
 		D69F36774462780F97EADF38 /* Pods_PoporFoundationMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,9 @@
 		7F75326025564657249F938B /* PoporFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PoporFoundation.podspec; path = ../PoporFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA995ABB33031BCCA677BEB8 /* Pods-PoporFoundationTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV.debug.xcconfig"; sourceTree = "<group>"; };
+		B7938C6C8126F8C60A9EE694 /* Pods-PoporFoundationTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV.release.xcconfig"; sourceTree = "<group>"; };
+		BFCA7CB6D389CC21897C4DDE /* Pods_PoporFoundationTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DF27F2DCBE6AF686353637 /* Pods-PoporFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E7557B07A6B58E89C88005FC /* Pods-PoporFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1FED7CC3C5636B98157B3F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B383ACED1A84DC32DD588624 /* Pods_PoporFoundationTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,16 +151,24 @@
 		1831BFD620E6209F0019F1A8 /* PoporFoundationTV */ = {
 			isa = PBXGroup;
 			children = (
+				1831BFE820E624150019F1A8 /* other */,
 				1831BFD720E6209F0019F1A8 /* AppDelegate.h */,
 				1831BFD820E6209F0019F1A8 /* AppDelegate.m */,
 				1831BFDA20E6209F0019F1A8 /* ViewController.h */,
 				1831BFDB20E6209F0019F1A8 /* ViewController.m */,
+			);
+			path = PoporFoundationTV;
+			sourceTree = "<group>";
+		};
+		1831BFE820E624150019F1A8 /* other */ = {
+			isa = PBXGroup;
+			children = (
 				1831BFDD20E6209F0019F1A8 /* Main.storyboard */,
 				1831BFE020E620A10019F1A8 /* Assets.xcassets */,
 				1831BFE220E620A10019F1A8 /* Info.plist */,
 				1831BFE320E620A10019F1A8 /* main.m */,
 			);
-			path = PoporFoundationTV;
+			name = other;
 			sourceTree = "<group>";
 		};
 		18EB654220E6101D00EC2E59 /* PoporFoundationMac */ = {
@@ -191,6 +204,8 @@
 				7AF18C123667655E3560497C /* Pods-PoporFoundation_Tests.release.xcconfig */,
 				416A96379209DC3873775F56 /* Pods-PoporFoundationMac.debug.xcconfig */,
 				4C648E9975CC1F3E7482EC93 /* Pods-PoporFoundationMac.release.xcconfig */,
+				AA995ABB33031BCCA677BEB8 /* Pods-PoporFoundationTV.debug.xcconfig */,
+				B7938C6C8126F8C60A9EE694 /* Pods-PoporFoundationTV.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -230,6 +245,7 @@
 				60C491A13442C43020533D4C /* Pods_PoporFoundation_Example.framework */,
 				23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */,
 				99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */,
+				BFCA7CB6D389CC21897C4DDE /* Pods_PoporFoundationTV.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,9 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1831BFE720E620A10019F1A8 /* Build configuration list for PBXNativeTarget "PoporFoundationTV" */;
 			buildPhases = (
+				871801C8B8AD174A7DF4010D /* [CP] Check Pods Manifest.lock */,
 				1831BFD120E6209F0019F1A8 /* Sources */,
 				1831BFD220E6209F0019F1A8 /* Frameworks */,
 				1831BFD320E6209F0019F1A8 /* Resources */,
+				512E31B84CA32158B64177D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -496,6 +514,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		512E31B84CA32158B64177D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PoporFoundation-tvOS/PoporFoundation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporFoundation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B148E41A945C0375E9CFF79 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +544,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PoporFoundation_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		871801C8B8AD174A7DF4010D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoporFoundationTV-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -647,6 +701,7 @@
 /* Begin XCBuildConfiguration section */
 		1831BFE520E620A10019F1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA995ABB33031BCCA677BEB8 /* Pods-PoporFoundationTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -685,6 +740,7 @@
 		};
 		1831BFE620E620A10019F1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7938C6C8126F8C60A9EE694 /* Pods-PoporFoundationTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

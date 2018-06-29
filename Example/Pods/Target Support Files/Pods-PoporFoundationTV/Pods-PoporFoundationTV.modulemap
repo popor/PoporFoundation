@@ -1,0 +1,6 @@
+framework module Pods_PoporFoundationTV {
+  umbrella header "Pods-PoporFoundationTV-umbrella.h"
+
+  export *
+  module * { export * }
+}
