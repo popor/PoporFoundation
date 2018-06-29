@@ -23,6 +23,9 @@
     NSString * url = @"http://www.baidu.com/王凯庆";
     NSLog(@"%@", url.toUrlEncode);
     NSLog(@"%@", url.toUtf8Encode);
+    
+    NSLog(@"%@", url.stringByRemovingPercentEncoding);
+    
 }
 
 
