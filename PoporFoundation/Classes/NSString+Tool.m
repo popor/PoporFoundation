@@ -173,6 +173,20 @@
     }
 }
 
+- (NSDictionary *)toDic {
+    if (self.length == 0) {
+        return nil;
+    }
+    
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:&err];
+    if(err) {
+        return nil;
+    }else{
+        return dic;
+    }
+}
+
 #pragma mark [获取 一个GUID]
 + (NSString *)getUUID {
     CFUUIDRef uuid_ref = CFUUIDCreate(NULL);

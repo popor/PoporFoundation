@@ -28,6 +28,8 @@
 + (NSString *)stringToDecimalWithString:(NSString *)theNumber;
 - (UIColor *)toColor;
 
+- (NSDictionary *)toDic;
+
 #pragma mark [获取 一个GUID]
 + (NSString *)getUUID;
 
