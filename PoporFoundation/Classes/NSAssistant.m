@@ -194,11 +194,11 @@
     free(properties);
 }
 
-+ (void)setVC:(UIViewController *)vc dic:(id)dic {
++ (void)setVC:(id)vc dic:(id)dic {
     if (!dic) {
         return;
     }
-    vc.title = dic[@"title"];
+    [vc setValue:dic[@"title"] forKey:@"title"];
     
     unsigned propertyCount;
     

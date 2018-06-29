@@ -6,16 +6,36 @@
 //  Copyright © 2017年 popor. All rights reserved.
 //
 
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 #import <UIKit/UIKit.h>
-
 #ifndef FontPrefix_h
 #define FontPrefix_h
 
-#define Font12			[UIFont systemFontOfSize:12] // 少量标签文字
-#define Font14			[UIFont systemFontOfSize:14] // 少量辅助文字
-#define Font15			[UIFont systemFontOfSize:15] // 大量使用的
-#define Font16			[UIFont systemFontOfSize:16] // 重点突出的
-#define Font18			[UIFont systemFontOfSize:18] // 标题栏部分
+#define Font12			[UIFont systemFontOfSize:12]// 少量标签文字
+#define Font14			[UIFont systemFontOfSize:14]// 少量辅助文字
+#define Font15			[UIFont systemFontOfSize:15]// 大量使用的
+#define Font16			[UIFont systemFontOfSize:16]// 重点突出的
+#define Font18			[UIFont systemFontOfSize:18]// 标题栏部分
+
+#define FontMini		Font12              // 少量标签文字
+#define FontDes			Font14              // 少量辅助文字
+#define FontDefault		Font15              // 大量使用的
+#define FontImportant	Font16              // 重点突出的
+#define FontMax			Font18              // 标题栏部分
+
+#endif /* FontPrefix_h */
+
+
+#elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
+#ifndef FontPrefix_h
+#define FontPrefix_h
+
+#define Font12			[NSFont systemFontOfSize:12] // 少量标签文字
+#define Font14			[NSFont systemFontOfSize:14] // 少量辅助文字
+#define Font15			[NSFont systemFontOfSize:15] // 大量使用的
+#define Font16			[NSFont systemFontOfSize:16] // 重点突出的
+#define Font18			[NSFont systemFontOfSize:18] // 标题栏部分
 
 #define FontMini		Font12 // 少量标签文字
 #define FontDes			Font14 // 少量辅助文字
@@ -24,3 +44,8 @@
 #define FontMax			Font18 // 标题栏部分
 
 #endif /* FontPrefix_h */
+
+
+
+#endif
+

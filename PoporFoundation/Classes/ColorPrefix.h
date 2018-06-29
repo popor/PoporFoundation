@@ -7,8 +7,9 @@
 //
 
 #import <CoreGraphics/CoreGraphics.h>
-#import <UIKit/UIKit.h>
 
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
+#import <UIKit/UIKit.h>
 // need:UIKit,CoreGraphics
 CG_INLINE UIColor * RGBA(float R, float G, float B, float F) {
     return [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:F];
@@ -22,6 +23,28 @@ CG_INLINE UIColor * RGB16(unsigned long rgbValue) {
 CG_INLINE UIColor * RGB16A(unsigned long rgbValue, float F) {
     return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:F];
 };
+
+
+
+#elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
+// need:UIKit,CoreGraphics
+CG_INLINE NSColor * RGBA(float R, float G, float B, float F) {
+    return [NSColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:F];
+};
+
+// need:UIKit,CoreGraphics
+CG_INLINE NSColor * RGB16(unsigned long rgbValue) {
+    return [NSColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0];
+};
+
+CG_INLINE NSColor * RGB16A(unsigned long rgbValue, float F) {
+    return [NSColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:F];
+};
+
+
+#endif
+
 
 #ifndef ColorPrefix_h
 #define ColorPrefix_h

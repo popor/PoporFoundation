@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreGraphics/CGGeometry.h>
-
+#pragma mark - iOS
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 @interface ScreenCommonSize : NSObject
 
 + (instancetype)share;
@@ -28,3 +28,11 @@
 
 
 @end
+
+#pragma mark - macOX
+#elif TARGET_OS_MAC
+
+
+#endif
+
+

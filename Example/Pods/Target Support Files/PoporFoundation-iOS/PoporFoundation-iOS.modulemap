@@ -1,5 +1,5 @@
 framework module PoporFoundation {
-  umbrella header "PoporFoundation-umbrella.h"
+  umbrella header "PoporFoundation-iOS-umbrella.h"
 
   export *
   module * { export * }

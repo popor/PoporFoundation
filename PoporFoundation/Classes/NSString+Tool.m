@@ -151,26 +151,12 @@
 }
 
 #pragma mark - 10-16转换
-+ (NSString *)stringToHexWithInt:(int)theNumber
-{
++ (NSString *)stringToHexWithInt:(int)theNumber {
     return [NSString stringWithFormat:@"%x", (unsigned int) theNumber];
 }
 
-+ (NSString *)stringToDecimalWithString:(NSString *)theNumber
-{
++ (NSString *)stringToDecimalWithString:(NSString *)theNumber {
     return [NSString stringWithFormat:@"%i", (int)strtoul([theNumber UTF8String], 0, 16)];
-}
-
-- (UIColor *)toColor
-{
-    if (self.length == 6) {
-        int red   = (int)strtoul([[self substringWithRange:(NSRange){0, 2}] UTF8String], 0, 16);
-        int green = (int)strtoul([[self substringWithRange:(NSRange){2, 2}] UTF8String], 0, 16);
-        int blue  = (int)strtoul([[self substringWithRange:(NSRange){4, 2}] UTF8String], 0, 16);
-        return RGBA(red, green, blue, 1);
-    }else{
-        return [UIColor clearColor];
-    }
 }
 
 - (NSDictionary *)toDic {
@@ -237,5 +223,32 @@
     NSInteger strCount = [self length] - [[self stringByReplacingOccurrencesOfString:searchString withString:@""] length];
     return strCount / [searchString length];
 }
+
+
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
+- (UIColor *)toColor {
+    if (self.length == 6) {
+        int red   = (int)strtoul([[self substringWithRange:(NSRange){0, 2}] UTF8String], 0, 16);
+        int green = (int)strtoul([[self substringWithRange:(NSRange){2, 2}] UTF8String], 0, 16);
+        int blue  = (int)strtoul([[self substringWithRange:(NSRange){4, 2}] UTF8String], 0, 16);
+        return RGBA(red, green, blue, 1);
+    }else{
+        return [UIColor clearColor];
+    }
+}
+
+#elif TARGET_OS_MAC
+- (NSColor *)toColor {
+    if (self.length == 6) {
+        int red   = (int)strtoul([[self substringWithRange:(NSRange){0, 2}] UTF8String], 0, 16);
+        int green = (int)strtoul([[self substringWithRange:(NSRange){2, 2}] UTF8String], 0, 16);
+        int blue  = (int)strtoul([[self substringWithRange:(NSRange){4, 2}] UTF8String], 0, 16);
+        return RGBA(red, green, blue, 1);
+    }else{
+        return [NSColor clearColor];
+    }
+}
+
+#endif
 
 @end

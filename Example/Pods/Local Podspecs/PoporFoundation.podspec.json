@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,16 +12,32 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.2"
+    "tag": "0.0.4"
   },
   "requires_arc": true,
-  "platforms": {
-    "ios": "8.0"
+  "ios": {
+    "frameworks": [
+      "Foundation",
+      "UIKit"
+    ]
   },
-  "frameworks": [
-    "UIKit",
-    "Foundation"
-  ],
+  "tvos": {
+    "frameworks": [
+      "Foundation",
+      "UIKit"
+    ]
+  },
+  "osx": {
+    "frameworks": [
+      "Foundation",
+      "AppKit"
+    ]
+  },
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.10",
+    "tvos": "9.0"
+  },
   "source_files": "PoporFoundation/Classes/PoporFoundation.h",
   "public_header_files": "PoporFoundation/Classes/PoporFoundation.h",
   "subspecs": [

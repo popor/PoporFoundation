@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 #import <UIKit/UIKit.h>
+
+#elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
+
+#endif
 
 @interface NSString (Tool)
 
@@ -26,7 +33,6 @@
 #pragma mark - 10-16转换
 + (NSString *)stringToHexWithInt:(int)theNumber;
 + (NSString *)stringToDecimalWithString:(NSString *)theNumber;
-- (UIColor *)toColor;
 
 - (NSDictionary *)toDic;
 
@@ -44,5 +50,13 @@
 - (NSData *)toData;
 
 - (NSInteger)countOccurencesOfString:(NSString*)searchString;
+
+
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
+- (UIColor *)toColor;
+
+#elif TARGET_OS_MAC
+- (NSColor *)toColor;
+#endif
 
 @end

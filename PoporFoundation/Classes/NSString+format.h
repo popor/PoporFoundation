@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 #import <UIKit/UIKit.h>
 
 @interface NSString (format)
@@ -32,3 +34,35 @@
 - (CGSize)sizeWithWidth:(CGFloat)width;
 
 @end
+
+
+#elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
+@interface NSString (format)
+
++ (NSMutableAttributedString *)underLineAttString:(NSString *)string font:(NSFont *)font color:(NSColor *)color;
+
+@end
+
+
+@interface NSMutableAttributedString (format)
+
+- (void)addString:(NSString *)string font:(NSFont *)font color:(NSColor *)color;
+- (void)addString:(NSString *)string font:(NSFont *)font color:(NSColor *)color underline:(BOOL)isUnderLine;
+- (void)addString:(NSString *)string font:(NSFont *)font color:(NSColor *)color bgColor:(NSColor *)bgColor underline:(BOOL)isUnderLine;
+
+- (void)addString:(NSString *)string font:(NSFont *)font color:(NSColor *)color bgColor:(NSColor *)bgColor underline:(BOOL)isUnderLine lineSpacing:(float)lineSpacing textAlignment:(NSTextAlignment)textAlignment lineBreakMode:(NSLineBreakMode)lineBreakMode;
+
+// 用于纠正不同字体之间的文字,不会行居中的问题
+- (void)setBaselineOffsetMaxFont:(float)maxFont miniFont:(float)miniFont range:(NSRange)range;
+- (void)setBaselineOffsetMaxFont:(float)maxFont miniFont:(float)miniFont scale:(float)scale range:(NSRange)range;
+
+#pragma mark - Size Department
+- (CGSize)sizeWithWidth:(CGFloat)width;
+
+@end
+
+
+#endif
+
+

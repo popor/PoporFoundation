@@ -10,3 +10,11 @@ target 'PoporFoundation_Example' do
     
   end
 end
+
+
+target 'PoporFoundationMac' do
+    pod 'PoporFoundation', :path => '../'
+    #pod 'PoporFoundation/NSArray', :path => '../'
+    
+end
+

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '0.0.4'
+    s.version          = '0.0.5'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -29,20 +29,21 @@ Pod::Spec.new do |s|
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.requires_arc = true
-    s.ios.deployment_target = '8.0'
     
-    # s.source_files = 'PoporFoundation/Classes/**/*'
+    s.ios.frameworks         = 'Foundation', 'UIKit'
+    s.tvos.frameworks        = 'Foundation', 'UIKit'
+    s.osx.frameworks         = 'Foundation', 'AppKit'
+
+    s.ios.deployment_target  = '8.0' # minimum SDK with autolayout
+    s.osx.deployment_target  = '10.10' # minimum SDK with autolayout
+    s.tvos.deployment_target = '9.0' # minimum SDK with autolayout
     
-    # s.resource_bundles = {
-    #   'PoporFoundation' => ['PoporFoundation/Assets/*.png']
-    # }
-    
+   
+    # s.frameworks = 'UIKit', 'Foundation'
     # s.public_header_files = 'Pod/Classes/**/*.h'
-    s.frameworks = 'UIKit', 'Foundation'
     
     s.source_files = 'PoporFoundation/Classes/PoporFoundation.h'
     s.public_header_files = 'PoporFoundation/Classes/PoporFoundation.h'
-    
     
     # base 1 : runtime
     s.subspec 'NSObject' do |ss|

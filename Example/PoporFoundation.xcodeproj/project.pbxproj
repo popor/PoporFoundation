@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18EB654520E6101D00EC2E59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB654420E6101D00EC2E59 /* AppDelegate.m */; };
+		18EB654820E6101D00EC2E59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB654720E6101D00EC2E59 /* ViewController.m */; };
+		18EB654A20E6101E00EC2E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EB654920E6101E00EC2E59 /* Assets.xcassets */; };
+		18EB654D20E6101E00EC2E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EB654B20E6101E00EC2E59 /* Main.storyboard */; };
+		18EB655020E6101E00EC2E59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB654F20E6101E00EC2E59 /* main.m */; };
 		5A6F3086F38071DDE08D3C11 /* Pods_PoporFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C491A13442C43020533D4C /* Pods_PoporFoundation_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -24,6 +29,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		8CF1CA9887146ED5A8543A21 /* Pods_PoporFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */; };
+		D69F36774462780F97EADF38 /* Pods_PoporFoundationMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +43,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18EB654120E6101C00EC2E59 /* PoporFoundationMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoporFoundationMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EB654320E6101D00EC2E59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18EB654420E6101D00EC2E59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18EB654620E6101D00EC2E59 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18EB654720E6101D00EC2E59 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18EB654920E6101E00EC2E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18EB654C20E6101E00EC2E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18EB654E20E6101E00EC2E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EB654F20E6101E00EC2E59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18EB655120E6101E00EC2E59 /* PoporFoundationMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PoporFoundationMac.entitlements; sourceTree = "<group>"; };
 		2212B2D6CC4EC4A6BAA5CE72 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		416A96379209DC3873775F56 /* Pods-PoporFoundationMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac.debug.xcconfig"; sourceTree = "<group>"; };
+		4C648E9975CC1F3E7482EC93 /* Pods-PoporFoundationMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PoporFoundation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoporFoundation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,12 +82,21 @@
 		7AF18C123667655E3560497C /* Pods-PoporFoundation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Tests/Pods-PoporFoundation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7F75326025564657249F938B /* PoporFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PoporFoundation.podspec; path = ../PoporFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DF27F2DCBE6AF686353637 /* Pods-PoporFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E7557B07A6B58E89C88005FC /* Pods-PoporFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1FED7CC3C5636B98157B3F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18EB653E20E6101C00EC2E59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69F36774462780F97EADF38 /* Pods_PoporFoundationMac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,6 +122,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18EB654220E6101D00EC2E59 /* PoporFoundationMac */ = {
+			isa = PBXGroup;
+			children = (
+				18EB655620E6103400EC2E59 /* other */,
+				18EB654320E6101D00EC2E59 /* AppDelegate.h */,
+				18EB654420E6101D00EC2E59 /* AppDelegate.m */,
+				18EB654620E6101D00EC2E59 /* ViewController.h */,
+				18EB654720E6101D00EC2E59 /* ViewController.m */,
+			);
+			path = PoporFoundationMac;
+			sourceTree = "<group>";
+		};
+		18EB655620E6103400EC2E59 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				18EB654920E6101E00EC2E59 /* Assets.xcassets */,
+				18EB654B20E6101E00EC2E59 /* Main.storyboard */,
+				18EB654E20E6101E00EC2E59 /* Info.plist */,
+				18EB654F20E6101E00EC2E59 /* main.m */,
+				18EB655120E6101E00EC2E59 /* PoporFoundationMac.entitlements */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
 		1B1DE5A73924A0DC7D8A9CB9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +153,8 @@
 				D8DF27F2DCBE6AF686353637 /* Pods-PoporFoundation_Example.release.xcconfig */,
 				75CE04B825F65AD63CDC662A /* Pods-PoporFoundation_Tests.debug.xcconfig */,
 				7AF18C123667655E3560497C /* Pods-PoporFoundation_Tests.release.xcconfig */,
+				416A96379209DC3873775F56 /* Pods-PoporFoundationMac.debug.xcconfig */,
+				4C648E9975CC1F3E7482EC93 /* Pods-PoporFoundationMac.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -112,6 +165,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for PoporFoundation */,
 				6003F5B5195388D20070C39A /* Tests */,
+				18EB654220E6101D00EC2E59 /* PoporFoundationMac */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				1B1DE5A73924A0DC7D8A9CB9 /* Pods */,
@@ -123,6 +177,7 @@
 			children = (
 				6003F58A195388D20070C39A /* PoporFoundation_Example.app */,
 				6003F5AE195388D20070C39A /* PoporFoundation_Tests.xctest */,
+				18EB654120E6101C00EC2E59 /* PoporFoundationMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +191,7 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				60C491A13442C43020533D4C /* Pods_PoporFoundation_Example.framework */,
 				23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */,
+				99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +263,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		18EB654020E6101C00EC2E59 /* PoporFoundationMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18EB655420E6101E00EC2E59 /* Build configuration list for PBXNativeTarget "PoporFoundationMac" */;
+			buildPhases = (
+				D29B536BE6436F4E31A85668 /* [CP] Check Pods Manifest.lock */,
+				18EB653D20E6101C00EC2E59 /* Sources */,
+				18EB653E20E6101C00EC2E59 /* Frameworks */,
+				18EB653F20E6101C00EC2E59 /* Resources */,
+				17420EC7F27D5F08C4B655FD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoporFoundationMac;
+			productName = PoporFoundationMac;
+			productReference = 18EB654120E6101C00EC2E59 /* PoporFoundationMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6003F589195388D20070C39A /* PoporFoundation_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "PoporFoundation_Example" */;
@@ -255,6 +330,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = popor;
 				TargetAttributes = {
+					18EB654020E6101C00EC2E59 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -274,12 +353,22 @@
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* PoporFoundation_Example */,
+				18EB654020E6101C00EC2E59 /* PoporFoundationMac */,
 				6003F5AD195388D20070C39A /* PoporFoundation_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		18EB653F20E6101C00EC2E59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EB654A20E6101E00EC2E59 /* Assets.xcassets in Resources */,
+				18EB654D20E6101E00EC2E59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,7 +398,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PoporFoundation/PoporFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/PoporFoundation-iOS/PoporFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -318,6 +407,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17420EC7F27D5F08C4B655FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PoporFoundation-macOS/PoporFoundation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporFoundation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5B148E41A945C0375E9CFF79 /* [CP] Check Pods Manifest.lock */ = {
@@ -356,9 +463,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D29B536BE6436F4E31A85668 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoporFoundationMac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18EB653D20E6101C00EC2E59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EB654820E6101D00EC2E59 /* ViewController.m in Sources */,
+				18EB655020E6101E00EC2E59 /* main.m in Sources */,
+				18EB654520E6101D00EC2E59 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +523,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		18EB654B20E6101E00EC2E59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18EB654C20E6101E00EC2E59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		6003F596195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -415,6 +558,87 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		18EB655220E6101E00EC2E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 416A96379209DC3873775F56 /* Pods-PoporFoundationMac.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = PoporFoundationMac/PoporFoundationMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PoporFoundationMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popor.PoporFoundationMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		18EB655320E6101E00EC2E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C648E9975CC1F3E7482EC93 /* Pods-PoporFoundationMac.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = PoporFoundationMac/PoporFoundationMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PoporFoundationMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popor.PoporFoundationMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -565,6 +789,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18EB655420E6101E00EC2E59 /* Build configuration list for PBXNativeTarget "PoporFoundationMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18EB655220E6101E00EC2E59 /* Debug */,
+				18EB655320E6101E00EC2E59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "PoporFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

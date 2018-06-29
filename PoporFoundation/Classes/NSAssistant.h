@@ -5,7 +5,7 @@
 //  Created by popor on 12-3-19.
 //V1.0
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface NSAssistant : NSObject
 
@@ -24,7 +24,7 @@
  */
 + (void)setFullEntity:(id)theClassEntity withJson:(id)theJsonObject;
 
-+ (void)setVC:(UIViewController *)vc dic:(id)dic;
++ (void)setVC:(id)vc dic:(id)dic;
 
 @end
 
