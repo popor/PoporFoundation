@@ -1,6 +1,10 @@
 {
   "name": "PoporFoundation",
+<<<<<<< HEAD
   "version": "0.0.10",
+=======
+  "version": "0.0.9",
+>>>>>>> 65b89dab4595a7dec6bf70b1fa737025a3c0377e
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -82,6 +86,7 @@
     },
     {
       "name": "PrefixOs",
+<<<<<<< HEAD
       "ios": {
         "dependencies": {
           "PoporFoundation/PrefixOs": [
@@ -103,6 +108,8 @@
           ]
         }
       },
+=======
+>>>>>>> 65b89dab4595a7dec6bf70b1fa737025a3c0377e
       "source_files": "PoporFoundation/Classes/PrefixOs.h"
     },
     {

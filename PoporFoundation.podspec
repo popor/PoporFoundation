@@ -70,6 +70,7 @@ Pod::Spec.new do |s|
     
     # base 4 : PrefixOs, UIKit和APPKit兼容宏
     s.subspec 'PrefixOs' do |ss|
+        
         ss.source_files = 'PoporFoundation/Classes/PrefixOs.h'
         
     end
