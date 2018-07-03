@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.8"
+    "tag": "0.0.10"
   },
   "requires_arc": true,
   "ios": {
@@ -57,7 +57,53 @@
     },
     {
       "name": "NSString",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/PrefixOs": [
+
+          ]
+        }
+      },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/PrefixOs": [
+
+          ]
+        }
+      },
+      "tvos": {
+        "dependencies": {
+          "PoporFoundation/PrefixOs": [
+
+          ]
+        }
+      },
       "source_files": "PoporFoundation/Classes/NSString*.{h,m}"
+    },
+    {
+      "name": "PrefixOs",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/PrefixOs": [
+
+          ]
+        }
+      },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/PrefixOs": [
+
+          ]
+        }
+      },
+      "tvos": {
+        "dependencies": {
+          "PoporFoundation/PrefixOs": [
+
+          ]
+        }
+      },
+      "source_files": "PoporFoundation/Classes/PrefixOs.h"
     },
     {
       "name": "NSArray",

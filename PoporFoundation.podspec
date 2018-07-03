@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '0.0.9'
+    s.version          = '0.0.10'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -52,12 +52,26 @@ Pod::Spec.new do |s|
     
     # base 2 : prefix
     s.subspec 'prefix' do |ss|
+        ss.ios.dependency  'PoporFoundation/PrefixOs'
+        ss.osx.dependency  'PoporFoundation/PrefixOs'
+        ss.tvos.dependency 'PoporFoundation/PrefixOs'
+        
         ss.source_files = 'PoporFoundation/Classes/BlockMacroDefines.h', 'PoporFoundation/Classes/ColorPrefix.h', 'PoporFoundation/Classes/FontPrefix.h', 'PoporFoundation/Classes/FunctionPrefix.h', 'PoporFoundation/Classes/SizePrefix.h'
     end
     
     # base 3 : NSString
     s.subspec 'NSString' do |ss|
+        ss.ios.dependency  'PoporFoundation/PrefixOs'
+        ss.osx.dependency  'PoporFoundation/PrefixOs'
+        ss.tvos.dependency 'PoporFoundation/PrefixOs'
+        
         ss.source_files = 'PoporFoundation/Classes/NSString*.{h,m}'
+    end
+    
+    # base 4 : PrefixOs, UIKit和APPKit兼容宏
+    s.subspec 'PrefixOs' do |ss|
+        ss.source_files = 'PoporFoundation/Classes/PrefixOs.h'
+        
     end
     
     s.subspec 'NSArray' do |ss|
