@@ -1,37 +1,39 @@
 PODS:
-  - PoporFoundation (0.0.9):
-    - PoporFoundation/NSArray (= 0.0.9)
-    - PoporFoundation/NSAssistant (= 0.0.9)
-    - PoporFoundation/NSData (= 0.0.9)
-    - PoporFoundation/NSDate (= 0.0.9)
-    - PoporFoundation/NSDecimalNumber (= 0.0.9)
-    - PoporFoundation/NSDictionary (= 0.0.9)
-    - PoporFoundation/NSObject (= 0.0.9)
-    - PoporFoundation/NSString (= 0.0.9)
-    - PoporFoundation/NSURL (= 0.0.9)
-    - PoporFoundation/prefix (= 0.0.9)
-    - PoporFoundation/PrefixOs (= 0.0.9)
-    - PoporFoundation/ScreenCommonSize (= 0.0.9)
-  - PoporFoundation/NSArray (0.0.9):
+  - PoporFoundation (0.0.10):
+    - PoporFoundation/NSArray (= 0.0.10)
+    - PoporFoundation/NSAssistant (= 0.0.10)
+    - PoporFoundation/NSData (= 0.0.10)
+    - PoporFoundation/NSDate (= 0.0.10)
+    - PoporFoundation/NSDecimalNumber (= 0.0.10)
+    - PoporFoundation/NSDictionary (= 0.0.10)
+    - PoporFoundation/NSObject (= 0.0.10)
+    - PoporFoundation/NSString (= 0.0.10)
+    - PoporFoundation/NSURL (= 0.0.10)
+    - PoporFoundation/prefix (= 0.0.10)
+    - PoporFoundation/PrefixOs (= 0.0.10)
+    - PoporFoundation/ScreenCommonSize (= 0.0.10)
+  - PoporFoundation/NSArray (0.0.10):
     - PoporFoundation/NSObject
     - PoporFoundation/prefix
-  - PoporFoundation/NSAssistant (0.0.9):
+  - PoporFoundation/NSAssistant (0.0.10):
     - PoporFoundation/prefix
-  - PoporFoundation/NSData (0.0.9)
-  - PoporFoundation/NSDate (0.0.9):
+  - PoporFoundation/NSData (0.0.10)
+  - PoporFoundation/NSDate (0.0.10):
     - PoporFoundation/NSString
-  - PoporFoundation/NSDecimalNumber (0.0.9):
+  - PoporFoundation/NSDecimalNumber (0.0.10):
     - PoporFoundation/NSObject
-  - PoporFoundation/NSDictionary (0.0.9):
+  - PoporFoundation/NSDictionary (0.0.10):
     - PoporFoundation/NSObject
     - PoporFoundation/prefix
-  - PoporFoundation/NSObject (0.0.9)
-  - PoporFoundation/NSString (0.0.9)
-  - PoporFoundation/NSURL (0.0.9):
+  - PoporFoundation/NSObject (0.0.10)
+  - PoporFoundation/NSString (0.0.10):
+    - PoporFoundation/PrefixOs
+  - PoporFoundation/NSURL (0.0.10):
     - PoporFoundation/NSObject
-  - PoporFoundation/prefix (0.0.9)
-  - PoporFoundation/PrefixOs (0.0.9)
-  - PoporFoundation/ScreenCommonSize (0.0.9)
+  - PoporFoundation/prefix (0.0.10):
+    - PoporFoundation/PrefixOs
+  - PoporFoundation/PrefixOs (0.0.10)
+  - PoporFoundation/ScreenCommonSize (0.0.10)
 
 DEPENDENCIES:
   - PoporFoundation (from `../`)
@@ -41,7 +43,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: 905e73578c1c40230bc0c104e5879d15ef5e6ad7
+  PoporFoundation: 6caa8a80eb3e4d2eb078ea064618182be0306cfa
 
 PODFILE CHECKSUM: e809a13432c890944cde8a15557d0d5347d5052c
 
