@@ -12,6 +12,9 @@
 //@import PoporFoundation;
 #import <PoporFoundation/NSArray+jsonDic.h>
 
+#import <PoporFoundation/NSString+format.h>
+#import <PoporFoundation/NSString+Tool.h>
+
 @interface PoporFoundationViewController ()
 
 @end
@@ -26,13 +29,29 @@
     
     NSLog(@"jsonString : %@", [array toJSONString]);
     
-    // 1
+    UILabel * oneL = ({
+        UILabel * l = [UILabel new];
+        l.frame              = CGRectMake(0, 100, 100, 44);
+        l.backgroundColor    = [UIColor clearColor];
+        l.font               = [UIFont systemFontOfSize:15];
+        l.textColor          = [UIColor darkGrayColor];
+        
+        l.numberOfLines      = 1;
+        
+        l.layer.cornerRadius = 5;
+        l.layer.borderColor  = [UIColor lightGrayColor].CGColor;
+        l.layer.borderWidth  = 1;
+        l.clipsToBounds      = YES;
+        
+        [self.view addSubview:l];
+        l;
+    });
+    NSMutableAttributedString * att = [NSMutableAttributedString new];
+    [att addString:@"12" font:[UIFont systemFontOfSize:14] color:@"0000FF".toColor];
+    
+    oneL.attributedText = att;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
