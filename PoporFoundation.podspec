@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '0.0.10'
+    s.version          = '0.0.11'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -47,7 +47,10 @@ Pod::Spec.new do |s|
     
     # base 1 : runtime
     s.subspec 'NSObject' do |ss|
-        ss.source_files = 'PoporFoundation/Classes/NSObject*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSObject+Swizzling.{h,m}'
+    end
+    s.subspec 'KVO' do |ss|
+        ss.source_files = 'PoporFoundation/Classes/NSObject+WMSafeKVO.{h,m}'
     end
     
     # base 2 : prefix

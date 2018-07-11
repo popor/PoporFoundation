@@ -11,6 +11,7 @@
 #endif
 
 #import "PoporFoundation.h"
+#import "NSObject+WMSafeKVO.h"
 #import "NSArray+jsonDic.h"
 #import "NSArray+Swizzling.h"
 #import "NSMutableArray+chain.h"
@@ -23,7 +24,6 @@
 #import "NSDictionary+Swizzling.h"
 #import "NSDictionary+tool.h"
 #import "NSObject+Swizzling.h"
-#import "NSObject+WMSafeKVO.h"
 #import "NSString+email.h"
 #import "NSString+format.h"
 #import "NSString+IDCard.h"
