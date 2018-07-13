@@ -44,9 +44,10 @@ dispatch_async(dispatch_get_main_queue(), block);\
 //#define NSLogInfo2(FORMAT, ...) printf("\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 //#define NSLog2(format, ...) printf("func:%s:\n%s\n---------------------\n\n", __PRETTY_FUNCTION__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
 
-#define NSLogRect(rect) NSLog(@"%s x:%.1f, y:%.1f, w:%.1f, h:%.1f", #rect, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)
-#define NSLogSize(size) NSLog(@"%s w:%.1f, h:%.1f", #size, size.width, size.height)
-#define NSLogPoint(point) NSLog(@"%s x:%.1f, y:%.1f", #point, point.x, point.y)
+#define NSLogRect(rect)		NSLog(@"CGRect:%s \t= %@", #rect, NSStringFromCGRect(rect));
+#define NSLogSize(size)		NSLog(@"CGSize:%s \t= %@", #size, NSStringFromCGSize(size));
+#define NSLogPoint(point)	NSLog(@"CGPoint:%s \t= %@", #point, NSStringFromCGPoint(point));
+#define NSLogRange(range)	NSLog(@"NSRange:%s \t= %@", #range, NSStringFromRange(range));
 
 #else
 
@@ -62,6 +63,7 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #define NSLogRect(rect) {}
 #define NSLogSize(size) {}
 #define NSLogPoint(point) {}
+#define NSLogRange(range) {}
 
 #endif
 
