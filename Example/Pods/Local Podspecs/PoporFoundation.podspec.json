@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.12"
+    "tag": "0.0.15"
   },
   "requires_arc": true,
   "ios": {
@@ -50,7 +50,7 @@
       "source_files": "PoporFoundation/Classes/NSObject+WMSafeKVO.{h,m}"
     },
     {
-      "name": "prefixCore",
+      "name": "PrefixCore",
       "ios": {
         "dependencies": {
           "PoporFoundation/PrefixOs": [
@@ -116,7 +116,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
@@ -126,7 +126,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
@@ -136,7 +136,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
@@ -150,21 +150,21 @@
       "name": "NSAssistant",
       "ios": {
         "dependencies": {
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
       },
       "osx": {
         "dependencies": {
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
       },
       "tvos": {
         "dependencies": {
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
@@ -207,7 +207,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
@@ -217,7 +217,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }
@@ -227,7 +227,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefixCore": [
+          "PoporFoundation/PrefixCore": [
 
           ]
         }

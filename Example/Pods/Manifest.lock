@@ -1,41 +1,41 @@
 PODS:
-  - PoporFoundation (0.0.12):
-    - PoporFoundation/KVO (= 0.0.12)
-    - PoporFoundation/NSArray (= 0.0.12)
-    - PoporFoundation/NSAssistant (= 0.0.12)
-    - PoporFoundation/NSData (= 0.0.12)
-    - PoporFoundation/NSDate (= 0.0.12)
-    - PoporFoundation/NSDecimalNumber (= 0.0.12)
-    - PoporFoundation/NSDictionary (= 0.0.12)
-    - PoporFoundation/NSObject (= 0.0.12)
-    - PoporFoundation/NSString (= 0.0.12)
-    - PoporFoundation/NSURL (= 0.0.12)
-    - PoporFoundation/prefixCore (= 0.0.12)
-    - PoporFoundation/PrefixOs (= 0.0.12)
-    - PoporFoundation/ScreenCommonSize (= 0.0.12)
-  - PoporFoundation/KVO (0.0.12)
-  - PoporFoundation/NSArray (0.0.12):
+  - PoporFoundation (0.0.15):
+    - PoporFoundation/KVO (= 0.0.15)
+    - PoporFoundation/NSArray (= 0.0.15)
+    - PoporFoundation/NSAssistant (= 0.0.15)
+    - PoporFoundation/NSData (= 0.0.15)
+    - PoporFoundation/NSDate (= 0.0.15)
+    - PoporFoundation/NSDecimalNumber (= 0.0.15)
+    - PoporFoundation/NSDictionary (= 0.0.15)
+    - PoporFoundation/NSObject (= 0.0.15)
+    - PoporFoundation/NSString (= 0.0.15)
+    - PoporFoundation/NSURL (= 0.0.15)
+    - PoporFoundation/PrefixCore (= 0.0.15)
+    - PoporFoundation/PrefixOs (= 0.0.15)
+    - PoporFoundation/ScreenCommonSize (= 0.0.15)
+  - PoporFoundation/KVO (0.0.15)
+  - PoporFoundation/NSArray (0.0.15):
     - PoporFoundation/NSObject
-    - PoporFoundation/prefixCore
-  - PoporFoundation/NSAssistant (0.0.12):
-    - PoporFoundation/prefixCore
-  - PoporFoundation/NSData (0.0.12)
-  - PoporFoundation/NSDate (0.0.12):
+    - PoporFoundation/PrefixCore
+  - PoporFoundation/NSAssistant (0.0.15):
+    - PoporFoundation/PrefixCore
+  - PoporFoundation/NSData (0.0.15)
+  - PoporFoundation/NSDate (0.0.15):
     - PoporFoundation/NSString
-  - PoporFoundation/NSDecimalNumber (0.0.12):
+  - PoporFoundation/NSDecimalNumber (0.0.15):
     - PoporFoundation/NSObject
-  - PoporFoundation/NSDictionary (0.0.12):
+  - PoporFoundation/NSDictionary (0.0.15):
     - PoporFoundation/NSObject
-    - PoporFoundation/prefixCore
-  - PoporFoundation/NSObject (0.0.12)
-  - PoporFoundation/NSString (0.0.12):
+    - PoporFoundation/PrefixCore
+  - PoporFoundation/NSObject (0.0.15)
+  - PoporFoundation/NSString (0.0.15):
     - PoporFoundation/PrefixOs
-  - PoporFoundation/NSURL (0.0.12):
+  - PoporFoundation/NSURL (0.0.15):
     - PoporFoundation/NSObject
-  - PoporFoundation/prefixCore (0.0.12):
+  - PoporFoundation/PrefixCore (0.0.15):
     - PoporFoundation/PrefixOs
-  - PoporFoundation/PrefixOs (0.0.12)
-  - PoporFoundation/ScreenCommonSize (0.0.12)
+  - PoporFoundation/PrefixOs (0.0.15)
+  - PoporFoundation/ScreenCommonSize (0.0.15)
 
 DEPENDENCIES:
   - PoporFoundation (from `../`)
@@ -45,7 +45,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: 58b0df1eadee44ea0d38c9e313aeda491f454b91
+  PoporFoundation: 7199a2ea9e92194759ebdb1451b312b3b181783d
 
 PODFILE CHECKSUM: e809a13432c890944cde8a15557d0d5347d5052c
 
