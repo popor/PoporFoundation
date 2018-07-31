@@ -1,5 +1,5 @@
 //
-//  SizePrefix.h
+//  PrefixSize.h
 //  AppStore
 //
 //  Created by popor on 2017/7/6.

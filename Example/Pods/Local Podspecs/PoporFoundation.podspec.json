@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.11"
+    "tag": "0.0.12"
   },
   "requires_arc": true,
   "ios": {
@@ -50,7 +50,7 @@
       "source_files": "PoporFoundation/Classes/NSObject+WMSafeKVO.{h,m}"
     },
     {
-      "name": "prefix",
+      "name": "prefixCore",
       "ios": {
         "dependencies": {
           "PoporFoundation/PrefixOs": [
@@ -73,11 +73,11 @@
         }
       },
       "source_files": [
-        "PoporFoundation/Classes/BlockMacroDefines.h",
-        "PoporFoundation/Classes/ColorPrefix.h",
-        "PoporFoundation/Classes/FontPrefix.h",
-        "PoporFoundation/Classes/FunctionPrefix.h",
-        "PoporFoundation/Classes/SizePrefix.h"
+        "PoporFoundation/Classes/PrefixBlock.h",
+        "PoporFoundation/Classes/PrefixColor.h",
+        "PoporFoundation/Classes/PrefixFont.h",
+        "PoporFoundation/Classes/PrefixFun.h",
+        "PoporFoundation/Classes/PrefixSize.h"
       ]
     },
     {
@@ -116,7 +116,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
@@ -126,7 +126,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
@@ -136,7 +136,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
@@ -150,21 +150,21 @@
       "name": "NSAssistant",
       "ios": {
         "dependencies": {
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
       },
       "osx": {
         "dependencies": {
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
       },
       "tvos": {
         "dependencies": {
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
@@ -207,7 +207,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
@@ -217,7 +217,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }
@@ -227,7 +227,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/prefix": [
+          "PoporFoundation/prefixCore": [
 
           ]
         }

@@ -18,7 +18,7 @@
 //解决办法：
 //＃import ”宏定义所在的文件“
 //#import "NSString+Tool.h"
-#import "FunctionPrefix.h"
+#import "PrefixFun.h"
 
 @implementation NSMutableArray (Swizzling)
 

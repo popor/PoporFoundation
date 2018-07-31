@@ -1,5 +1,5 @@
 //
-//  ColorPrefix.h
+//  PrefixColor.h
 //  AppStore
 //
 //  Created by popor on 2017/7/5.
@@ -8,8 +8,8 @@
 
 #import "PrefixOs.h"
 
-#ifndef FontPrefix_h
-#define FontPrefix_h
+#ifndef PrefixFont_h
+#define PrefixFont_h
 
 #define Font12			[FONT_CLASS systemFontOfSize:12]// 少量标签文字
 #define Font14			[FONT_CLASS systemFontOfSize:14]// 少量辅助文字
@@ -23,6 +23,6 @@
 #define FontImportant	Font16              // 重点突出的
 #define FontMax			Font18              // 标题栏部分
 
-#endif /* FontPrefix_h */
+#endif /* PrefixFont_h */
 
 

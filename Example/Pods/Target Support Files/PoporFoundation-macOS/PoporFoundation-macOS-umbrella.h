@@ -33,11 +33,11 @@
 #import "NSURL+Swizzling.h"
 #import "PrefixOs.h"
 #import "ScreenCommonSize.h"
-#import "BlockMacroDefines.h"
-#import "ColorPrefix.h"
-#import "FontPrefix.h"
-#import "FunctionPrefix.h"
-#import "SizePrefix.h"
+#import "PrefixBlock.h"
+#import "PrefixColor.h"
+#import "PrefixFont.h"
+#import "PrefixFun.h"
+#import "PrefixSize.h"
 
 FOUNDATION_EXPORT double PoporFoundationVersionNumber;
 FOUNDATION_EXPORT const unsigned char PoporFoundationVersionString[];

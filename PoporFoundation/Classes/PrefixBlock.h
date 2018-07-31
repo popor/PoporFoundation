@@ -1,13 +1,13 @@
 //
-//  BlockMacroDefines.h
+//  PrefixBlock.h
 //  linRunShengPi
 //
 //  Created by popor on 2018/1/11.
 //  Copyright © 2018年 popor. All rights reserved.
 //
 
-#ifndef BlockMacroDefines_h
-#define BlockMacroDefines_h
+#ifndef PrefixBlock_h
+#define PrefixBlock_h
 
 // 函数中用到的
 //(void (^)(void))block
@@ -48,5 +48,5 @@ typedef void(^BlockPUIViewController) (NSViewController * vc);
 // property用到的
 //@property (nonatomic, copy  ) NSString *(^someblock)(NSString *name);
 
-#endif /* BlockMacroDefines_h */
+#endif /* PrefixBlock_h */
 

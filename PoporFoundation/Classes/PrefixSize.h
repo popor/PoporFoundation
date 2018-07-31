@@ -1,13 +1,13 @@
 //
-//  SizePrefix.h
+//  PrefixSize.h
 //  AppStore
 //
 //  Created by popor on 2017/7/6.
 //  Copyright © 2017年 popor. All rights reserved.
 //
 
-#ifndef SizePrefix_h
-#define SizePrefix_h
+#ifndef PrefixSize_h
+#define PrefixSize_h
 
 #pragma mark - iOS
 #if TARGET_OS_IOS || TARGET_OS_WATCH
@@ -18,7 +18,7 @@
 #define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 
 
-#pragma mark - macOX
+#pragma mark - macOS
 #elif TARGET_OS_MAC
 #define ScreenBounds   [[NSScreen mainScreen] bounds]
 #define ScreenSize     [[NSScreen mainScreen] bounds].size
@@ -36,4 +36,4 @@
 //static int CornerRadiusVideo = 8;
 //static int CornerRadiusPano  = 8;
 
-#endif /* SizePrefix_h */
+#endif /* PrefixSize_h */

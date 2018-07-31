@@ -17,7 +17,7 @@
 //
 //解决办法：
 //＃import ”宏定义所在的文件“
-#import "FunctionPrefix.h"
+#import "PrefixFun.h"
 
 @implementation NSAssistant
 

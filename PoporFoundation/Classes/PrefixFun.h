@@ -1,13 +1,13 @@
 //
-//  FunctionPrefix.h
+//  PrefixFun.h
 //  linRunShengPi
 //
 //  Created by popor on 2018/2/1.
 //  Copyright © 2018年 popor. All rights reserved.
 //
 
-#ifndef FunctionPrefix_h
-#define FunctionPrefix_h
+#ifndef PrefixFun_h
+#define PrefixFun_h
 
 
 #ifndef dispatch_main_async_safe_sd
@@ -77,4 +77,4 @@ static NSString * AppResumeActiveNC = @"AppResumeActiveNC";
 /** 版本号小于11 */
 #define IsVersionLessThan11 [UIDevice currentDevice].systemVersion.doubleValue < 11.0
 
-#endif /* FunctionPrefix_h */
+#endif /* PrefixFun_h */

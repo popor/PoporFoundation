@@ -52,8 +52,8 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 #import "ScreenCommonSize.h"
 
 // prefix
-#import "ColorPrefix.h"
-#import "FontPrefix.h"
-#import "SizePrefix.h"
-#import "FunctionPrefix.h"
-#import "BlockMacroDefines.h"
+#import "PrefixColor.h"
+#import "PrefixFont.h"
+#import "PrefixSize.h"
+#import "PrefixFun.h"
+#import "PrefixBlock.h"
