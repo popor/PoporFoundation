@@ -12,4 +12,6 @@
 
 - (NSMutableArray *(^)(NSObject *))add;
 
+- (NSMutableArray *(^)(NSArray *))adds;
+
 @end

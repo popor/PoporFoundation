@@ -17,4 +17,11 @@
     };
 }
 
+- (NSMutableArray *(^)(NSArray *))adds {
+    return ^NSMutableArray *(NSArray * array){
+        [self addObjectsFromArray:array];
+        return self;
+    };
+}
+
 @end
