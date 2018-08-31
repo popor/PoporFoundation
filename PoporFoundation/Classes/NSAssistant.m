@@ -192,7 +192,7 @@
     free(properties);
 }
 
-+ (void)setVC:(UIViewController *)vc dic:(id)dic {
++ (void)setVC:(VC_CLASS *)vc dic:(id)dic {
     if (!dic || !vc) {
         return;
     }

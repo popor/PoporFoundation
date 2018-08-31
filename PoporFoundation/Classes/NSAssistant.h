@@ -6,6 +6,7 @@
 //V1.0
 
 #import <Foundation/Foundation.h>
+#import "PrefixOs.h"
 
 @interface NSAssistant : NSObject
 
@@ -24,7 +25,7 @@
 /**
  以下接口不对参数正确性判断,需要自己审核dic.
  */
-+ (void)setVC:(id)vc dic:(id)dic;
++ (void)setVC:(VC_CLASS *)vc dic:(id)dic;
 + (void)setEntity:(id)entity dic:(id)dic;
 
 @end
