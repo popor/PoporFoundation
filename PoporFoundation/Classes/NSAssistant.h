@@ -9,22 +9,23 @@
 
 @interface NSAssistant : NSObject
 
-#pragma mark 【数据库方面】
 /*
- S:Statement
- 只支持全额属性集
- 支持的属性包括:int, float, BOOL, NSString, NSMutableString, NSNumber.
- 不支持的属性包括:NSArray, NSMutableArray.或者其他自定义类.
+ 断点调试的时候,推荐使用chisel。或者配合Injection3使用以下方法。
  */
 + (void)NSLogEntity:(id)theClassEntity;
 + (void)NSLogEntity:(id)theClassEntity title:(NSString *)title;
 
 /**
- * 默认忽略__开头的参数
+ 默认忽略__开头的参数.
+ 后来一般使用JsonModel来映射model,兼容性更高.
  */
 + (void)setFullEntity:(id)theClassEntity withJson:(id)theJsonObject;
 
+/**
+ 以下接口不对参数正确性判断,需要自己审核dic.
+ */
 + (void)setVC:(id)vc dic:(id)dic;
++ (void)setEntity:(id)entity dic:(id)dic;
 
 @end
 
