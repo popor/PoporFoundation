@@ -8,12 +8,11 @@
 
 #import "PoporFoundationViewController.h"
 
-//#import <PoporFoundation/PoporFoundation.h>
-//@import PoporFoundation;
 #import <PoporFoundation/NSArray+jsonDic.h>
 
 #import <PoporFoundation/NSString+format.h>
 #import <PoporFoundation/NSString+Tool.h>
+
 
 @interface PoporFoundationViewController ()
 
@@ -51,7 +50,5 @@
     
     oneL.attributedText = att;
 }
-
-
 
 @end

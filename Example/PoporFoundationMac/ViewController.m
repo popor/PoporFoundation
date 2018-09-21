@@ -16,6 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self testReg];
+    return;
     NSString * title;
     NSArray * array = @[@"1", @"2", title, @"4"];
     NSLog(@"array: %@", array);
@@ -39,5 +41,21 @@
     
     oneTF.attributedStringValue = att;
 }
+
+- (void)testReg
+{
+    NSString * text = @"<div>wahaha</div>";
+    
+    NSError *error = NULL;
+    NSString * regOrigin = @"<div>(\\w*)</div>";
+    NSString * regTarget = @"<p>$1</p>";
+    
+    NSRegularExpression * imageUrlRegex = [NSRegularExpression regularExpressionWithPattern:regOrigin options:NSRegularExpressionCaseInsensitive error:&error];
+    
+    text   = [imageUrlRegex stringByReplacingMatchesInString:text options:0 range:NSMakeRange(0, [text length]) withTemplate:regTarget];
+    
+    NSLog(@"text : %@", text);
+}
+
 
 @end
