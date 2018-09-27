@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '0.0.18'
+    s.version          = '0.0.19'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -47,10 +47,10 @@ Pod::Spec.new do |s|
     
     # base 1 : runtime
     s.subspec 'NSObject' do |ss|
-        ss.source_files = 'PoporFoundation/Classes/NSObject+Swizzling.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSObject/*.{h,m}'
     end
     s.subspec 'KVO' do |ss|
-        ss.source_files = 'PoporFoundation/Classes/NSObject+WMSafeKVO.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/KVO/*.{h,m}'
     end
     
     # base 2 : PrefixCore
@@ -59,7 +59,7 @@ Pod::Spec.new do |s|
         ss.osx.dependency  'PoporFoundation/PrefixOs'
         ss.tvos.dependency 'PoporFoundation/PrefixOs'
         
-        ss.source_files = 'PoporFoundation/Classes/PrefixBlock.h', 'PoporFoundation/Classes/PrefixColor.h', 'PoporFoundation/Classes/PrefixFont.h', 'PoporFoundation/Classes/PrefixFun.h', 'PoporFoundation/Classes/PrefixSize.h'
+        ss.source_files = 'PoporFoundation/Classes/PrefixCore/*.h'
     end
     
     # base 3 : NSString
@@ -68,13 +68,13 @@ Pod::Spec.new do |s|
         ss.osx.dependency  'PoporFoundation/PrefixOs'
         ss.tvos.dependency 'PoporFoundation/PrefixOs'
         
-        ss.source_files = 'PoporFoundation/Classes/NSString*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSString/*.{h,m}'
     end
     
     # base 4 : PrefixOs, UIKit和APPKit兼容宏
     s.subspec 'PrefixOs' do |ss|
         
-        ss.source_files = 'PoporFoundation/Classes/PrefixOs.h'
+        ss.source_files = 'PoporFoundation/Classes/PrefixOs/*.h'
         
     end
     
@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
         ss.tvos.dependency 'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/PrefixCore'
         
-        ss.source_files = 'PoporFoundation/Classes/NSArray*.{h,m}', 'PoporFoundation/Classes/NSMutableArray*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSArray/*.{h,m}'
     end
     s.subspec 'NSAssistant' do |ss|
         ss.ios.dependency  'PoporFoundation/PrefixOs'
@@ -99,17 +99,17 @@ Pod::Spec.new do |s|
         ss.osx.dependency 'PoporFoundation/PrefixCore'
         ss.tvos.dependency 'PoporFoundation/PrefixCore'
 
-        ss.source_files = 'PoporFoundation/Classes/NSAssistant.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSAssistant/*.{h,m}'
     end
     s.subspec 'NSData' do |ss|
-        ss.source_files = 'PoporFoundation/Classes/NSData*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSData/*.{h,m}'
     end
     s.subspec 'NSDate' do |ss|
         ss.ios.dependency 'PoporFoundation/NSString'
         ss.osx.dependency 'PoporFoundation/NSString'
         ss.tvos.dependency 'PoporFoundation/NSString'
 
-        ss.source_files = 'PoporFoundation/Classes/NSDate*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSDate/*.{h,m}'
     end
     
     s.subspec 'NSDictionary' do |ss|
@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
         ss.tvos.dependency 'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/PrefixCore'
         
-        ss.source_files = 'PoporFoundation/Classes/NSDictionary*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSDictionary/*.{h,m}'
     end
     
     s.subspec 'NSURL' do |ss|
@@ -130,11 +130,11 @@ Pod::Spec.new do |s|
         ss.osx.dependency 'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/NSObject'
         
-        ss.source_files = 'PoporFoundation/Classes/NSURL*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSURL/*.{h,m}'
     end
     
     s.subspec 'ScreenCommonSize' do |ss|
-        ss.source_files = 'PoporFoundation/Classes/ScreenCommonSize.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/ScreenCommonSize/*.{h,m}'
     end
     
     s.subspec 'NSDecimalNumber' do |ss|
@@ -142,7 +142,7 @@ Pod::Spec.new do |s|
         ss.osx.dependency 'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/NSObject'
         
-        ss.source_files = 'PoporFoundation/Classes/NSDecimalNumber*.{h,m}'
+        ss.source_files = 'PoporFoundation/Classes/NSDecimalNumber/*.{h,m}'
     end
     
 end

@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.18"
+    "tag": "0.0.19"
   },
   "requires_arc": true,
   "ios": {
@@ -43,11 +43,11 @@
   "subspecs": [
     {
       "name": "NSObject",
-      "source_files": "PoporFoundation/Classes/NSObject+Swizzling.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSObject/*.{h,m}"
     },
     {
       "name": "KVO",
-      "source_files": "PoporFoundation/Classes/NSObject+WMSafeKVO.{h,m}"
+      "source_files": "PoporFoundation/Classes/KVO/*.{h,m}"
     },
     {
       "name": "PrefixCore",
@@ -72,13 +72,7 @@
           ]
         }
       },
-      "source_files": [
-        "PoporFoundation/Classes/PrefixBlock.h",
-        "PoporFoundation/Classes/PrefixColor.h",
-        "PoporFoundation/Classes/PrefixFont.h",
-        "PoporFoundation/Classes/PrefixFun.h",
-        "PoporFoundation/Classes/PrefixSize.h"
-      ]
+      "source_files": "PoporFoundation/Classes/PrefixCore/*.h"
     },
     {
       "name": "NSString",
@@ -103,11 +97,11 @@
           ]
         }
       },
-      "source_files": "PoporFoundation/Classes/NSString*.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSString/*.{h,m}"
     },
     {
       "name": "PrefixOs",
-      "source_files": "PoporFoundation/Classes/PrefixOs.h"
+      "source_files": "PoporFoundation/Classes/PrefixOs/*.h"
     },
     {
       "name": "NSArray",
@@ -141,10 +135,7 @@
           ]
         }
       },
-      "source_files": [
-        "PoporFoundation/Classes/NSArray*.{h,m}",
-        "PoporFoundation/Classes/NSMutableArray*.{h,m}"
-      ]
+      "source_files": "PoporFoundation/Classes/NSArray/*.{h,m}"
     },
     {
       "name": "NSAssistant",
@@ -178,11 +169,11 @@
           ]
         }
       },
-      "source_files": "PoporFoundation/Classes/NSAssistant.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSAssistant/*.{h,m}"
     },
     {
       "name": "NSData",
-      "source_files": "PoporFoundation/Classes/NSData*.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSData/*.{h,m}"
     },
     {
       "name": "NSDate",
@@ -207,7 +198,7 @@
           ]
         }
       },
-      "source_files": "PoporFoundation/Classes/NSDate*.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSDate/*.{h,m}"
     },
     {
       "name": "NSDictionary",
@@ -241,7 +232,7 @@
           ]
         }
       },
-      "source_files": "PoporFoundation/Classes/NSDictionary*.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSDictionary/*.{h,m}"
     },
     {
       "name": "NSURL",
@@ -266,11 +257,11 @@
           ]
         }
       },
-      "source_files": "PoporFoundation/Classes/NSURL*.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSURL/*.{h,m}"
     },
     {
       "name": "ScreenCommonSize",
-      "source_files": "PoporFoundation/Classes/ScreenCommonSize.{h,m}"
+      "source_files": "PoporFoundation/Classes/ScreenCommonSize/*.{h,m}"
     },
     {
       "name": "NSDecimalNumber",
@@ -295,7 +286,7 @@
           ]
         }
       },
-      "source_files": "PoporFoundation/Classes/NSDecimalNumber*.{h,m}"
+      "source_files": "PoporFoundation/Classes/NSDecimalNumber/*.{h,m}"
     }
   ]
 }

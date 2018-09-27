@@ -23,6 +23,7 @@
 #import "NSDecimalNumber+Swizzling.h"
 #import "NSDictionary+Swizzling.h"
 #import "NSDictionary+tool.h"
+#import "NSObject+performSelector.h"
 #import "NSObject+Swizzling.h"
 #import "NSString+email.h"
 #import "NSString+format.h"
