@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		129C33C4C5C50AA47F24806B /* Pods_PoporFoundationTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E733E9A34B4C2ADAAC0B99C /* Pods_PoporFoundationTV.framework */; };
 		1831BFD920E6209F0019F1A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831BFD820E6209F0019F1A8 /* AppDelegate.m */; };
 		1831BFDC20E6209F0019F1A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831BFDB20E6209F0019F1A8 /* ViewController.m */; };
 		1831BFDF20E6209F0019F1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1831BFDD20E6209F0019F1A8 /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		18EB654A20E6101E00EC2E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EB654920E6101E00EC2E59 /* Assets.xcassets */; };
 		18EB654D20E6101E00EC2E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EB654B20E6101E00EC2E59 /* Main.storyboard */; };
 		18EB655020E6101E00EC2E59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB654F20E6101E00EC2E59 /* main.m */; };
-		5A6F3086F38071DDE08D3C11 /* Pods_PoporFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C491A13442C43020533D4C /* Pods_PoporFoundation_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -26,16 +26,15 @@
 		6003F59E195388D20070C39A /* PoporFoundationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* PoporFoundationAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* PoporFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PoporFoundationViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		861F1A86C2D0922C9C36C0C4 /* Pods_PoporFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A055FC732BD7FDF7F31F446 /* Pods_PoporFoundation_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		8CF1CA9887146ED5A8543A21 /* Pods_PoporFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */; };
-		B383ACED1A84DC32DD588624 /* Pods_PoporFoundationTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCA7CB6D389CC21897C4DDE /* Pods_PoporFoundationTV.framework */; };
-		D69F36774462780F97EADF38 /* Pods_PoporFoundationMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */; };
+		AE0D875951BDF7656410177D /* Pods_PoporFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541D61E079F08EC962B07CCC /* Pods_PoporFoundation_Example.framework */; };
+		F157F62D45B29F55FE33F27D /* Pods_PoporFoundationMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AF0E04F900F18E6EA06377 /* Pods_PoporFoundationMac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +67,12 @@
 		18EB654E20E6101E00EC2E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EB654F20E6101E00EC2E59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18EB655120E6101E00EC2E59 /* PoporFoundationMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PoporFoundationMac.entitlements; sourceTree = "<group>"; };
+		1A055FC732BD7FDF7F31F446 /* Pods_PoporFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2212B2D6CC4EC4A6BAA5CE72 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E733E9A34B4C2ADAAC0B99C /* Pods_PoporFoundationTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416A96379209DC3873775F56 /* Pods-PoporFoundationMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac.debug.xcconfig"; sourceTree = "<group>"; };
 		4C648E9975CC1F3E7482EC93 /* Pods-PoporFoundationMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac.release.xcconfig"; sourceTree = "<group>"; };
+		541D61E079F08EC962B07CCC /* Pods_PoporFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* PoporFoundation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoporFoundation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,21 +87,18 @@
 		6003F5A6195388D20070C39A /* PoporFoundationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoporFoundationViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* PoporFoundation_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoporFoundation_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		60C491A13442C43020533D4C /* Pods_PoporFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75CE04B825F65AD63CDC662A /* Pods-PoporFoundation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Tests/Pods-PoporFoundation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AF18C123667655E3560497C /* Pods-PoporFoundation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Tests/Pods-PoporFoundation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7F75326025564657249F938B /* PoporFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PoporFoundation.podspec; path = ../PoporFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA995ABB33031BCCA677BEB8 /* Pods-PoporFoundationTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV.debug.xcconfig"; sourceTree = "<group>"; };
 		B7938C6C8126F8C60A9EE694 /* Pods-PoporFoundationTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV.release.xcconfig"; sourceTree = "<group>"; };
-		BFCA7CB6D389CC21897C4DDE /* Pods_PoporFoundationTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8AF0E04F900F18E6EA06377 /* Pods_PoporFoundationMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DF27F2DCBE6AF686353637 /* Pods-PoporFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E7557B07A6B58E89C88005FC /* Pods-PoporFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1FED7CC3C5636B98157B3F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B383ACED1A84DC32DD588624 /* Pods_PoporFoundationTV.framework in Frameworks */,
+				129C33C4C5C50AA47F24806B /* Pods_PoporFoundationTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69F36774462780F97EADF38 /* Pods_PoporFoundationMac.framework in Frameworks */,
+				F157F62D45B29F55FE33F27D /* Pods_PoporFoundationMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +128,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				5A6F3086F38071DDE08D3C11 /* Pods_PoporFoundation_Example.framework in Frameworks */,
+				AE0D875951BDF7656410177D /* Pods_PoporFoundation_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,10 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				8CF1CA9887146ED5A8543A21 /* Pods_PoporFoundation_Tests.framework in Frameworks */,
+				861F1A86C2D0922C9C36C0C4 /* Pods_PoporFoundation_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,11 +238,10 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				60C491A13442C43020533D4C /* Pods_PoporFoundation_Example.framework */,
-				23683CCDFB02A12CDAD2F2AB /* Pods_PoporFoundation_Tests.framework */,
-				99AD427AB31208C02EBDE363 /* Pods_PoporFoundationMac.framework */,
-				BFCA7CB6D389CC21897C4DDE /* Pods_PoporFoundationTV.framework */,
+				D8AF0E04F900F18E6EA06377 /* Pods_PoporFoundationMac.framework */,
+				2E733E9A34B4C2ADAAC0B99C /* Pods_PoporFoundationTV.framework */,
+				541D61E079F08EC962B07CCC /* Pods_PoporFoundation_Example.framework */,
+				1A055FC732BD7FDF7F31F446 /* Pods_PoporFoundation_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -484,7 +480,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PoporFoundation-iOS/PoporFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -493,7 +489,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		17420EC7F27D5F08C4B655FD /* [CP] Embed Pods Frameworks */ = {
@@ -502,7 +498,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PoporFoundation-macOS/PoporFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -511,7 +507,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoporFoundationMac/Pods-PoporFoundationMac-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		512E31B84CA32158B64177D1 /* [CP] Embed Pods Frameworks */ = {
@@ -520,7 +516,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PoporFoundation-tvOS/PoporFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -529,7 +525,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5B148E41A945C0375E9CFF79 /* [CP] Check Pods Manifest.lock */ = {

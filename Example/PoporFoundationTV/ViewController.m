@@ -10,6 +10,8 @@
 
 #import <PoporFoundation/NSString+Tool.h>
 
+//#import "NSString+Tool.h"
+
 @interface ViewController ()
 
 @end
