@@ -146,10 +146,6 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSFileManager' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSObject'
-        ss.osx.dependency 'PoporFoundation/NSObject'
-        ss.tvos.dependency 'PoporFoundation/NSObject'
-        
         ss.source_files = 'PoporFoundation/Classes/NSFileManager/*.{h,m}'
     end
 end
