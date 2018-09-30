@@ -7,6 +7,7 @@ PODS:
     - PoporFoundation/NSDate (= 0.0.20)
     - PoporFoundation/NSDecimalNumber (= 0.0.20)
     - PoporFoundation/NSDictionary (= 0.0.20)
+    - PoporFoundation/NSFileManager (= 0.0.20)
     - PoporFoundation/NSObject (= 0.0.20)
     - PoporFoundation/NSString (= 0.0.20)
     - PoporFoundation/NSURL (= 0.0.20)
@@ -28,6 +29,8 @@ PODS:
   - PoporFoundation/NSDictionary (0.0.20):
     - PoporFoundation/NSObject
     - PoporFoundation/PrefixCore
+  - PoporFoundation/NSFileManager (0.0.20):
+    - PoporFoundation/NSObject
   - PoporFoundation/NSObject (0.0.20)
   - PoporFoundation/NSString (0.0.20):
     - PoporFoundation/PrefixOs
@@ -46,7 +49,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: 4d69b680e33fdc8a6ff2fcf638bfc398e07fedbb
+  PoporFoundation: 681c17e220141013a175ec25103e296e256bda6d
 
 PODFILE CHECKSUM: e809a13432c890944cde8a15557d0d5347d5052c
 

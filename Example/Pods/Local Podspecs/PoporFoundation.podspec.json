@@ -287,6 +287,31 @@
         }
       },
       "source_files": "PoporFoundation/Classes/NSDecimalNumber/*.{h,m}"
+    },
+    {
+      "name": "NSFileManager",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
+      "tvos": {
+        "dependencies": {
+          "PoporFoundation/NSObject": [
+
+          ]
+        }
+      },
+      "source_files": "PoporFoundation/Classes/NSFileManager/*.{h,m}"
     }
   ]
 }
