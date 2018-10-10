@@ -46,11 +46,6 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 // NSURL
 #import "NSURL+Swizzling.h"
 
-// Runtime
-
-// ScreenCommonSize
-#import "ScreenCommonSize.h"
-
 // prefix
 #import "PrefixColor.h"
 #import "PrefixFont.h"
