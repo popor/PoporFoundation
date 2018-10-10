@@ -39,7 +39,6 @@
 #import "PrefixFun.h"
 #import "PrefixSize.h"
 #import "PrefixOs.h"
-#import "ScreenCommonSize.h"
 
 FOUNDATION_EXPORT double PoporFoundationVersionNumber;
 FOUNDATION_EXPORT const unsigned char PoporFoundationVersionString[];

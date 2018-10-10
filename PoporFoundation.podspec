@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '0.0.23'
+    s.version          = '0.0.24'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -131,10 +131,6 @@ Pod::Spec.new do |s|
         ss.tvos.dependency 'PoporFoundation/NSObject'
         
         ss.source_files = 'PoporFoundation/Classes/NSURL/*.{h,m}'
-    end
-    
-    s.subspec 'ScreenCommonSize' do |ss|
-        ss.source_files = 'PoporFoundation/Classes/ScreenCommonSize/*.{h,m}'
     end
     
     s.subspec 'NSDecimalNumber' do |ss|
