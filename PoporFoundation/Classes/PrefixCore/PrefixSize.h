@@ -10,7 +10,7 @@
 #define PrefixSize_h
 
 #pragma mark - iOS
-#if TARGET_OS_IOS || TARGET_OS_WATCH
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 #import <UIKit/UIKit.h>
 
 #define ScreenBounds   [[UIScreen mainScreen] bounds]

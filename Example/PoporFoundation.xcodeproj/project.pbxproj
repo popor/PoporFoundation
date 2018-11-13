@@ -13,6 +13,7 @@
 		1831BFDF20E6209F0019F1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1831BFDD20E6209F0019F1A8 /* Main.storyboard */; };
 		1831BFE120E620A10019F1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1831BFE020E620A10019F1A8 /* Assets.xcassets */; };
 		1831BFE420E620A10019F1A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831BFE320E620A10019F1A8 /* main.m */; };
+		18B2F17B219AAF5500A05B5F /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2F17A219AAF5500A05B5F /* IntentHandler.m */; };
 		18EB654520E6101D00EC2E59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB654420E6101D00EC2E59 /* AppDelegate.m */; };
 		18EB654820E6101D00EC2E59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB654720E6101D00EC2E59 /* ViewController.m */; };
 		18EB654A20E6101E00EC2E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EB654920E6101E00EC2E59 /* Assets.xcassets */; };
@@ -57,6 +58,10 @@
 		1831BFE020E620A10019F1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1831BFE220E620A10019F1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1831BFE320E620A10019F1A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18B2F177219AAF5500A05B5F /* PoporFoundationWatch.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PoporFoundationWatch.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B2F179219AAF5500A05B5F /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
+		18B2F17A219AAF5500A05B5F /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
+		18B2F17C219AAF5500A05B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EB654120E6101C00EC2E59 /* PoporFoundationMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoporFoundationMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EB654320E6101D00EC2E59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18EB654420E6101D00EC2E59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +115,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				129C33C4C5C50AA47F24806B /* Pods_PoporFoundationTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B2F174219AAF5500A05B5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +180,16 @@
 			name = other;
 			sourceTree = "<group>";
 		};
+		18B2F178219AAF5500A05B5F /* PoporFoundationWatch */ = {
+			isa = PBXGroup;
+			children = (
+				18B2F179219AAF5500A05B5F /* IntentHandler.h */,
+				18B2F17A219AAF5500A05B5F /* IntentHandler.m */,
+				18B2F17C219AAF5500A05B5F /* Info.plist */,
+			);
+			path = PoporFoundationWatch;
+			sourceTree = "<group>";
+		};
 		18EB654220E6101D00EC2E59 /* PoporFoundationMac */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +237,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				18EB654220E6101D00EC2E59 /* PoporFoundationMac */,
 				1831BFD620E6209F0019F1A8 /* PoporFoundationTV */,
+				18B2F178219AAF5500A05B5F /* PoporFoundationWatch */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				1B1DE5A73924A0DC7D8A9CB9 /* Pods */,
@@ -228,6 +251,7 @@
 				6003F5AE195388D20070C39A /* PoporFoundation_Tests.xctest */,
 				18EB654120E6101C00EC2E59 /* PoporFoundationMac.app */,
 				1831BFD520E6209F0019F1A8 /* PoporFoundationTV.app */,
+				18B2F177219AAF5500A05B5F /* PoporFoundationWatch.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -332,6 +356,23 @@
 			productReference = 1831BFD520E6209F0019F1A8 /* PoporFoundationTV.app */;
 			productType = "com.apple.product-type.application";
 		};
+		18B2F176219AAF5500A05B5F /* PoporFoundationWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B2F17F219AAF5500A05B5F /* Build configuration list for PBXNativeTarget "PoporFoundationWatch" */;
+			buildPhases = (
+				18B2F173219AAF5500A05B5F /* Sources */,
+				18B2F174219AAF5500A05B5F /* Frameworks */,
+				18B2F175219AAF5500A05B5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoporFoundationWatch;
+			productName = PoporFoundationWatch;
+			productReference = 18B2F177219AAF5500A05B5F /* PoporFoundationWatch.appex */;
+			productType = "com.apple.product-type.app-extension.intents-service";
+		};
 		18EB654020E6101C00EC2E59 /* PoporFoundationMac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18EB655420E6101E00EC2E59 /* Build configuration list for PBXNativeTarget "PoporFoundationMac" */;
@@ -403,6 +444,10 @@
 						CreatedOnToolsVersion = 9.4;
 						ProvisioningStyle = Automatic;
 					};
+					18B2F176219AAF5500A05B5F = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
 					18EB654020E6101C00EC2E59 = {
 						CreatedOnToolsVersion = 9.4;
 						ProvisioningStyle = Automatic;
@@ -429,6 +474,7 @@
 				18EB654020E6101C00EC2E59 /* PoporFoundationMac */,
 				1831BFD420E6209F0019F1A8 /* PoporFoundationTV */,
 				6003F5AD195388D20070C39A /* PoporFoundation_Tests */,
+				18B2F176219AAF5500A05B5F /* PoporFoundationWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -440,6 +486,13 @@
 			files = (
 				1831BFE120E620A10019F1A8 /* Assets.xcassets in Resources */,
 				1831BFDF20E6209F0019F1A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18B2F175219AAF5500A05B5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +666,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18B2F173219AAF5500A05B5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B2F17B219AAF5500A05B5F /* IntentHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18EB653D20E6101C00EC2E59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -771,6 +832,83 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		18B2F17D219AAF5500A05B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PoporFoundationWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks @executable_path/../../../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popor.PoporFoundationWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		18B2F17E219AAF5500A05B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PoporFoundationWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks @executable_path/../../../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popor.PoporFoundationWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
 			name = Release;
 		};
@@ -1010,6 +1148,15 @@
 			buildConfigurations = (
 				1831BFE520E620A10019F1A8 /* Debug */,
 				1831BFE620E620A10019F1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18B2F17F219AAF5500A05B5F /* Build configuration list for PBXNativeTarget "PoporFoundationWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B2F17D219AAF5500A05B5F /* Debug */,
+				18B2F17E219AAF5500A05B5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
