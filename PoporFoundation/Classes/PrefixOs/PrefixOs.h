@@ -11,6 +11,7 @@
 
 // UI系列
 #if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
+#import <UIKit/UIKit.h>
 
 #define VIEW_CLASS  UIView
 #define VC_CLASS    UIViewController
@@ -23,6 +24,7 @@
 
 // NS系列
 #elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
 
 #define VIEW_CLASS  NSView
 #define VC_CLASS    NSViewController

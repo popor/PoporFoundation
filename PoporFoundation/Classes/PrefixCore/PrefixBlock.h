@@ -6,6 +6,8 @@
 //  Copyright © 2018年 popor. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #ifndef PrefixBlock_h
 #define PrefixBlock_h
 

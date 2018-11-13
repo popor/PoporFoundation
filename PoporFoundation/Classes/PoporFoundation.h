@@ -52,3 +52,6 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 #import "PrefixSize.h"
 #import "PrefixFun.h"
 #import "PrefixBlock.h"
+
+// NSAssistant
+#import "NSAssistant.h"

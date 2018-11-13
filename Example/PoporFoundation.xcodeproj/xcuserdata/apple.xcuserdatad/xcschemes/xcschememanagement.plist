@@ -14,7 +14,17 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>PoporFoundationMac.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>PoporFoundationTV.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>PoporFoundationTV.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>9</integer>
