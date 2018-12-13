@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.27"
+    "tag": "0.0.28"
   },
   "requires_arc": true,
   "ios": {
