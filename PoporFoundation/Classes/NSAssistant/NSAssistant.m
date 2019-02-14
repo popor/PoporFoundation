@@ -49,27 +49,35 @@
         propAttributesString =[NSString stringWithCString:propAttributes encoding:NSASCIIStringEncoding];
         
         id value = [theClassEntity valueForKey:propNameString];
-        NSString * valueString;
-        // 根据各个情况处理.
-        if ([propAttributesString hasPrefix:@"T@\"NSString\""]
-            || [propAttributesString hasPrefix:@"T@\"NSMutableString\""]){
-            valueString=[NSString stringWithFormat:@"%@",value];
-        }else if ([propAttributesString hasPrefix:@"Tc"]
-                  || [propAttributesString hasPrefix:@"Ti"]
-                  || [propAttributesString hasPrefix:@"TB"]){
-            valueString=[NSString stringWithFormat:@"%i",[value intValue]];
-        }else if ([propAttributesString hasPrefix:@"Tf"]){
-            valueString=[NSString stringWithFormat:@"%f",[value floatValue]];
-        }else if ([propAttributesString hasPrefix:@"T@\"NSNumber\""]){
-            
-            NSNumber * oneNumber=(NSNumber *)value;
-            valueString=[NSString stringWithFormat:@"%i",[oneNumber intValue]];
+        if (value) {
+            NSLog(@"%@ : %@", propNameString, value);
+        }else{
+            NSLog(@"%@ : __null__", propNameString);
         }
-        if (valueString==nil) {
-            continue;
-        }else {
-            NSLog(@"%@ : %@", propNameString, valueString);
-        }
+        //        continue;
+        //        NSString * valueString;
+        //        // 根据各个情况处理.
+        //        if ([propAttributesString hasPrefix:@"T@\"NSString\""]
+        //            || [propAttributesString hasPrefix:@"T@\"NSMutableString\""]){
+        //            valueString=[NSString stringWithFormat:@"%@",value];
+        //        }else if ([propAttributesString hasPrefix:@"Tc"]
+        //                  || [propAttributesString hasPrefix:@"Ti"]
+        //                  || [propAttributesString hasPrefix:@"TB"]){
+        //            valueString=[NSString stringWithFormat:@"%i",[value intValue]];
+        //        }else if ([propAttributesString hasPrefix:@"Tf"]){
+        //            valueString=[NSString stringWithFormat:@"%f",[value floatValue]];
+        //        }else if ([propAttributesString hasPrefix:@"T@\"NSNumber\""]){
+        //
+        //            NSNumber * oneNumber=(NSNumber *)value;
+        //            valueString=[NSString stringWithFormat:@"%i",[oneNumber intValue]];
+        //        }else{
+        //            NSLog(@"%@ : %@", propNameString, value);
+        //        }
+        //        if (valueString==nil) {
+        //            continue;
+        //        }else {
+        //            NSLog(@"%@ : %@", propNameString, valueString);
+        //        }
     } // end for.
     free(properties);
 }
