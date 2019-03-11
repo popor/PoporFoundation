@@ -21,6 +21,9 @@
         [objc_getClass("NSURL") methodSwizzlingWithOriginalSelector:@selector(initFileURLWithPath:relativeToURL:) bySwizzledSelector:@selector(safeInitFileURLWithPath:relativeToURL:)];
         [objc_getClass("NSURL") methodSwizzlingWithOriginalSelector:@selector(initFileURLWithPath:isDirectory:) bySwizzledSelector:@selector(safeInitFileURLWithPath:isDirectory:)];
         [objc_getClass("NSURL") methodSwizzlingWithOriginalSelector:@selector(initFileURLWithPath:) bySwizzledSelector:@selector(safeInitFileURLWithPath:)];
+        
+        [objc_getClass("NSURL") methodSwizzlingWithOriginalSelector:@selector(initWithString:) bySwizzledSelector:@selector(safeInitWithString:)];
+        [objc_getClass("NSURL") methodSwizzlingWithOriginalSelector:@selector(initWithString:relativeToURL:) bySwizzledSelector:@selector(safeInitWithString:relativeToURL:)];
     });
 }
 
@@ -50,6 +53,19 @@
         return nil;
     }
     return [self safeInitFileURLWithPath:path.toUrlEncode];
+}
+
+- (instancetype)safeInitWithString:(NSString *)URLString {
+    if (!URLString) {
+        return nil;
+    }
+    return [self safeInitWithString:URLString.toUrlEncode];
+}
+- (instancetype)safeInitWithString:(NSString *)URLString relativeToURL:(nullable NSURL *)baseURL {
+    if (!URLString) {
+        return nil;
+    }
+    return [self safeInitWithString:URLString.toUrlEncode relativeToURL:baseURL];
 }
 
 @end
