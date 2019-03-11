@@ -9,6 +9,7 @@
 #import "NSURL+Swizzling.h"
 
 #import "NSObject+Swizzling.h"
+#import "NSString+Tool.h"
 
 @implementation NSURL (Swizzling)
 
@@ -28,27 +29,27 @@
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path isDirectory:isDir relativeToURL:baseURL];
+    return [self safeInitFileURLWithPath:path.toUrlEncode isDirectory:isDir relativeToURL:baseURL];
 }
 
 - (instancetype)safeInitFileURLWithPath:(NSString *)path relativeToURL:(nullable NSURL *)baseURL {
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path relativeToURL:baseURL];
+    return [self safeInitFileURLWithPath:path.toUrlEncode relativeToURL:baseURL];
 }
 - (instancetype)safeInitFileURLWithPath:(NSString *)path isDirectory:(BOOL)isDir {
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path isDirectory:isDir];
+    return [self safeInitFileURLWithPath:path.toUrlEncode isDirectory:isDir];
 }
 
 - (instancetype)safeInitFileURLWithPath:(NSString *)path {
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path];
+    return [self safeInitFileURLWithPath:path.toUrlEncode];
 }
 
 @end

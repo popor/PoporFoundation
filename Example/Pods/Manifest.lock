@@ -1,42 +1,42 @@
 PODS:
-  - PoporFoundation (0.0.30):
-    - PoporFoundation/KVO (= 0.0.30)
-    - PoporFoundation/NSArray (= 0.0.30)
-    - PoporFoundation/NSAssistant (= 0.0.30)
-    - PoporFoundation/NSData (= 0.0.30)
-    - PoporFoundation/NSDate (= 0.0.30)
-    - PoporFoundation/NSDecimalNumber (= 0.0.30)
-    - PoporFoundation/NSDictionary (= 0.0.30)
-    - PoporFoundation/NSFileManager (= 0.0.30)
-    - PoporFoundation/NSObject (= 0.0.30)
-    - PoporFoundation/NSString (= 0.0.30)
-    - PoporFoundation/NSURL (= 0.0.30)
-    - PoporFoundation/PrefixCore (= 0.0.30)
-    - PoporFoundation/PrefixOs (= 0.0.30)
-  - PoporFoundation/KVO (0.0.30)
-  - PoporFoundation/NSArray (0.0.30):
+  - PoporFoundation (0.0.31):
+    - PoporFoundation/KVO (= 0.0.31)
+    - PoporFoundation/NSArray (= 0.0.31)
+    - PoporFoundation/NSAssistant (= 0.0.31)
+    - PoporFoundation/NSData (= 0.0.31)
+    - PoporFoundation/NSDate (= 0.0.31)
+    - PoporFoundation/NSDecimalNumber (= 0.0.31)
+    - PoporFoundation/NSDictionary (= 0.0.31)
+    - PoporFoundation/NSFileManager (= 0.0.31)
+    - PoporFoundation/NSObject (= 0.0.31)
+    - PoporFoundation/NSString (= 0.0.31)
+    - PoporFoundation/NSURL (= 0.0.31)
+    - PoporFoundation/PrefixCore (= 0.0.31)
+    - PoporFoundation/PrefixOs (= 0.0.31)
+  - PoporFoundation/KVO (0.0.31)
+  - PoporFoundation/NSArray (0.0.31):
     - PoporFoundation/NSObject
     - PoporFoundation/PrefixCore
-  - PoporFoundation/NSAssistant (0.0.30):
+  - PoporFoundation/NSAssistant (0.0.31):
     - PoporFoundation/PrefixCore
     - PoporFoundation/PrefixOs
-  - PoporFoundation/NSData (0.0.30)
-  - PoporFoundation/NSDate (0.0.30):
+  - PoporFoundation/NSData (0.0.31)
+  - PoporFoundation/NSDate (0.0.31):
     - PoporFoundation/NSString
-  - PoporFoundation/NSDecimalNumber (0.0.30):
+  - PoporFoundation/NSDecimalNumber (0.0.31):
     - PoporFoundation/NSObject
-  - PoporFoundation/NSDictionary (0.0.30):
+  - PoporFoundation/NSDictionary (0.0.31):
     - PoporFoundation/NSObject
     - PoporFoundation/PrefixCore
-  - PoporFoundation/NSFileManager (0.0.30)
-  - PoporFoundation/NSObject (0.0.30)
-  - PoporFoundation/NSString (0.0.30):
+  - PoporFoundation/NSFileManager (0.0.31)
+  - PoporFoundation/NSObject (0.0.31)
+  - PoporFoundation/NSString (0.0.31):
     - PoporFoundation/PrefixOs
-  - PoporFoundation/NSURL (0.0.30):
+  - PoporFoundation/NSURL (0.0.31):
     - PoporFoundation/NSObject
-  - PoporFoundation/PrefixCore (0.0.30):
+  - PoporFoundation/PrefixCore (0.0.31):
     - PoporFoundation/PrefixOs
-  - PoporFoundation/PrefixOs (0.0.30)
+  - PoporFoundation/PrefixOs (0.0.31)
 
 DEPENDENCIES:
   - PoporFoundation (from `../`)
@@ -46,7 +46,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: 4878593ff9c202e2ba9a7d7bf49251f6b327ba7e
+  PoporFoundation: ea3a3b35143b34e483b8893d691e43d1a029348f
 
 PODFILE CHECKSUM: e809a13432c890944cde8a15557d0d5347d5052c
 
