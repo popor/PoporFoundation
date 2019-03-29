@@ -27,32 +27,33 @@
     });
 }
 
+// MARK: 0.0.36 之后不再对 filrUrl 进行toUrlEncode, 因为发现 AVAudioPlayer 使用本地url不能将汉字转换为 urlCode .
 // - 方法
 - (instancetype)safeInitFileURLWithPath:(NSString *)path isDirectory:(BOOL)isDir relativeToURL:(nullable NSURL *)baseURL {
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path.toUrlEncode isDirectory:isDir relativeToURL:baseURL];
+    return [self safeInitFileURLWithPath:path isDirectory:isDir relativeToURL:baseURL];
 }
 
 - (instancetype)safeInitFileURLWithPath:(NSString *)path relativeToURL:(nullable NSURL *)baseURL {
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path.toUrlEncode relativeToURL:baseURL];
+    return [self safeInitFileURLWithPath:path relativeToURL:baseURL];
 }
 - (instancetype)safeInitFileURLWithPath:(NSString *)path isDirectory:(BOOL)isDir {
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path.toUrlEncode isDirectory:isDir];
+    return [self safeInitFileURLWithPath:path isDirectory:isDir];
 }
 
 - (instancetype)safeInitFileURLWithPath:(NSString *)path {
     if (!path) {
         return nil;
     }
-    return [self safeInitFileURLWithPath:path.toUrlEncode];
+    return [self safeInitFileURLWithPath:path];
 }
 
 - (instancetype)safeInitWithString:(NSString *)URLString {
