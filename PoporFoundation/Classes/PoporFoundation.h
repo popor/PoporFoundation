@@ -19,39 +19,56 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 
 #import "NSObject+WMSafeKVO.h"
 
-// NSArray
+// - KVO
+#import "NSObject+WMSafeKVO.h"
+
+// - NSArray
 #import "NSArray+jsonDic.h"
-//#import "NSArray+Swizzling.h"
-//#import "NSMutableArray+Swizzling.h"
+#import "NSArray+Swizzling.h"
+#import "NSMutableArray+Swizzling.h"
 #import "NSMutableArray+chain.h"
 
-// NSDecimalNumber
-#import "NSDecimalNumber+chain.h"
+// - NSAssistant
+#import "NSAssistant.h"
 
-// NSData
+// -NSData
 #import "NSData+dic.h"
 
-// NSDictionary
+// -NSDate
+#import "NSDate+Tool.h"
+
+// -NSDecimalNumber
+#import "NSDecimalNumber+chain.h"
+#import "NSDecimalNumber+Swizzling.h"
+
+// -NSDictionary
 #import "NSDictionary+tool.h"
-//#import "NSDictionary+Swizzling.h"
+#import "NSDictionary+Swizzling.h"
 
-// NSString
+// -NSFileManager
+#import "NSFileManager+Tool.h"
+
+// -NSObject
+#import "NSObject+assign.h"
+#import "NSObject+performSelector.h"
+
+// -NSString
 #import "NSString+email.h"
-#import "NSString+MD5.h"
 #import "NSString+format.h"
-#import "NSString+Tool.h"
-#import "NSString+Size.h"
 #import "NSString+IDCard.h"
+#import "NSString+MD5.h"
+#import "NSString+Size.h"
+#import "NSString+Tool.h"
 
-// NSURL
+// -NSURL
 #import "NSURL+Swizzling.h"
 
-// prefix
+// -PrefixCore
 #import "PrefixColor.h"
 #import "PrefixFont.h"
 #import "PrefixSize.h"
 #import "PrefixFun.h"
 #import "PrefixBlock.h"
 
-// NSAssistant
-#import "NSAssistant.h"
+// -PrefixOs
+#import "PrefixOs.h"
