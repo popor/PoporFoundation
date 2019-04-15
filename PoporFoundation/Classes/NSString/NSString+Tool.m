@@ -189,7 +189,7 @@
     //return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)toHumanizePhoneString {
+- (NSString *)toChinaPhoneString {
     if (self.length == 11) {
         return [NSString stringWithFormat:@"%@-%@-%@"
                 , [self substringWithRange:(NSRange){0,3}]

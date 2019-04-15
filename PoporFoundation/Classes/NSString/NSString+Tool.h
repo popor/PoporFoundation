@@ -38,7 +38,7 @@
 
 - (NSString *)toUtf8Encode;
 
-- (NSString *)toHumanizePhoneString;
+- (NSString *)toChinaPhoneString;
 - (BOOL)isPhoneNum;
 
 - (NSData *)toData;
