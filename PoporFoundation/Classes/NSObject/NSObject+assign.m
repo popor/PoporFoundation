@@ -11,7 +11,10 @@
 
 @implementation NSObject (assign)
 
-- (void)assignInt:(int)intValue string:(NSString *)string {
+- (void)assignInt:(int)intValue string:(NSString * _Nullable)string {
+    if (!string) {
+        string = @"";
+    }
     NSObject * entity = self;
     unsigned propertyCount;
     

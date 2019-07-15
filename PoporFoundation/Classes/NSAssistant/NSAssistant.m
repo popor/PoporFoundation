@@ -21,15 +21,19 @@
 
 @implementation NSAssistant
 
-+ (void)NSLogEntity:(id)theClassEntity title:(NSString *)title {
++ (void)NSLogEntity:(id _Nullable)theClassEntity title:(NSString * _Nullable)title {
     NSLog(@"实体数据-- %@ --------------------------------", title);
     [self NSLogEntity:theClassEntity];
     NSLog(@"---------------------------------------------");
 }
 
-+ (void)NSLogEntity:(id)theClassEntity {
++ (void)NSLogEntity:(id _Nullable)theClassEntity {
     if (!IsDebugVersion) {
         // 正式版不打印任何数据
+        return;
+    }
+    if (!theClassEntity) {
+        NSLog(@"空 实体");
         return;
     }
     
@@ -82,9 +86,12 @@
     free(properties);
 }
 
-+ (void)setFullEntity:(id)theClassEntity withJson:(id)theJsonObject
++ (void)setFullEntity:(id _Nullable)theClassEntity withJson:(id _Nullable)theJsonObject
 {
     if (!theJsonObject) {
+        return;
+    }
+    if (!theClassEntity) {
         return;
     }
     unsigned propertyCount;
@@ -200,7 +207,7 @@
     free(properties);
 }
 
-+ (void)setVC:(VC_CLASS *)vc dic:(id)dic {
++ (void)setVC:(VC_CLASS * _Nullable)vc dic:(id _Nullable)dic {
     if (!dic || !vc) {
         return;
     }
@@ -208,7 +215,7 @@
     [self setEntity:vc dic:dic];
 }
 
-+ (void)setEntity:(id)entity dic:(id)dic {
++ (void)setEntity:(id _Nullable)entity dic:(id _Nullable)dic {
     if (!dic || !entity) {
         return;
     }

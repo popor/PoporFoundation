@@ -39,10 +39,10 @@ static dispatch_semaphore_t sKVOProxySemaphore;
 
 @implementation NSObject (WMSafeKVO)
 
-- (void)wm_addObserver:(NSObject *)observer
-            forKeyPath:(NSString *)keyPath
+- (void)wm_addObserver:(NSObject * _Nullable)observer
+            forKeyPath:(NSString * _Nullable)keyPath
                options:(NSKeyValueObservingOptions)options
-               context:(void *)context {
+               context:(void * _Nullable)context {
     if (!observer || !keyPath.length ||
         ![observer respondsToSelector:@selector(observeValueForKeyPath:ofObject:change:context:)]) {
         return;
@@ -73,7 +73,9 @@ static dispatch_semaphore_t sKVOProxySemaphore;
                     context:context];
 }
 
-- (void)wm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context {
+- (void)wm_removeObserver:(NSObject * _Nullable)observer
+               forKeyPath:(NSString * _Nullable)keyPath
+                  context:(void * _Nullable)context {
     if (!observer || !keyPath.length) {
         return;
     }
@@ -81,7 +83,8 @@ static dispatch_semaphore_t sKVOProxySemaphore;
     [proxy proxy_removeObserver:observer forKeyPath:keyPath context:context];
 }
 
-- (void)wm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
+- (void)wm_removeObserver:(NSObject * _Nullable)observer
+               forKeyPath:(NSString * _Nullable)keyPath {
     [self wm_removeObserver:observer forKeyPath:keyPath context:nil];
 }
 

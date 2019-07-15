@@ -11,7 +11,7 @@
 @implementation NSFileManager (Tool)
 
 #pragma mark - 判断文件是否存在
-+ (BOOL)isFileExist:(NSString *)filePath
++ (BOOL)isFileExist:(NSString * _Nullable)filePath
 {
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         // 如果存在的话，直接返回就好了。
@@ -23,14 +23,14 @@
 }
 
 #pragma mark - 文件长度
-+ (int)fileLength:(NSString *)filePath
++ (int)fileLength:(NSString * _Nullable)filePath
 {
     NSData * data=[NSData dataWithContentsOfFile:filePath];
     return (int)data.length;
 }
 
 #pragma mark - 删除文件
-+ (void)deleteFile:(NSString *)filePath
++ (void)deleteFile:(NSString * _Nullable)filePath
 {
     if (!filePath) {
         return;
@@ -47,7 +47,7 @@
 }
 
 #pragma mark - 创建完整的路径
-+ (void)createWithBasePath:(NSString *)basePath folder:(NSString *)folder
++ (void)createWithBasePath:(NSString * _Nullable)basePath folder:(NSString * _Nullable)folder
 {
     // basePath 是指最基本的路径例如：/Users/admin/Library/Application Support/iPhone
     // Simulator/4.2/Applications/BB05C254-2E01-4679-B2C8-539B1FD04F92/Library/Caches
@@ -95,7 +95,7 @@
     // end.
 }
 
-+ (void)createCachesFolder:(NSString *)folderName
++ (void)createCachesFolder:(NSString * _Nullable)folderName
 {
     /* 路径 */
     NSArray  * pathsToDocuments = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -109,19 +109,19 @@
 }
 
 #pragma mark - 移动文件
-+ (void)moveFile:(NSString *)originPath to:(NSString *)targetPath
++ (void)moveFile:(NSString * _Nullable)originPath to:(NSString * _Nullable)targetPath
 {
     [[NSFileManager defaultManager] moveItemAtPath:originPath toPath:targetPath error:nil];
 }
 
 #pragma mark - 复制地址
-+ (void)copyFile:(NSString *)originPath to:(NSString *)targetPath
++ (void)copyFile:(NSString * _Nullable)originPath to:(NSString * _Nullable)targetPath
 {
     [[NSFileManager defaultManager] copyItemAtPath:originPath toPath:targetPath error:nil];
 }
 
 #pragma mark - 文件路径
-+ (NSString *)getFilePath:(NSString *)originPath
++ (NSString *)getFilePath:(NSString * _Nullable)originPath
 {
     if (!originPath) {
         return nil;
@@ -139,7 +139,7 @@
 }
 
 #pragma mark - 文件名称
-+ (NSString *)getFileName:(NSString *)originPath
++ (NSString *)getFileName:(NSString * _Nullable)originPath
 {
     if (!originPath) {
         return nil;

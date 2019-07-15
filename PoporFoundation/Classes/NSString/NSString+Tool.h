@@ -15,20 +15,22 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (Tool)
 
 #pragma mark - 判断空字符串
-+ (BOOL)isNullToString:(NSString*)string;
++ (BOOL)isNullToString:(NSString * _Nullable)string;
 
 #pragma mark - 正则部分
-+ (NSString *)replaceString:(NSString *)theOriginString withREG:(NSString *)theRegString withNewString:(NSString *)theNewString;
-+ (NSString *)cleanString:(NSString *)theOriginString withREG:(NSString *)theRegString;
-+ (NSString *)stringWithReg:(NSString *)theOriginString withREG:(NSString *)theRegString;
++ (NSString *)replaceString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString withNewString:(NSString * _Nonnull)theNewString;
 
-- (NSString *)replaceWithREG:(NSString *)reg newString:(NSString *)theNewString;
-- (NSString *)cleanWithREG:(NSString *)reg;
-- (NSString *)stringWithREG:(NSString *)reg;
++ (NSString *)cleanString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString;
++ (NSString *)stringWithReg:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString;
+
+- (NSString *)replaceWithREG:(NSString * _Nonnull)reg newString:(NSString * _Nonnull)theNewString;
+
+- (NSString *)cleanWithREG:(NSString * _Nonnull)reg;
+- (NSString *)stringWithREG:(NSString * _Nonnull)reg;
 
 #pragma mark - 10-16转换
 + (NSString *)stringToHexWithInt:(int)theNumber;
-+ (NSString *)stringToDecimalWithString:(NSString *)theNumber;
++ (NSString *)stringToDecimalWithString:(NSString * _Nonnull)theNumber;
 
 - (NSDictionary *)toDic;
 
@@ -45,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSData *)toData;
 
-- (NSInteger)countOccurencesOfString:(NSString*)searchString;
+- (NSInteger)countOccurencesOfString:(NSString * _Nonnull)searchString;
 
 - (COLOR_CLASS *)toColor;
 

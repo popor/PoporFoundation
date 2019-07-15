@@ -11,8 +11,8 @@
 @implementation NSString (Tool)
 
 #pragma mark - 判断空字符串
-+ (BOOL)isNullToString:(NSString*)string
-{
++ (BOOL)isNullToString:(NSString * _Nullable)string {
+    
     if ([string isEqual:@"NULL"] || [string isKindOfClass:[NSNull class]] || [string isEqual:[NSNull null]] || [string isEqual:NULL] || [[string class] isSubclassOfClass:[NSNull class]] || string == nil || string == NULL || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0 || [string isEqualToString:@"<null>"] || [string isEqualToString:@"(null)"]){
         return YES;
     }else{
@@ -21,11 +21,12 @@
 }
 
 #pragma mark - 正则部分
-+ (NSString *)replaceString:(NSString *)theOriginString withREG:(NSString *)theRegString withNewString:(NSString *)theNewString
++ (NSString *)replaceString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString withNewString:(NSString * _Nonnull)theNewString
 {
-    if (!theOriginString) {
+    if (!theOriginString || !theRegString || !theNewString) {
         return @"";
     }
+    
     NSError *error = NULL;
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString
@@ -40,39 +41,28 @@
     return newSearchString;
 }
 
-+ (NSString *)cleanString:(NSString *)theOriginString withREG:(NSString *)theRegString
-{
-    if (!theOriginString) {
++ (NSString *)cleanString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString {
+    
+    if (!theOriginString || !theRegString) {
         return @"";
     }
+    
     NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString options:NSRegularExpressionCaseInsensitive error:&error];
+    NSString *newSearchString = [regex stringByReplacingMatchesInString:theOriginString options:0 range:NSMakeRange(0, [theOriginString length]) withTemplate:@""];
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
-    
-    NSString *newSearchString = [regex stringByReplacingMatchesInString:theOriginString
-                                                                options:0
-                                                                  range:NSMakeRange(0, [theOriginString length])
-                                                           withTemplate:@""];
     //NSLog(@"New string: %@",newSearchString);
     return newSearchString;
 }
 
-+ (NSString *)stringWithReg:(NSString *)theOriginString withREG:(NSString *)theRegString
-{
++ (NSString *)stringWithReg:(NSString *)theOriginString withREG:(NSString *)theRegString {
     if (!theOriginString) {
         return @"";
     }
     NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
-    NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:theOriginString
-                                                         options:0
-                                                           range:NSMakeRange(0, [theOriginString length])];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:theOriginString options:0 range:NSMakeRange(0, [theOriginString length])];
     if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
-        
         NSString *substringForFirstMatch = [theOriginString substringWithRange:rangeOfFirstMatch];
         return substringForFirstMatch;
     }
@@ -80,58 +70,36 @@
     return @"";
 }
 
-- (NSString *)replaceWithREG:(NSString *)reg newString:(NSString *)theNewString
-{
-    if (!self) {
+- (NSString *)replaceWithREG:(NSString * _Nonnull)reg newString:(NSString * _Nonnull)theNewString {
+    if (!self || !reg || !theNewString) {
         return @"";
     }
     NSError *error = NULL;
-    
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
-    
-    NSString *newSearchString = [regex stringByReplacingMatchesInString:self
-                                                                options:0
-                                                                  range:NSMakeRange(0, [self length])
-                                                           withTemplate:theNewString];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg options:NSRegularExpressionCaseInsensitive error:&error];
+    NSString *newSearchString = [regex stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:theNewString];
     //NSLog(@"New string: %@",newSearchString);
     return newSearchString;
 }
 
-- (NSString *)cleanWithREG:(NSString *)reg
-{
-    if (!self) {
+- (NSString *)cleanWithREG:(NSString * _Nonnull)reg {
+    if (!self || !reg) {
         return @"";
     }
     NSError *error = NULL;
-    
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
-    
-    NSString *newSearchString = [regex stringByReplacingMatchesInString:self
-                                                                options:0
-                                                                  range:NSMakeRange(0, [self length])
-                                                           withTemplate:@""];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg options:NSRegularExpressionCaseInsensitive error:&error];
+    NSString *newSearchString = [regex stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:@""];
     //NSLog(@"New string: %@",newSearchString);
     return newSearchString;
 }
 
-- (NSString *)stringWithREG:(NSString *)reg
-{
-    if (!self) {
+- (NSString *)stringWithREG:(NSString * _Nonnull)reg {
+    if (!self || !reg) {
         return @"";
     }
     NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
-    NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:self
-                                                         options:0
-                                                           range:NSMakeRange(0, [self length])];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:self options:0 range:NSMakeRange(0, [self length])];
     if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
-        
         NSString *substringForFirstMatch = [self substringWithRange:rangeOfFirstMatch];
         return substringForFirstMatch;
     }
@@ -144,7 +112,10 @@
     return [NSString stringWithFormat:@"%x", (unsigned int) theNumber];
 }
 
-+ (NSString *)stringToDecimalWithString:(NSString *)theNumber {
++ (NSString *)stringToDecimalWithString:(NSString * _Nonnull)theNumber {
+    if (!theNumber) {
+        return @"";
+    }
     return [NSString stringWithFormat:@"%i", (int)strtoul([theNumber UTF8String], 0, 16)];
 }
 
@@ -175,11 +146,17 @@
 #pragma mark 空格URL
 - (NSString *)toUrlEncode {
     // https://www.jianshu.com/p/ffbb95e01489
-    return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                              (CFStringRef)self,
-                                                              (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
-                                                              NULL,
-                                                              kCFStringEncodingUTF8));
+    return CFBridgingRelease
+    (
+     CFURLCreateStringByAddingPercentEscapes
+     (
+      kCFAllocatorDefault,
+      (CFStringRef)self,
+      (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
+      NULL,
+      kCFStringEncodingUTF8
+      )
+     ) ;
     // 下面的方法,多次转换后,会不一样.不够安全.
     //return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
 }
@@ -216,7 +193,10 @@
     return [self dataUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSInteger)countOccurencesOfString:(NSString*)searchString {
+- (NSInteger)countOccurencesOfString:(NSString * _Nonnull)searchString {
+    if (!searchString) {
+        return 0;
+    }
     NSInteger strCount = [self length] - [[self stringByReplacingOccurrencesOfString:searchString withString:@""] length];
     return strCount / [searchString length];
 }

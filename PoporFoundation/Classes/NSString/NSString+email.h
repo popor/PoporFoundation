@@ -15,7 +15,7 @@ static NSString * const EmailRegStr = @"([a-z0-9A-Z_]+[-|\\.]?)+[a-z0-9A-Z]@([a-
 @interface NSString (email)
 
 #pragma mark - 判断邮箱格式是否正确
-+ (BOOL)isValidateEmail:(NSString *)email;
++ (BOOL)isValidateEmail:(NSString * _Nullable)email;
 
 @end
 

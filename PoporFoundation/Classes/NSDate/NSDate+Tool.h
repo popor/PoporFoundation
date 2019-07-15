@@ -36,23 +36,23 @@ NS_ASSUME_NONNULL_BEGIN
  //*/
 
 #pragma mark - 获取有期限日历
-+ (NSDateComponents *)compareDataFrom:(NSDate *)startData to:(NSDate *)endData;
++ (NSDateComponents *)compareDataFrom:(NSDate * _Nullable)startData to:(NSDate * _Nullable)endData;
 
 #pragma mark - 获取某个时期日历(NSString)
-+ (NSDateComponents *)dateComponentsFromString:(NSString *)InvalidTime;
++ (NSDateComponents *)dateComponentsFromString:(NSString * _Nullable)InvalidTime;
 
 #pragma mark - 获取某个时期日历(NSDate)
-+ (NSDateComponents *)dateComponentsFromDate:(NSDate *)InvalidTimeDate;
++ (NSDateComponents *)dateComponentsFromDate:(NSDate * _Nullable)InvalidTimeDate;
 
 #pragma mark - NSString转Date
-+ (NSDate *)dateFromString:(NSString *)dateString formatter:(NSString*)formatterString;
++ (NSDate *)dateFromString:(NSString * _Nullable)dateString formatter:(NSString * _Nullable)formatterString;
 
 #pragma mark - Date转NSString
-+ (NSString *)stringFromDate:(NSDate *)date formatter:(NSString*)formatterString;
-+ (NSString *)stringFromDate:(NSDate *)date formatter:(NSString*)formatterString timeZone:(int)timeZone;
++ (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString;
++ (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString timeZone:(int)timeZone;
 
 #pragma mark - 返回时间(NSString)
-+ (NSDate *)dateFromUnixDateString:(NSString *)theUnixDateString;
++ (NSDate *)dateFromUnixDateString:(NSString * _Nullable)theUnixDateString;
 
 #pragma mark - 返回时间(NSTimeInterval)
 + (NSDate *)dateFromUnixDate:(NSTimeInterval)theUnixDate;
@@ -61,16 +61,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSTimeInterval)getCurrentUnixDate;
 
 #pragma mark - 获取某个时期的时间戳
-+ (NSTimeInterval)getUnixDateAt:(NSDate *)anotherDate;
++ (NSTimeInterval)getUnixDateAt:(NSDate * _Nullable)anotherDate;
 
 #pragma mark - 当前指定格式的时间String
-+ (NSString *)stringFromNow:(NSString *)formatterString;
++ (NSString *)stringFromNow:(NSString * _Nullable)formatterString;
 
 #pragma mark - 当前指定格式的时间Date
-+ (NSDate *)dateFromNow:(NSString *)formatterString;
++ (NSDate *)dateFromNow:(NSString * _Nullable)formatterString;
 
 #pragma mark - 日期转时间戳
-+ (NSString *)getTimeStamp:(NSDate *)date;
++ (NSString *)getTimeStamp:(NSDate * _Nullable)date;
 
 #pragma mark - 获取时差
 + (int)getZoneHour;

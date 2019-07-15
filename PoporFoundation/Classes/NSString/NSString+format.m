@@ -13,8 +13,11 @@
 //#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 @implementation NSString (format)
 
-+ (NSMutableAttributedString *)underLineAttString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color
++ (NSMutableAttributedString *)underLineAttString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color
 {
+    if (!string || !font|| !color) {
+        return nil;
+    }
     NSRange range = (NSRange){0, string.length};
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:string];
     // 下划线
@@ -32,17 +35,17 @@
 
 @implementation NSMutableAttributedString (format)
 
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color
 {
     [self addString:string font:font color:color underline:NO];
 }
 
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color underline:(BOOL)isUnderLine
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color underline:(BOOL)isUnderLine
 {
     [self addString:string font:font color:color bgColor:nil underline:isUnderLine];
 }
 
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color bgColor:(COLOR_CLASS *)bgColor underline:(BOOL)isUnderLine
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color bgColor:(COLOR_CLASS * _Nullable)bgColor underline:(BOOL)isUnderLine
 {
     if (!string) {
         return;
@@ -66,7 +69,7 @@
     [self appendAttributedString:attString];
 }
 
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color bgColor:(COLOR_CLASS *)bgColor underline:(BOOL)isUnderLine lineSpacing:(float)lineSpacing textAlignment:(NSTextAlignment)textAlignment lineBreakMode:(NSLineBreakMode)lineBreakMode
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color bgColor:(COLOR_CLASS * _Nullable)bgColor underline:(BOOL)isUnderLine lineSpacing:(float)lineSpacing textAlignment:(NSTextAlignment)textAlignment lineBreakMode:(NSLineBreakMode)lineBreakMode
 {
     if (!string) {
         return;

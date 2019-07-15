@@ -14,18 +14,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (format)
 
-+ (NSMutableAttributedString *)underLineAttString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color;
++ (NSMutableAttributedString *)underLineAttString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color;
 
 @end
 
 
 @interface NSMutableAttributedString (format)
 
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color;
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color underline:(BOOL)isUnderLine;
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color bgColor:(COLOR_CLASS *)bgColor underline:(BOOL)isUnderLine;
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color;
 
-- (void)addString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color bgColor:(COLOR_CLASS *)bgColor underline:(BOOL)isUnderLine lineSpacing:(float)lineSpacing textAlignment:(NSTextAlignment)textAlignment lineBreakMode:(NSLineBreakMode)lineBreakMode;
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color underline:(BOOL)isUnderLine;
+
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color bgColor:(COLOR_CLASS * _Nullable)bgColor underline:(BOOL)isUnderLine;
+
+- (void)addString:(NSString * _Nullable)string font:(FONT_CLASS * _Nullable)font color:(COLOR_CLASS * _Nullable)color bgColor:(COLOR_CLASS * _Nullable)bgColor underline:(BOOL)isUnderLine lineSpacing:(float)lineSpacing textAlignment:(NSTextAlignment)textAlignment lineBreakMode:(NSLineBreakMode)lineBreakMode;
 
 // 用于纠正不同字体之间的文字,不会行居中的问题
 - (void)setBaselineOffsetMaxFont:(float)maxFont miniFont:(float)miniFont range:(NSRange)range;

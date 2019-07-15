@@ -10,8 +10,8 @@
 
 @implementation NSString (Size)
 
-- (CGSize)sizeInFont:(FONT_CLASS *)font{
-    if (!self || self.length==0) {
+- (CGSize)sizeInFont:(FONT_CLASS * _Nonnull)font{
+    if (!self || self.length==0 || !font) {
         return CGSizeZero;
     }
     
@@ -26,10 +26,11 @@
     return contentSize;
 }
 
-- (CGSize)sizeInFont:(FONT_CLASS *)font width:(float)width {
-    if (!self || self.length==0) {
+- (CGSize)sizeInFont:(FONT_CLASS * _Nonnull)font width:(float)width {
+    if (!self || self.length==0 || !font) {
         return CGSizeZero;
     }
+    
     CGSize size = CGSizeMake(width, 200000.0f);
     NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName,nil];
     
@@ -53,7 +54,11 @@
     
 }
 
--(CGSize)sizeAttrSpace:(CGFloat)lineSpeace withFont:(FONT_CLASS*)font withWidth:(CGFloat)width {
+-(CGSize)sizeAttrSpace:(CGFloat)lineSpeace withFont:(FONT_CLASS * _Nonnull)font withWidth:(CGFloat)width {
+    if (!self || self.length==0 || !font) {
+        return CGSizeZero;
+    }
+    
     NSMutableAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:self];
     
     NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];

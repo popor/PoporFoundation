@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Size)
 
-- (CGSize)sizeInFont:(FONT_CLASS *)font;
+- (CGSize)sizeInFont:(FONT_CLASS * _Nonnull)font;
 
-- (CGSize)sizeInFont:(FONT_CLASS *)font width:(float)width;
+- (CGSize)sizeInFont:(FONT_CLASS * _Nonnull)font width:(float)width;
 
-- (CGSize)sizeAttrSpace:(CGFloat)lineSpeace withFont:(FONT_CLASS*)font withWidth:(CGFloat)width;
+- (CGSize)sizeAttrSpace:(CGFloat)lineSpeace withFont:(FONT_CLASS * _Nonnull)font withWidth:(CGFloat)width;
 @end
 
 NS_ASSUME_NONNULL_END
