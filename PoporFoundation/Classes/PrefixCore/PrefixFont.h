@@ -11,17 +11,16 @@
 #ifndef PrefixFont_h
 #define PrefixFont_h
 
-#define Font12			[FONT_CLASS systemFontOfSize:12]// 少量标签文字
-#define Font14			[FONT_CLASS systemFontOfSize:14]// 少量辅助文字
-#define Font15			[FONT_CLASS systemFontOfSize:15]// 大量使用的
-#define Font16			[FONT_CLASS systemFontOfSize:16]// 重点突出的
-#define Font18			[FONT_CLASS systemFontOfSize:18]// 标题栏部分
-
-#define FontMini		Font12              // 少量标签文字
-#define FontDes			Font14              // 少量辅助文字
-#define FontDefault		Font15              // 大量使用的
-#define FontImportant	Font16              // 重点突出的
-#define FontMax			Font18              // 标题栏部分
+#define Font10 [FONT_CLASS systemFontOfSize:10]
+#define Font11 [FONT_CLASS systemFontOfSize:11]
+#define Font12 [FONT_CLASS systemFontOfSize:12]
+#define Font13 [FONT_CLASS systemFontOfSize:13]
+#define Font14 [FONT_CLASS systemFontOfSize:14]
+#define Font15 [FONT_CLASS systemFontOfSize:15]
+#define Font16 [FONT_CLASS systemFontOfSize:16]
+#define Font18 [FONT_CLASS systemFontOfSize:18]
+#define Font19 [FONT_CLASS systemFontOfSize:19]
+#define Font20 [FONT_CLASS systemFontOfSize:20]
 
 #endif /* PrefixFont_h */
 

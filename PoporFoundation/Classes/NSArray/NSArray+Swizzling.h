@@ -60,6 +60,7 @@
 //來源：简书
 //著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
+// NSArray 数组为空的话,就无法屏蔽出错了.
 @interface NSArray (Swizzling)
 
 @end

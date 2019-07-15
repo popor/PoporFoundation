@@ -32,12 +32,4 @@
 
 #endif
 
-
-
-
-//static int CornerRadiusApp   = 12;
-//
-//static int CornerRadiusVideo = 8;
-//static int CornerRadiusPano  = 8;
-
 #endif /* PrefixSize_h */
