@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef id (^OCDynamicHookUtilsImpCallback)(id self,...);
+typedef id _Nullable (^OCDynamicHookUtilsImpCallback)(id self,...);
 
 @interface NSObject (Swizzling)
 
