@@ -16,25 +16,25 @@ typedef id (^OCDynamicHookUtilsImpCallback)(id self,...);
 @interface NSObject (Swizzling)
 
 // 交换方法
-+ (void)methodSwizzlingWithOriginalSelector:(SEL)originalSelector bySwizzledSelector:(SEL)swizzledSelector;
++ (void)methodSwizzlingWithOriginalSelector:(SEL _Nonnull)originalSelector bySwizzledSelector:(SEL _Nonnull)swizzledSelector;
 
 /**
  OCDynamicHookUtils
  https://github.com/enefry/OCDynamicHookUtils
  */
-+(BOOL)SwizzleClass:(Class)destClass instanceMethod:(SEL)originalSelector withMethod:(SEL)newSelector;
++ (BOOL)SwizzleClass:(Class _Nonnull)destClass instanceMethod:(SEL _Nonnull)originalSelector withMethod:(SEL _Nonnull)newSelector;
 
-+(BOOL)SwizzleClass:(Class)destClass classMethod:(SEL)originalSelector withMethod:(SEL)newSelector;
++ (BOOL)SwizzleClass:(Class _Nonnull)destClass classMethod:(SEL _Nonnull)originalSelector withMethod:(SEL _Nonnull)newSelector;
 
-+(BOOL)AddClassMethod:(const char*)methodTypes toSelector:(SEL)selector implement:(IMP)imp toClass:(Class)destClass;
++ (BOOL)AddClassMethod:(const char* _Nullable)methodTypes toSelector:(SEL _Nonnull)selector implement:(IMP _Nonnull)imp toClass:(Class _Nullable)destClass;
 
-+(BOOL)AddInstanceMethod:(const char*)methodTypes toSelector:(SEL)selector implement:(IMP)imp toClass:(Class)destClass;
++ (BOOL)AddInstanceMethod:(const char* _Nullable)methodTypes toSelector:(SEL _Nonnull)selector implement:(IMP _Nonnull)imp toClass:(Class _Nullable)destClass;
 
-+(BOOL)AddHookInstanceMethodImp:(OCDynamicHookUtilsImpCallback)callback toClass:(Class)destaClass toReplaceSelector:(SEL)selector;
++ (BOOL)AddHookInstanceMethodImp:(OCDynamicHookUtilsImpCallback _Nonnull)callback toClass:(Class _Nonnull)destaClass toReplaceSelector:(SEL _Nonnull)selector;
 
-+(BOOL)AddHookInstanceMethodImp:(OCDynamicHookUtilsImpCallback)callback toClassName:(NSString*)className toReplaceSelectorName:(NSString*)selectorName;
++ (BOOL)AddHookInstanceMethodImp:(OCDynamicHookUtilsImpCallback _Nonnull)callback toClassName:(NSString* _Nonnull)className toReplaceSelectorName:(NSString* _Nonnull)selectorName;
 
-+(BOOL)AddHookClassMethodImp:(OCDynamicHookUtilsImpCallback)callback toClassName:(NSString*)className toReplaceSelectorName:(NSString*)selectorName;
++ (BOOL)AddHookClassMethodImp:(OCDynamicHookUtilsImpCallback _Nonnull)callback toClassName:(NSString* _Nonnull)className toReplaceSelectorName:(NSString* _Nonnull)selectorName;
 
 @end
 
