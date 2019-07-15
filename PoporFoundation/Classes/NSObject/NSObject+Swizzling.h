@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef id (^OCDynamicHookUtilsImpCallback)(id self,...);
 
 @interface NSObject (Swizzling)
@@ -35,3 +37,5 @@ typedef id (^OCDynamicHookUtilsImpCallback)(id self,...);
 +(BOOL)AddHookClassMethodImp:(OCDynamicHookUtilsImpCallback)callback toClassName:(NSString*)className toReplaceSelectorName:(NSString*)selectorName;
 
 @end
+
+NS_ASSUME_NONNULL_END

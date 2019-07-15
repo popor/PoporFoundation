@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define DecNumStr(string) [NSDecimalNumber decimalNumberWithString:string]
 
 @interface NSDecimalNumber (chain)
@@ -20,3 +22,5 @@
 - (NSDecimalNumber *(^)(id <NSDecimalNumberBehaviors>))behavior;
 
 @end
+
+NS_ASSUME_NONNULL_END

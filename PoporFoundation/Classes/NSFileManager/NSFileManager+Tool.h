@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSFileManager (Tool)
 
 #pragma mark - 判断文件是否存在
@@ -35,5 +37,6 @@
 #pragma mark - 文件名称
 + (NSString *)getFileName:(NSString *)originPath;
 
-
 @end
+
+NS_ASSUME_NONNULL_END

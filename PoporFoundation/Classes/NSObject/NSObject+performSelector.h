@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \
 _Pragma("clang diagnostic push") \
@@ -28,3 +30,5 @@ _Pragma("clang diagnostic pop") \
 + (void)target:(id)target voidAction:(SEL)action;
 
 @end
+
+NS_ASSUME_NONNULL_END

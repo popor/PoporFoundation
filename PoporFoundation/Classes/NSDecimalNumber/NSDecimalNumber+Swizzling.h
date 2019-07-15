@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSDecimalNumber (Swizzling)
 
 @end
+
+NS_ASSUME_NONNULL_END

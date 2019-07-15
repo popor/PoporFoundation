@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSArray (jsonDic)
 /**
  *  转换成JSON串字符串（没有可读性）
@@ -30,5 +32,6 @@
  */
 - (NSData *)toJSONData;
 
-
 @end
+
+NS_ASSUME_NONNULL_END

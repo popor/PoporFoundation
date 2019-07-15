@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 // 测试代码1 : 初始化
 //{
 //    NSString * w1 = nil;
@@ -29,3 +31,5 @@
 @interface NSDictionary (Swizzling)
 
 @end
+
+NS_ASSUME_NONNULL_END

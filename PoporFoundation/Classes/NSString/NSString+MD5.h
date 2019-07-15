@@ -10,6 +10,9 @@
 
 // 代码来源: http://blog.csdn.net/u011349387/article/details/47318679
 
+NS_ASSUME_NONNULL_BEGIN
+
+
 @interface NSString (MD5)
 
 //计算NSData 的MD5值
@@ -28,3 +31,5 @@
 + (NSString *)encryptByMd5:(NSString *)str;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "PrefixOs.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSAssistant : NSObject
 
 /*
@@ -30,4 +32,4 @@
 
 @end
 
-
+NS_ASSUME_NONNULL_END

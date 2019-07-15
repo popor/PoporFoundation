@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "PrefixOs.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+
 @interface NSString (format)
 
 + (NSMutableAttributedString *)underLineAttString:(NSString *)string font:(FONT_CLASS *)font color:(COLOR_CLASS *)color;
@@ -33,3 +36,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

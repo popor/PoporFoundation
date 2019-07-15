@@ -10,6 +10,8 @@
 
 #import "PrefixOs.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSString (Tool)
 
 #pragma mark - 判断空字符串
@@ -48,3 +50,5 @@
 - (COLOR_CLASS *)toColor;
 
 @end
+
+NS_ASSUME_NONNULL_END

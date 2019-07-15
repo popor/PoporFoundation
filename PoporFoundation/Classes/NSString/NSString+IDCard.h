@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+
 @interface NSString (IDCard)
 
 - (BOOL)isChinaIdCardNoLength;
 - (BOOL)isChinaIdCardNo;
 
 @end
+
+NS_ASSUME_NONNULL_END

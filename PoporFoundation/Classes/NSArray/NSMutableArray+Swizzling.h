@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 //作者：熊桥桥桥桥桥桥
 //链接：https://www.jianshu.com/p/080a238c62b9
 //來源：简书
@@ -16,3 +18,5 @@
 @interface NSMutableArray (Swizzling)
 
 @end
+
+NS_ASSUME_NONNULL_END

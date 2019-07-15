@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 // 测试代码
 //{
 //    NSMutableArray *array = [@[@"value", @"value1"] mutableCopy];
@@ -64,3 +66,5 @@
 @interface NSArray (Swizzling)
 
 @end
+
+NS_ASSUME_NONNULL_END
