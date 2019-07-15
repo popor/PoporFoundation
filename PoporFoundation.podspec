@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '0.0.43'
+    s.version          = '0.0.44'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
     s.osx.frameworks         = 'Foundation', 'AppKit'
 
     s.ios.deployment_target  = '8.0' # minimum SDK with autolayout
-    s.osx.deployment_target  = '10.0' # minimum SDK with autolayout
+    s.osx.deployment_target  = '10.10' # minimum SDK with autolayout
     s.tvos.deployment_target = '9.0' # minimum SDK with autolayout
     
    
