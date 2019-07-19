@@ -9,7 +9,6 @@
 #ifndef PrefixFun_h
 #define PrefixFun_h
 
-
 #ifndef dispatch_main_async_safe_sd
 #define dispatch_main_async_safe_sd(block)\
 if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(dispatch_get_main_queue())) == 0) {\
@@ -72,5 +71,25 @@ dispatch_async(dispatch_get_main_queue(), block);\
 
 /** 版本号小于11 */
 #define IsVersionLessThan11 [UIDevice currentDevice].systemVersion.doubleValue < 11.0
+
+// -----------------------------------------------------------------------------
+#pragma mark - iOS
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
+#import <UIKit/UIKit.h>
+
+#define NSValuePoint(point)         [NSValue valueWithCGPoint:point]
+#define NSValueVector(vector)       [NSValue valueWithCGVector:vector]
+#define NSValueSize(size)           [NSValue valueWithCGSize:size]
+#define NSValueRect(rect)           [NSValue valueWithCGRect:rect]
+#define NSValueTransform(transform) [NSValue valueWithCGAffineTransform:transform]
+#define NSValueInsets(insets)       [NSValue valueWithUIEdgeInsets:insets]
+#define NSValueOffset(insets)       [NSValue valueWithUIOffset:insets]
+
+#pragma mark - macOS
+#elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
+
+
+#endif
 
 #endif /* PrefixFun_h */
