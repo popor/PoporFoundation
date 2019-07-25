@@ -80,24 +80,14 @@
         //NSLog(@"propNameString: %@, propAttributesString:%@", propNameString, propAttributesString);
         // 根据各个情况处理.
         if ([propAttributesString hasPrefix:@"T@\"NSString\""]){
-            [entity setValue:strValue forKey:propNameString];
+            if (![self valueForKey:propNameString]) {
+                [entity setValue:strValue forKey:propNameString];
+            }
         }else if ([propAttributesString hasPrefix:@"T@\"NSMutableString\""]){
-            [entity setValue:[[NSMutableString alloc] initWithString:strValue] forKey:propNameString];
+            if (![self valueForKey:propNameString]) {
+                [entity setValue:[[NSMutableString alloc] initWithString:strValue] forKey:propNameString];
+            }
         }
-        
-        // else if ([propAttributesString hasPrefix:@"Tc"]){ //BOOL
-        //     [entity setValue:[NSNumber numberWithBool:YES] forKey:propNameString];
-        // }
-        // else if ([propAttributesString hasPrefix:@"Ti"] ||
-        //          [propAttributesString hasPrefix:@"TB"]){
-        //     [entity setValue:[NSNumber numberWithInt:intValue] forKey:propNameString];
-        // }
-        // else if ([propAttributesString hasPrefix:@"Tf"]){
-        //     [entity setValue:[NSNumber numberWithInt:intValue] forKey:propNameString];
-        // }
-        // else if ([propAttributesString hasPrefix:@"T@\"NSNumber\""]){
-        //     [entity setValue:[NSNumber numberWithInt:intValue] forKey:propNameString];
-        // }
     }
     
     free(properties);
