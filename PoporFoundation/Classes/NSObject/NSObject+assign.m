@@ -80,11 +80,13 @@
         //NSLog(@"propNameString: %@, propAttributesString:%@", propNameString, propAttributesString);
         // 根据各个情况处理.
         if ([propAttributesString hasPrefix:@"T@\"NSString\""]){
-            if (![self valueForKey:propNameString]) {
+            NSString * oldStr = [self valueForKey:propNameString];
+            if (oldStr.length == 0) {
                 [entity setValue:strValue forKey:propNameString];
             }
         }else if ([propAttributesString hasPrefix:@"T@\"NSMutableString\""]){
-            if (![self valueForKey:propNameString]) {
+            NSString * oldStr = [self valueForKey:propNameString];
+            if (oldStr.length == 0) {
                 [entity setValue:[[NSMutableString alloc] initWithString:strValue] forKey:propNameString];
             }
         }

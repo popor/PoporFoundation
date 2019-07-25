@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)assignInt:(int)intValue string:(NSString * _Nullable)string;
 
-// 假如string为空那么设置为 value, 只针对
+// 假如某个string为null或者"", 那么设置为 value
 - (void)assignNilString:(NSString * _Nullable)strValue;
 
 - (void)assignIncreaseValue;
