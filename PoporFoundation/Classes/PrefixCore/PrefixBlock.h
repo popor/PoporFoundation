@@ -20,6 +20,7 @@
 typedef void(^BlockPVoid)             (void);
 typedef void(^BlockPInt)              (int number);
 typedef void(^BlockPInteger)          (NSInteger number);
+typedef void(^BlockPFloat)            (CGFloat number);
 typedef void(^BlockPBool)             (BOOL value);
 typedef void(^BlockPString)           (NSString * string);
 typedef void(^BlockPDic)              (NSDictionary * dic);
