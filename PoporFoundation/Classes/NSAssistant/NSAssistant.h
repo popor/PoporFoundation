@@ -1,6 +1,6 @@
 //
 //  NSAssistant.h
-//  wanzi
+//  PoporFoundation
 //
 //  Created by popor on 12-3-19.
 //V1.0

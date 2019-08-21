@@ -1,6 +1,6 @@
 //
 //  NSString+email.h
-//  WanziTG
+//  PoporFoundation
 //
 //  Created by popor on 2017/1/9.
 //  Copyright © 2017年 popor. All rights reserved.

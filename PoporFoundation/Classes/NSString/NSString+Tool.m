@@ -1,6 +1,6 @@
 //
 //  NSString+Tool.m
-//  Wanzi
+//  PoporFoundation
 //
 //  Created by popor on 2016/12/28.
 //  Copyright © 2016年 popor. All rights reserved.
@@ -21,59 +21,14 @@
 }
 
 #pragma mark - 正则部分
-+ (NSString *)replaceString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString withNewString:(NSString * _Nonnull)theNewString
-{
-    if (!theOriginString || !theRegString || !theNewString) {
-        return @"";
-    }
-    
-    NSError *error = NULL;
-    
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
-    
-    NSString *newSearchString = [regex stringByReplacingMatchesInString:theOriginString
-                                                                options:0
-                                                                  range:NSMakeRange(0, [theOriginString length])
-                                                           withTemplate:theNewString];
-    //NSLog(@"New string: %@",newSearchString);
-    return newSearchString;
-}
-
-+ (NSString *)cleanString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString {
-    
-    if (!theOriginString || !theRegString) {
-        return @"";
-    }
-    
-    NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString options:NSRegularExpressionCaseInsensitive error:&error];
-    NSString *newSearchString = [regex stringByReplacingMatchesInString:theOriginString options:0 range:NSMakeRange(0, [theOriginString length]) withTemplate:@""];
-    
-    //NSLog(@"New string: %@",newSearchString);
-    return newSearchString;
-}
-
-+ (NSString *)stringWithReg:(NSString *)theOriginString withREG:(NSString *)theRegString {
-    if (!theOriginString) {
-        return @"";
-    }
-    NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:theRegString options:NSRegularExpressionCaseInsensitive error:&error];
-    NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:theOriginString options:0 range:NSMakeRange(0, [theOriginString length])];
-    if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
-        NSString *substringForFirstMatch = [theOriginString substringWithRange:rangeOfFirstMatch];
-        return substringForFirstMatch;
-    }
-    
-    return @"";
-}
-
 - (NSString *)replaceWithREG:(NSString * _Nonnull)reg newString:(NSString * _Nonnull)theNewString {
-    if (!self || !reg || !theNewString) {
-        return @"";
+    if (!self) {
+        return nil;
     }
+    if (!reg || !theNewString) {
+        return self;
+    }
+    
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg options:NSRegularExpressionCaseInsensitive error:&error];
     NSString *newSearchString = [regex stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:theNewString];
@@ -82,9 +37,13 @@
 }
 
 - (NSString *)cleanWithREG:(NSString * _Nonnull)reg {
-    if (!self || !reg) {
-        return @"";
+    if (!self) {
+        return nil;
     }
+    if (!reg) {
+        return self;
+    }
+    
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg options:NSRegularExpressionCaseInsensitive error:&error];
     NSString *newSearchString = [regex stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:@""];
@@ -93,9 +52,13 @@
 }
 
 - (NSString *)stringWithREG:(NSString * _Nonnull)reg {
-    if (!self || !reg) {
-        return @"";
+    if (!self) {
+        return nil;
     }
+    if (!reg) {
+        return nil;
+    }
+    
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:reg options:NSRegularExpressionCaseInsensitive error:&error];
     NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:self options:0 range:NSMakeRange(0, [self length])];

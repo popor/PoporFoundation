@@ -1,6 +1,6 @@
 //
 //  NSDate+Tool.m
-//  Wanzi
+//  PoporFoundation
 //
 //  Created by popor on 2017/1/3.
 //  Copyright © 2017年 popor. All rights reserved.

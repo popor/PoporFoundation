@@ -1,6 +1,6 @@
 //
 //  PrefixSize.h
-//  AppStore
+//  PoporFoundation
 //
 //  Created by popor on 2017/7/6.
 //  Copyright © 2017年 popor. All rights reserved.

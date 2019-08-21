@@ -1,6 +1,6 @@
 //
 //  NSAssistant.m
-//  wanzi
+//  PoporFoundation
 //
 //  Created by popor on 12-3-19.
 //  Copyright 2012 popor. All rights reserved.

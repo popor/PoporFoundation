@@ -1,6 +1,6 @@
 //
 //  NSString+format.m
-//  Wanzi
+//  PoporFoundation
 //
 //  Created by popor on 2016/11/8.
 //  Copyright © 2016年 popor. All rights reserved.

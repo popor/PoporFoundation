@@ -1,6 +1,6 @@
 //
 //  NSString+IDCard.m
-//  linRunShengPi
+//  PoporFoundation
 //
 //  Created by popor on 2018/1/5.
 //  Copyright © 2018年 popor. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  NSObject+assign.h
-//  term
+//  PoporFoundation
 //
 //  Created by apple on 2018/12/13.
 //  Copyright © 2018 apple. All rights reserved.

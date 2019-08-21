@@ -1,6 +1,6 @@
 //
 //  NSDictionary+tool.h
-//  linRunShengPi
+//  PoporFoundation
 //
 //  Created by popor on 2018/3/28.
 //  Copyright © 2018年 popor. All rights reserved.

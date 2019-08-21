@@ -1,6 +1,6 @@
 //
 //  NSString+Tool.h
-//  Wanzi
+//  PoporFoundation
 //
 //  Created by popor on 2016/12/28.
 //  Copyright © 2016年 popor. All rights reserved.
@@ -18,11 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isNullToString:(NSString * _Nullable)string;
 
 #pragma mark - 正则部分
-+ (NSString *)replaceString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString withNewString:(NSString * _Nonnull)theNewString;
-
-+ (NSString *)cleanString:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString;
-+ (NSString *)stringWithReg:(NSString * _Nonnull)theOriginString withREG:(NSString * _Nonnull)theRegString;
-
 - (NSString *)replaceWithREG:(NSString * _Nonnull)reg newString:(NSString * _Nonnull)theNewString;
 
 - (NSString *)cleanWithREG:(NSString * _Nonnull)reg;
