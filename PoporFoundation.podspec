@@ -78,11 +78,11 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSArray' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSObject'
-        ss.ios.dependency 'PoporFoundation/Prefix'
+        ss.ios.dependency  'PoporFoundation/NSObject'
+        ss.ios.dependency  'PoporFoundation/Prefix'
         
-        ss.osx.dependency 'PoporFoundation/NSObject'
-        ss.osx.dependency 'PoporFoundation/Prefix'
+        ss.osx.dependency  'PoporFoundation/NSObject'
+        ss.osx.dependency  'PoporFoundation/Prefix'
         
         ss.tvos.dependency 'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/Prefix'
@@ -94,8 +94,8 @@ Pod::Spec.new do |s|
         ss.osx.dependency  'PoporFoundation/Os'
         ss.tvos.dependency 'PoporFoundation/Os'
         
-        ss.ios.dependency 'PoporFoundation/Prefix'
-        ss.osx.dependency 'PoporFoundation/Prefix'
+        ss.ios.dependency  'PoporFoundation/Prefix'
+        ss.osx.dependency  'PoporFoundation/Prefix'
         ss.tvos.dependency 'PoporFoundation/Prefix'
 
         ss.source_files = 'PoporFoundation/Classes/NSAssistant/*.{h,m}'
@@ -104,19 +104,19 @@ Pod::Spec.new do |s|
         ss.source_files = 'PoporFoundation/Classes/NSData/*.{h,m}'
     end
     s.subspec 'NSDate' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSString'
-        ss.osx.dependency 'PoporFoundation/NSString'
+        ss.ios.dependency  'PoporFoundation/NSString'
+        ss.osx.dependency  'PoporFoundation/NSString'
         ss.tvos.dependency 'PoporFoundation/NSString'
 
         ss.source_files = 'PoporFoundation/Classes/NSDate/*.{h,m}'
     end
     
     s.subspec 'NSDictionary' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSObject'
-        ss.ios.dependency 'PoporFoundation/Prefix'
+        ss.ios.dependency  'PoporFoundation/NSObject'
+        ss.ios.dependency  'PoporFoundation/Prefix'
         
-        ss.osx.dependency 'PoporFoundation/NSObject'
-        ss.osx.dependency 'PoporFoundation/Prefix'
+        ss.osx.dependency  'PoporFoundation/NSObject'
+        ss.osx.dependency  'PoporFoundation/Prefix'
         
         ss.tvos.dependency 'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/Prefix'
@@ -125,20 +125,20 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'NSURL' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSObject'
-        ss.osx.dependency 'PoporFoundation/NSObject'
+        ss.ios.dependency  'PoporFoundation/NSObject'
+        ss.osx.dependency  'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/NSObject'
         
-        ss.ios.dependency 'PoporFoundation/NSString'
-        ss.osx.dependency 'PoporFoundation/NSString'
+        ss.ios.dependency  'PoporFoundation/NSString'
+        ss.osx.dependency  'PoporFoundation/NSString'
         ss.tvos.dependency 'PoporFoundation/NSString'
         
         ss.source_files = 'PoporFoundation/Classes/NSURL/*.{h,m}'
     end
     
     s.subspec 'NSDecimalNumber' do |ss|
-        ss.ios.dependency 'PoporFoundation/NSObject'
-        ss.osx.dependency 'PoporFoundation/NSObject'
+        ss.ios.dependency  'PoporFoundation/NSObject'
+        ss.osx.dependency  'PoporFoundation/NSObject'
         ss.tvos.dependency 'PoporFoundation/NSObject'
         
         ss.source_files = 'PoporFoundation/Classes/NSDecimalNumber/*.{h,m}'
