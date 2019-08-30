@@ -10,6 +10,9 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
+#ifndef Color_pPrefix_h
+#define Color_pPrefix_h
+
 // need:UIKit,CoreGraphics
 CG_INLINE COLOR_CLASS * PRGBF(float R, float G, float B, float F) {
     return [COLOR_CLASS colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:F];
@@ -23,9 +26,6 @@ CG_INLINE COLOR_CLASS * PRGB16(unsigned long rgbValue) {
 CG_INLINE COLOR_CLASS * PRGB16A(unsigned long rgbValue, float F) {
     return [COLOR_CLASS colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:F];
 };
-
-#ifndef Block_pPrefix_h
-#define Block_pPrefix_h
 
 //------------------------------------------------------------------------------
 // 常用的色
