@@ -28,7 +28,7 @@
 }
 
 + (void)NSLogEntity:(id _Nullable)theClassEntity {
-    if (!IsDebugVersion) {
+    if (!PIsDebugVersion) {
         // 正式版不打印任何数据
         return;
     }
