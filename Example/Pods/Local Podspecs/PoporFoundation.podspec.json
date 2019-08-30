@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "0.0.49",
+  "version": "1.01",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "0.0.49"
+    "tag": "1.01"
   },
   "requires_arc": true,
   "ios": {
@@ -42,6 +42,35 @@
   "public_header_files": "PoporFoundation/Classes/PoporFoundation.h",
   "subspecs": [
     {
+      "name": "Os",
+      "source_files": "PoporFoundation/Classes/Os/*.h"
+    },
+    {
+      "name": "Prefix",
+      "ios": {
+        "dependencies": {
+          "PoporFoundation/Os": [
+
+          ]
+        }
+      },
+      "osx": {
+        "dependencies": {
+          "PoporFoundation/Os": [
+
+          ]
+        }
+      },
+      "tvos": {
+        "dependencies": {
+          "PoporFoundation/Os": [
+
+          ]
+        }
+      },
+      "source_files": "PoporFoundation/Classes/Prefix/*.h"
+    },
+    {
       "name": "NSObject",
       "source_files": "PoporFoundation/Classes/NSObject/*.{h,m}"
     },
@@ -50,58 +79,29 @@
       "source_files": "PoporFoundation/Classes/KVO/*.{h,m}"
     },
     {
-      "name": "PrefixCore",
-      "ios": {
-        "dependencies": {
-          "PoporFoundation/PrefixOs": [
-
-          ]
-        }
-      },
-      "osx": {
-        "dependencies": {
-          "PoporFoundation/PrefixOs": [
-
-          ]
-        }
-      },
-      "tvos": {
-        "dependencies": {
-          "PoporFoundation/PrefixOs": [
-
-          ]
-        }
-      },
-      "source_files": "PoporFoundation/Classes/PrefixCore/*.h"
-    },
-    {
       "name": "NSString",
       "ios": {
         "dependencies": {
-          "PoporFoundation/PrefixOs": [
+          "PoporFoundation/Os": [
 
           ]
         }
       },
       "osx": {
         "dependencies": {
-          "PoporFoundation/PrefixOs": [
+          "PoporFoundation/Os": [
 
           ]
         }
       },
       "tvos": {
         "dependencies": {
-          "PoporFoundation/PrefixOs": [
+          "PoporFoundation/Os": [
 
           ]
         }
       },
       "source_files": "PoporFoundation/Classes/NSString/*.{h,m}"
-    },
-    {
-      "name": "PrefixOs",
-      "source_files": "PoporFoundation/Classes/PrefixOs/*.h"
     },
     {
       "name": "NSArray",
@@ -110,7 +110,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
@@ -120,7 +120,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
@@ -130,7 +130,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
@@ -141,30 +141,30 @@
       "name": "NSAssistant",
       "ios": {
         "dependencies": {
-          "PoporFoundation/PrefixOs": [
+          "PoporFoundation/Os": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
       },
       "osx": {
         "dependencies": {
-          "PoporFoundation/PrefixOs": [
+          "PoporFoundation/Os": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
       },
       "tvos": {
         "dependencies": {
-          "PoporFoundation/PrefixOs": [
+          "PoporFoundation/Os": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
@@ -207,7 +207,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
@@ -217,7 +217,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }
@@ -227,7 +227,7 @@
           "PoporFoundation/NSObject": [
 
           ],
-          "PoporFoundation/PrefixCore": [
+          "PoporFoundation/Prefix": [
 
           ]
         }

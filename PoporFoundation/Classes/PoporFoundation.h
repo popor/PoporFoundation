@@ -14,61 +14,64 @@ FOUNDATION_EXPORT double PoporFoundationExtensionVersionNumber;
 //! Project version string for PoporFoundationExtension.
 FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <PoporFoundationExtension/PublicHeader.h>
-
-
-#import "NSObject+WMSafeKVO.h"
+/*
+ .宏将来用P开头,全部大写,或者中间穿插'_',防止和其他冲突
+ .category类型采用p开头
+ .不太重要的参数继续采用驼峰命名,或者逐渐放弃.
+ 
+ //*/
 
 // - KVO
-#import "NSObject+WMSafeKVO.h"
+#import "NSObject+pSafeKVO.h"
 
 // - NSArray
-#import "NSArray+jsonDic.h"
-#import "NSArray+Swizzling.h"
-#import "NSMutableArray+Swizzling.h"
-#import "NSMutableArray+chain.h"
+#import "NSArray+pJsonDic.h"
+#import "NSArray+pSwizzling.h"
+#import "NSMutableArray+pChain.h"
+#import "NSMutableArray+pSwizzling.h"
 
 // - NSAssistant
 #import "NSAssistant.h"
 
 // -NSData
-#import "NSData+dic.h"
+#import "NSData+pDic.h"
 
 // -NSDate
-#import "NSDate+Tool.h"
+#import "NSDate+pTool.h"
 
 // -NSDecimalNumber
-#import "NSDecimalNumber+chain.h"
-#import "NSDecimalNumber+Swizzling.h"
+#import "NSDecimalNumber+pChain.h"
+#import "NSDecimalNumber+pSwizzling.h"
 
 // -NSDictionary
-#import "NSDictionary+tool.h"
-#import "NSDictionary+Swizzling.h"
+#import "NSDictionary+pSwizzling.h"
+#import "NSDictionary+pTool.h"
 
 // -NSFileManager
-#import "NSFileManager+Tool.h"
+#import "NSFileManager+pTool.h"
 
 // -NSObject
-#import "NSObject+assign.h"
-#import "NSObject+performSelector.h"
+#import "NSObject+pAssign.h"
+#import "NSObject+pPerformSelector.h"
+#import "NSObject+pSwizzling.h"
 
 // -NSString
-#import "NSString+email.h"
-#import "NSString+format.h"
-#import "NSString+IDCard.h"
-#import "NSString+MD5.h"
-#import "NSString+Size.h"
-#import "NSString+Tool.h"
+#import "NSString+pEmail.h"
+#import "NSString+pAtt.h"
+#import "NSString+pIDCard.h"
+#import "NSString+pMD5.h"
+#import "NSString+pSize.h"
+#import "NSString+pTool.h"
 
 // -NSURL
-#import "NSURL+Swizzling.h"
+#import "NSURL+pSwizzling.h"
 
 // -PrefixCore
-#import "PrefixColor.h"
-#import "PrefixFont.h"
-#import "PrefixSize.h"
-#import "PrefixFun.h"
-#import "PrefixBlock.h"
+#import "Block+pPrefix.h"
+#import "Color+pPrefix.h"
+#import "Font+pPrefix.h"
+#import "Size+pPrefix.h"
+#import "Fun+pPrefix.h"
 
-// -PrefixOs
-#import "PrefixOs.h"
+// -Os+pPrefix
+#import "Os+pPrefix.h"

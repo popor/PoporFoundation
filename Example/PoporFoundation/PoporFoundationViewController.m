@@ -8,11 +8,10 @@
 
 #import "PoporFoundationViewController.h"
 
-#import <PoporFoundation/NSArray+jsonDic.h>
+#import <PoporFoundation/NSArray+pJsonDic.h>
 
-#import <PoporFoundation/NSString+format.h>
-#import <PoporFoundation/NSString+Tool.h>
-
+#import <PoporFoundation/NSString+pAtt.h>
+#import <PoporFoundation/NSString+pTool.h>
 
 @interface PoporFoundationViewController ()
 

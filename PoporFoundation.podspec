@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '0.0.49'
+    s.version          = '1.01'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -45,7 +45,22 @@ Pod::Spec.new do |s|
     s.source_files = 'PoporFoundation/Classes/PoporFoundation.h'
     s.public_header_files = 'PoporFoundation/Classes/PoporFoundation.h'
     
-    # base 1 : runtime
+    # base 0 : Os, UIKit和APPKit兼容宏
+    s.subspec 'Os' do |ss|
+      
+      ss.source_files = 'PoporFoundation/Classes/Os/*.h'
+    end
+    
+    # base 1 : Prefix
+    s.subspec 'Prefix' do |ss|
+      ss.ios.dependency  'PoporFoundation/Os'
+      ss.osx.dependency  'PoporFoundation/Os'
+      ss.tvos.dependency 'PoporFoundation/Os'
+      
+      ss.source_files = 'PoporFoundation/Classes/Prefix/*.h'
+    end
+    
+    # base 2 : runtime
     s.subspec 'NSObject' do |ss|
         ss.source_files = 'PoporFoundation/Classes/NSObject/*.{h,m}'
     end
@@ -53,51 +68,35 @@ Pod::Spec.new do |s|
         ss.source_files = 'PoporFoundation/Classes/KVO/*.{h,m}'
     end
     
-    # base 2 : PrefixCore
-    s.subspec 'PrefixCore' do |ss|
-        ss.ios.dependency  'PoporFoundation/PrefixOs'
-        ss.osx.dependency  'PoporFoundation/PrefixOs'
-        ss.tvos.dependency 'PoporFoundation/PrefixOs'
-        
-        ss.source_files = 'PoporFoundation/Classes/PrefixCore/*.h'
-    end
-    
     # base 3 : NSString
     s.subspec 'NSString' do |ss|
-        ss.ios.dependency  'PoporFoundation/PrefixOs'
-        ss.osx.dependency  'PoporFoundation/PrefixOs'
-        ss.tvos.dependency 'PoporFoundation/PrefixOs'
+        ss.ios.dependency  'PoporFoundation/Os'
+        ss.osx.dependency  'PoporFoundation/Os'
+        ss.tvos.dependency 'PoporFoundation/Os'
         
         ss.source_files = 'PoporFoundation/Classes/NSString/*.{h,m}'
     end
     
-    # base 4 : PrefixOs, UIKit和APPKit兼容宏
-    s.subspec 'PrefixOs' do |ss|
-        
-        ss.source_files = 'PoporFoundation/Classes/PrefixOs/*.h'
-        
-    end
-    
     s.subspec 'NSArray' do |ss|
         ss.ios.dependency 'PoporFoundation/NSObject'
-        ss.ios.dependency 'PoporFoundation/PrefixCore'
+        ss.ios.dependency 'PoporFoundation/Prefix'
         
         ss.osx.dependency 'PoporFoundation/NSObject'
-        ss.osx.dependency 'PoporFoundation/PrefixCore'
+        ss.osx.dependency 'PoporFoundation/Prefix'
         
         ss.tvos.dependency 'PoporFoundation/NSObject'
-        ss.tvos.dependency 'PoporFoundation/PrefixCore'
+        ss.tvos.dependency 'PoporFoundation/Prefix'
         
         ss.source_files = 'PoporFoundation/Classes/NSArray/*.{h,m}'
     end
     s.subspec 'NSAssistant' do |ss|
-        ss.ios.dependency  'PoporFoundation/PrefixOs'
-        ss.osx.dependency  'PoporFoundation/PrefixOs'
-        ss.tvos.dependency 'PoporFoundation/PrefixOs'
+        ss.ios.dependency  'PoporFoundation/Os'
+        ss.osx.dependency  'PoporFoundation/Os'
+        ss.tvos.dependency 'PoporFoundation/Os'
         
-        ss.ios.dependency 'PoporFoundation/PrefixCore'
-        ss.osx.dependency 'PoporFoundation/PrefixCore'
-        ss.tvos.dependency 'PoporFoundation/PrefixCore'
+        ss.ios.dependency 'PoporFoundation/Prefix'
+        ss.osx.dependency 'PoporFoundation/Prefix'
+        ss.tvos.dependency 'PoporFoundation/Prefix'
 
         ss.source_files = 'PoporFoundation/Classes/NSAssistant/*.{h,m}'
     end
@@ -114,13 +113,13 @@ Pod::Spec.new do |s|
     
     s.subspec 'NSDictionary' do |ss|
         ss.ios.dependency 'PoporFoundation/NSObject'
-        ss.ios.dependency 'PoporFoundation/PrefixCore'
+        ss.ios.dependency 'PoporFoundation/Prefix'
         
         ss.osx.dependency 'PoporFoundation/NSObject'
-        ss.osx.dependency 'PoporFoundation/PrefixCore'
+        ss.osx.dependency 'PoporFoundation/Prefix'
         
         ss.tvos.dependency 'PoporFoundation/NSObject'
-        ss.tvos.dependency 'PoporFoundation/PrefixCore'
+        ss.tvos.dependency 'PoporFoundation/Prefix'
         
         ss.source_files = 'PoporFoundation/Classes/NSDictionary/*.{h,m}'
     end
