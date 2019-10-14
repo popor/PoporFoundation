@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
  //*/
 
 #pragma mark - 获取有期限日历
-+ (NSDateComponents *)compareDataFrom:(NSDate * _Nullable)startData to:(NSDate * _Nullable)endData;
++ (NSDateComponents *)dateComponentsFrom:(NSDate * _Nullable)startData to:(NSDate * _Nullable)endData;
 
 #pragma mark - 获取某个时期日历(NSString)
 + (NSDateComponents *)dateComponentsFromString:(NSString * _Nullable)InvalidTime;

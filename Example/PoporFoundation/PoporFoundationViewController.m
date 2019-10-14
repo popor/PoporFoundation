@@ -19,6 +19,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSDateComponents * com = [self dateComponentsFrom:[NSDate dateFromUnixDate:0] to:[NSDate dateFromUnixDate:86400*90]];
+    //[self dateComponentsFromDate:[NSDate dateFromUnixDate:86400*90]];
+    
+    
+    NSLog(@"1");
+    
 	// Do any additional setup after loading the view, typically from a nib.
     NSArray * array = @[@"1", @"2"];
     
@@ -45,6 +52,13 @@
     [att addString:@"12" font:[UIFont systemFontOfSize:14] color:@"0000FF".toColor];
     
     oneL.attributedText = att;
+}
+
+- (NSDateComponents *)dateComponentsFrom:(NSDate * _Nullable)startData to:(NSDate * _Nullable)endData {
+    static unsigned int unitFlags = NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    
+    NSDateComponents * intervalDateComponents= [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] components:unitFlags fromDate:startData toDate:endData options:0];
+    return intervalDateComponents;
 }
 
 @end

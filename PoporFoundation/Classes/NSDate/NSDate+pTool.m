@@ -50,7 +50,7 @@
 @implementation NSDate (pTool)
 
 #pragma mark - 获取有期限日历
-+ (NSDateComponents *)compareDataFrom:(NSDate * _Nullable)startData to:(NSDate * _Nullable)endData {
++ (NSDateComponents *)dateComponentsFrom:(NSDate * _Nullable)startData to:(NSDate * _Nullable)endData {
     if(startData==nil || endData==nil){
         return nil;
     }
