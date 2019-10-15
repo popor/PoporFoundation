@@ -110,6 +110,14 @@
     return [dateFormatter stringFromDate:date];
 }
 
+- (NSString *)stringWithFormatter:(NSString * _Nullable)formatterString {
+    return [NSDate stringFromDate:self formatter:formatterString];
+}
+
+- (NSString *)stringWithFormatter:(NSString * _Nullable)formatterString timeZone:(int)timeZone {
+    return [NSDate stringFromDate:self formatter:formatterString timeZone:timeZone];
+}
+
 #pragma mark - 返回时间戳(NSString)
 + (NSDate *)dateFromUnixDateString:(NSString * _Nullable)theUnixDateString {
     return [NSDate dateWithTimeIntervalSince1970:[theUnixDateString doubleValue]];
@@ -126,13 +134,17 @@
 }
 
 /**
- * 经常返回1480521599.9999971的数据,需要自主四舍五入
+ * 经常返回1480521599.9999971的数据,需要自主四舍五入, round()可以达到这样的目的.
  */
 #pragma mark - 获取某个时期的时间戳
 + (NSTimeInterval)getUnixDateAt:(NSDate * _Nullable)anotherDate {
     NSTimeInterval time = [[NSDate date] timeIntervalSince1970] - [[NSDate date] timeIntervalSinceDate:anotherDate];
     
     return round(time);
+}
+
+- (NSTimeInterval)unixTimestamp {
+    return [NSDate getUnixDateAt:self];
 }
 
 + (NSString *)stringFromNow:(NSString * _Nullable)formatterString {
@@ -158,6 +170,10 @@
 #pragma mark - 获取时间戳
 + (NSString *)getTimeStamp:(NSDate * _Nullable)date {
     return [NSString stringWithFormat:@"%ld", (long)[date timeIntervalSince1970]];
+}
+
+- (NSString *)stringUnixTimestamp {
+    return [NSString stringWithFormat:@"%ld", (long)self];
 }
 
 #pragma mark - 获取时差

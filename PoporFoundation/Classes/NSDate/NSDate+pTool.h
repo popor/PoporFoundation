@@ -51,6 +51,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString;
 + (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString timeZone:(int)timeZone;
 
+- (NSString *)stringWithFormatter:(NSString * _Nullable)formatterString;
+- (NSString *)stringWithFormatter:(NSString * _Nullable)formatterString timeZone:(int)timeZone;
+
 #pragma mark - 返回时间(NSString)
 + (NSDate *)dateFromUnixDateString:(NSString * _Nullable)theUnixDateString;
 
@@ -62,6 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 获取某个时期的时间戳
 + (NSTimeInterval)getUnixDateAt:(NSDate * _Nullable)anotherDate;
+- (NSTimeInterval)unixTimestamp;
 
 #pragma mark - 当前指定格式的时间String
 + (NSString *)stringFromNow:(NSString * _Nullable)formatterString;
@@ -71,7 +75,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 日期转时间戳
 + (NSString *)getTimeStamp:(NSDate * _Nullable)date;
+- (NSString *)stringUnixTimestamp;
 
+// -------------------------------------------------------------------------
 #pragma mark - 获取时差
 + (int)getZoneHour;
 
