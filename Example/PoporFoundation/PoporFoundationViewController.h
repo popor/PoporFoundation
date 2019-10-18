@@ -6,7 +6,7 @@
 //  Copyright (c) 2018 popor. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface PoporFoundationViewController : UIViewController
 
