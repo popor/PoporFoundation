@@ -16,15 +16,13 @@
 
 @implementation PoporFoundationViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-	// Do any additional setup after loading the view, typically from a nib.
-    NSArray * array = @[@"1", @"2"];
-    
-    NSLog(@"jsonString : %@", [array toJSONString]);
-    
+    [self blockEvent];
+}
+
+- (void)addL {
     UILabel * oneL = ({
         UILabel * l = [UILabel new];
         l.frame              = CGRectMake(0, 100, 100, 44);
@@ -46,6 +44,10 @@
     [att addString:@"12" font:[UIFont systemFontOfSize:14] color:@"0000FF".toColor];
     
     oneL.attributedText = att;
+}
+
+- (void)blockEvent {
+    
 }
 
 @end
