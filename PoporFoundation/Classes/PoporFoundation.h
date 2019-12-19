@@ -61,6 +61,7 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 #import "NSString+pIDCard.h"
 #import "NSString+pMD5.h"
 #import "NSString+pSize.h"
+#import "NSString+pSwizzling.h"
 #import "NSString+pTool.h"
 
 // -NSURL

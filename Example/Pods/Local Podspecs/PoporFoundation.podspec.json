@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "1.09",
+  "version": "1.10",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "1.09"
+    "tag": "1.10"
   },
   "requires_arc": true,
   "ios": {
@@ -84,6 +84,12 @@
         "dependencies": {
           "PoporFoundation/Os": [
 
+          ],
+          "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/Prefix": [
+
           ]
         }
       },
@@ -91,12 +97,24 @@
         "dependencies": {
           "PoporFoundation/Os": [
 
+          ],
+          "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/Prefix": [
+
           ]
         }
       },
       "tvos": {
         "dependencies": {
           "PoporFoundation/Os": [
+
+          ],
+          "PoporFoundation/NSObject": [
+
+          ],
+          "PoporFoundation/Prefix": [
 
           ]
         }

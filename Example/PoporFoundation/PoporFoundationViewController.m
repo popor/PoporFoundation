@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self blockEvent];
+    [self stringEvent];
 }
 
 - (void)addL {
@@ -48,6 +48,14 @@
 
 - (void)blockEvent {
     
+}
+
+- (void)stringEvent {
+    NSString * str = @"aaaabbbb";
+    
+    NSLog(@"substringToIndex    %@", [str substringToIndex:3]);
+    NSLog(@"substringFromIndex  %@", [str substringFromIndex:3]);
+    NSLog(@"substringWithRange  %@", [str substringWithRange:(NSRange){4, 3}]);
 }
 
 @end
