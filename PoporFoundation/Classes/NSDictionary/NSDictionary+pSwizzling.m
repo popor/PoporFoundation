@@ -90,7 +90,13 @@
             NSLogError(@"字典设置key:%@ 的value为空", NSStringFromClass([key class]));
         }
 #endif
-    }else{
+    }
+    else if (key == nil) {
+#if DEBUG
+        NSLogError(@"字典设置key为空");
+#endif
+    }
+    else{
         [self setSafeObject:obj forKey:key];
         //NSLogSuccess(@"key:%@, obj:%@", key, NSStringFromClass([obj class]));
     }

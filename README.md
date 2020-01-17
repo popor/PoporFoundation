@@ -30,6 +30,9 @@ pod 'PoporFoundation'
 1.10
 增加NSString+pSwizzling
 
+1.11
+NSDictionary+pSwizzling setSafeObject: forKey: 增加对key的判断
+
 ## Author
 
 popor, 908891024@qq.com
