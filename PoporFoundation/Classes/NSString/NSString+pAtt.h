@@ -36,6 +36,28 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Size Department
 - (CGSize)sizeWithWidth:(CGFloat)width;
 
+// MARK: 生成具有间隔的att, 例如身份证、电话号码、银行卡、金钱数等
+/**
+ *  设置个人信息
+ *
+ *  @param text 文本
+ *  @param bigGap 大间隔宽度,默认为6
+ *  @param smallGap 大间隔宽度,默认为0
+ *  @param numberArray 大间隔点数组,里面的参数为NSNumber, 示例: 中国电话号码为 @[@2, @6, @10]
+ *
+ */
+- (NSMutableAttributedString *)text:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap numberArray:(NSArray *)numberArray;
+
+/**
+*  设置个人信息
+*
+*  @param text 文本
+*  @param bigGap 大间隔宽度,默认为6
+*  @param smallGap 大间隔宽度,默认为0
+*  @param separate 间隔分割间隔, 默认为4, 针对银行卡号
+*/
+- (NSMutableAttributedString *)text:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap separate:(int)separate;
+
 @end
 
 NS_ASSUME_NONNULL_END

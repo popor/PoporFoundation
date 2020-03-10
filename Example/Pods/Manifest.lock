@@ -1,44 +1,44 @@
 PODS:
-  - PoporFoundation (1.11):
-    - PoporFoundation/KVO (= 1.11)
-    - PoporFoundation/NSArray (= 1.11)
-    - PoporFoundation/NSAssistant (= 1.11)
-    - PoporFoundation/NSData (= 1.11)
-    - PoporFoundation/NSDate (= 1.11)
-    - PoporFoundation/NSDecimalNumber (= 1.11)
-    - PoporFoundation/NSDictionary (= 1.11)
-    - PoporFoundation/NSFileManager (= 1.11)
-    - PoporFoundation/NSObject (= 1.11)
-    - PoporFoundation/NSString (= 1.11)
-    - PoporFoundation/NSURL (= 1.11)
-    - PoporFoundation/Os (= 1.11)
-    - PoporFoundation/Prefix (= 1.11)
-  - PoporFoundation/KVO (1.11)
-  - PoporFoundation/NSArray (1.11):
+  - PoporFoundation (1.12):
+    - PoporFoundation/KVO (= 1.12)
+    - PoporFoundation/NSArray (= 1.12)
+    - PoporFoundation/NSAssistant (= 1.12)
+    - PoporFoundation/NSData (= 1.12)
+    - PoporFoundation/NSDate (= 1.12)
+    - PoporFoundation/NSDecimalNumber (= 1.12)
+    - PoporFoundation/NSDictionary (= 1.12)
+    - PoporFoundation/NSFileManager (= 1.12)
+    - PoporFoundation/NSObject (= 1.12)
+    - PoporFoundation/NSString (= 1.12)
+    - PoporFoundation/NSURL (= 1.12)
+    - PoporFoundation/Os (= 1.12)
+    - PoporFoundation/Prefix (= 1.12)
+  - PoporFoundation/KVO (1.12)
+  - PoporFoundation/NSArray (1.12):
     - PoporFoundation/NSObject
     - PoporFoundation/Prefix
-  - PoporFoundation/NSAssistant (1.11):
+  - PoporFoundation/NSAssistant (1.12):
     - PoporFoundation/Os
     - PoporFoundation/Prefix
-  - PoporFoundation/NSData (1.11)
-  - PoporFoundation/NSDate (1.11):
+  - PoporFoundation/NSData (1.12)
+  - PoporFoundation/NSDate (1.12):
     - PoporFoundation/NSString
-  - PoporFoundation/NSDecimalNumber (1.11):
+  - PoporFoundation/NSDecimalNumber (1.12):
     - PoporFoundation/NSObject
-  - PoporFoundation/NSDictionary (1.11):
+  - PoporFoundation/NSDictionary (1.12):
     - PoporFoundation/NSObject
     - PoporFoundation/Prefix
-  - PoporFoundation/NSFileManager (1.11)
-  - PoporFoundation/NSObject (1.11)
-  - PoporFoundation/NSString (1.11):
+  - PoporFoundation/NSFileManager (1.12)
+  - PoporFoundation/NSObject (1.12)
+  - PoporFoundation/NSString (1.12):
     - PoporFoundation/NSObject
     - PoporFoundation/Os
     - PoporFoundation/Prefix
-  - PoporFoundation/NSURL (1.11):
+  - PoporFoundation/NSURL (1.12):
     - PoporFoundation/NSObject
     - PoporFoundation/NSString
-  - PoporFoundation/Os (1.11)
-  - PoporFoundation/Prefix (1.11):
+  - PoporFoundation/Os (1.12)
+  - PoporFoundation/Prefix (1.12):
     - PoporFoundation/Os
 
 DEPENDENCIES:
@@ -49,8 +49,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: dc29699873b618827eb3922510f4b4d807fc8b2a
+  PoporFoundation: 48786ab8ea337df60851ed473f51086e409014d8
 
 PODFILE CHECKSUM: e809a13432c890944cde8a15557d0d5347d5052c
 
-COCOAPODS: 1.9.0.beta.2
+COCOAPODS: 1.9.1
