@@ -43,10 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param text 文本
  *  @param bigGap 大间隔宽度,默认为6
  *  @param smallGap 大间隔宽度,默认为0
- *  @param numberArray 大间隔点数组,里面的参数为NSNumber, 示例: 中国电话号码为 @[@2, @6, @10]
+ *  @param separateNumberArray 大间隔点数组,里面的参数为NSNumber, 示例: 中国电话号码为 @[@2, @6, @10]
  *
  */
-- (NSMutableAttributedString *)text:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap numberArray:(NSArray *)numberArray;
++ (NSMutableAttributedString *)separateText:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap separateNumberArray:(NSArray *)separateNumberArray;
 
 /**
 *  设置个人信息
@@ -54,9 +54,9 @@ NS_ASSUME_NONNULL_BEGIN
 *  @param text 文本
 *  @param bigGap 大间隔宽度,默认为6
 *  @param smallGap 大间隔宽度,默认为0
-*  @param separate 间隔分割间隔, 默认为4, 针对银行卡号
+*  @param separateNumber 间隔分割间隔, 默认为4, 针对银行卡号
 */
-- (NSMutableAttributedString *)text:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap separate:(int)separate;
++ (NSMutableAttributedString *)separateText:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap separateNumber:(int)separateNumber;
 
 @end
 
