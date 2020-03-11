@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: 生成具有间隔的att, 例如身份证、电话号码、银行卡、金钱数等
 /**
- *  设置个人信息
+ *  普通信息
  *
  *  @param text 文本
  *  @param bigGap 大间隔宽度,默认为6
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSMutableAttributedString *)separateText:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap separateNumberArray:(NSArray *)separateNumberArray;
 
 /**
-*  设置个人信息
+*  普通信息
 *
 *  @param text 文本
 *  @param bigGap 大间隔宽度,默认为6
@@ -57,6 +57,16 @@ NS_ASSUME_NONNULL_BEGIN
 *  @param separateNumber 间隔分割间隔, 默认为4, 针对银行卡号
 */
 + (NSMutableAttributedString *)separateText:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap separateNumber:(int)separateNumber;
+
+/**
+*  金钱信息
+*
+*  @param text 文本
+*  @param bigGap 大间隔宽度,默认为6
+*  @param smallGap 大间隔宽度,默认为0
+*  @param separateNumber 间隔分割间隔, 默认为4, 针对中国数字习惯
+*/
++ (NSMutableAttributedString *)separateMoneyText:(NSString *)text bigGap:(int)bigGap smallGap:(int)smallGap separateNumber:(int)separateNumber;
 
 @end
 
