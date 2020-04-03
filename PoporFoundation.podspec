@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PoporFoundation'
-    s.version          = '1.13'
+    s.version          = '1.14'
     s.summary          = '1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools'
     
     # This description is used to generate tags and improve search results.
@@ -83,6 +83,12 @@ Pod::Spec.new do |s|
         ss.tvos.dependency 'PoporFoundation/Prefix'
         
         ss.source_files = 'PoporFoundation/Classes/NSString/*.{h,m}'
+    end
+    
+    # base 3 : NSTimer
+    s.subspec 'NSTimer' do |ss|
+        ss.source_files = 'PoporFoundation/Classes/NSTimer/*.{h,m}'
+        
     end
     
     s.subspec 'NSArray' do |ss|

@@ -76,3 +76,6 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
 
 // -Os+pPrefix
 #import "Os+pPrefix.h"
+
+// -NSTimer
+#import "NSTimer+pSafe.h"

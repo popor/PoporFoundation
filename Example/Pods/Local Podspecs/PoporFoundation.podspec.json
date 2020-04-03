@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "1.13",
+  "version": "1.14",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "1.13"
+    "tag": "1.14"
   },
   "requires_arc": true,
   "ios": {
@@ -120,6 +120,10 @@
         }
       },
       "source_files": "PoporFoundation/Classes/NSString/*.{h,m}"
+    },
+    {
+      "name": "NSTimer",
+      "source_files": "PoporFoundation/Classes/NSTimer/*.{h,m}"
     },
     {
       "name": "NSArray",

@@ -34,6 +34,7 @@
 #import "NSString+pSize.h"
 #import "NSString+pSwizzling.h"
 #import "NSString+pTool.h"
+#import "NSTimer+pSafe.h"
 #import "NSURL+pSwizzling.h"
 #import "Os+pPrefix.h"
 #import "Block+pPrefix.h"

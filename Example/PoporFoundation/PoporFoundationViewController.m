@@ -9,8 +9,11 @@
 #import "PoporFoundationViewController.h"
 
 #import "PoporFoundation.h"
+#import "NSTimerVC.h"
 
-@interface PoporFoundationViewController ()
+@interface PoporFoundationViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView * infoTV;
 
 @end
 
@@ -19,7 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self stringEvent];
+    self.title = @"PoporFoudation";
+    
+    self.infoTV = [self addTVs];
+    //[self stringEvent];
 }
 
 - (void)addL {
@@ -56,6 +62,82 @@
     NSLog(@"substringToIndex    %@", [str substringToIndex:3]);
     NSLog(@"substringFromIndex  %@", [str substringFromIndex:3]);
     NSLog(@"substringWithRange  %@", [str substringWithRange:(NSRange){4, 3}]);
+}
+
+#pragma mark - UITableView
+- (UITableView *)addTVs {
+    UITableView * oneTV = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    
+    oneTV.delegate   = self;
+    oneTV.dataSource = self;
+    
+    oneTV.allowsMultipleSelectionDuringEditing = YES;
+    oneTV.directionalLockEnabled = YES;
+    
+    oneTV.estimatedRowHeight           = 0;
+    oneTV.estimatedSectionHeaderHeight = 0;
+    oneTV.estimatedSectionFooterHeight = 0;
+    
+    [self.view addSubview:oneTV];
+    
+    return oneTV;
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * CellID = @"CellID";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+        //cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    switch (indexPath.row) {
+        case 0: {
+            cell.textLabel.text = @"NSTimer";
+            break;
+        }
+        default:
+            break;
+    }
+    
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0: {
+            [self.navigationController pushViewController:[NSTimerVC new] animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
+    
 }
 
 @end
