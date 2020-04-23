@@ -40,7 +40,7 @@
     unsigned propertyCount;
     
     objc_property_t *properties = class_copyPropertyList([theClassEntity class],&propertyCount);
-    for(int i=0;i<propertyCount;i++){
+    for(NSInteger i=0;i<propertyCount;i++){
         NSString * propNameString;
         NSString * propAttributesString;
         
@@ -97,7 +97,7 @@
     unsigned propertyCount;
     
     objc_property_t *properties = class_copyPropertyList([theClassEntity class],&propertyCount);
-    for(int i=0;i<propertyCount;i++){
+    for(NSInteger i=0;i<propertyCount;i++){
         NSString * propNameString;
         NSString * propAttributesString;
         
@@ -223,7 +223,7 @@
     unsigned propertyCount;
     
     objc_property_t *properties = class_copyPropertyList([entity class],&propertyCount);
-    for(int i=0;i<propertyCount;i++){
+    for(NSInteger i=0;i<propertyCount;i++){
         NSString * keySName;                              // key string  名字
         NSString * keySAtt;                               // key string  属性
         objc_property_t keyChar = properties[i];          // key Char 属性

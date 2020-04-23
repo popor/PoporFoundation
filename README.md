@@ -39,6 +39,10 @@ NSDictionary+pSwizzling setSafeObject: forKey: 增加对key的判断
 1.14
 增加NSTimer, (从<<Effective Objective-C 2.0>>截取),解决了NSTimer循环引用的问题,简化使用.
 
+1.15
+适配swift: int > NSInteger,  float > CGFloat
+
+
 ## Author
 
 popor, 908891024@qq.com

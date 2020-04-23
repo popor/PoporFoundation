@@ -103,7 +103,7 @@
     return [dateFormatter stringFromDate:date];
 }
 
-+ (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString timeZone:(int)timeZone {
++ (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString timeZone:(NSInteger)timeZone {
     NSDateFormatter *dateFormatter = [NSDate defaultDateFormatter:formatterString];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:3600* (timeZone)]];
     
@@ -114,7 +114,7 @@
     return [NSDate stringFromDate:self formatter:formatterString];
 }
 
-- (NSString *)stringWithFormatter:(NSString * _Nullable)formatterString timeZone:(int)timeZone {
+- (NSString *)stringWithFormatter:(NSString * _Nullable)formatterString timeZone:(NSInteger)timeZone {
     return [NSDate stringFromDate:self formatter:formatterString timeZone:timeZone];
 }
 
@@ -177,16 +177,18 @@
 }
 
 #pragma mark - 获取时差
-+ (int)getZoneHour {
++ (NSInteger)getZoneHour {
     NSTimeZone * zone     = [NSTimeZone localTimeZone];
     NSString * secondTime = [zone.description stringWithREG:@"offset\\s+-?\\d+"];
     //[NSString stringWithReg:zone.description withREG:];
     secondTime            = [secondTime stringWithREG:@"-?\\d+"];
-   // [NSString stringWithReg:secondTime withREG:];
-    NSLog(@"____________description: %@", zone.description);
-    NSLog(@"____________secondTime: %@", secondTime);
-    NSLog(@"____________zoneTime  : %i", (int)([secondTime integerValue]/3600));
-    return (int)([secondTime integerValue]/3600);
+    
+    //[NSString stringWithReg:secondTime withREG:];
+    //NSLog(@"____________description: %@", zone.description);
+    //NSLog(@"____________secondTime: %@", secondTime);
+    //NSLog(@"____________zoneTime  : %i", (NSInteger)([secondTime integerValue]/3600));
+    
+    return (NSInteger)([secondTime integerValue]/3600);
 }
 
 @end

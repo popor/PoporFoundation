@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface NSTimer (pSafe)
 
+/**
+ 当 NSTimer 的持有者销毁后, [self.NSTimer invalidate]就不会生效了, 使用 [_NSTimer invalidate] 就可以了.
+ */
 + (NSTimer *)safe_scheduledTimerWithTimeInterval:(NSTimeInterval)ti
                                            block:(void(^)(void))block
                                          repeats:(BOOL)repeats;

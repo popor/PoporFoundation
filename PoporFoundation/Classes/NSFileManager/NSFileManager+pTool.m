@@ -23,10 +23,9 @@
 }
 
 #pragma mark - 文件长度
-+ (int)fileLength:(NSString * _Nullable)filePath
++ (NSInteger)fileLength:(NSString * _Nullable)filePath
 {
-    NSData * data=[NSData dataWithContentsOfFile:filePath];
-    return (int)data.length;
+    return [NSData dataWithContentsOfFile:filePath].length;
 }
 
 #pragma mark - 删除文件

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isFileExist:(NSString * _Nullable)filePath;
 
 #pragma mark - 文件长度
-+ (int)fileLength:(NSString * _Nullable)filePath;
++ (NSInteger)fileLength:(NSString * _Nullable)filePath;
 
 #pragma mark - 删除文件
 + (void)deleteFile:(NSString * _Nullable)filePath;
