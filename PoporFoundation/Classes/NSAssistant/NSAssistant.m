@@ -270,6 +270,38 @@
     //NSLog(@"\n\n");
 }
 
+/**
+ 根据compareValue 得到 这个参数的名称
+ */
++ (NSString *)paraNameOf:(id _Nullable)entity equal:(id)compareValue {
+    NSString * parameterName;
+    
+    unsigned propertyCount;
+    
+    objc_property_t *properties = class_copyPropertyList([entity class],&propertyCount);
+    for(int i=0;i<propertyCount;i++){
+        NSString * propNameString;
+        NSString * propAttributesString;
+        
+        objc_property_t prop=properties[i];
+        
+        const char *propName = property_getName(prop);
+        propNameString =[NSString stringWithCString:propName encoding:NSASCIIStringEncoding];
+        
+        const char * propAttributes=property_getAttributes(prop);
+        propAttributesString =[NSString stringWithCString:propAttributes encoding:NSASCIIStringEncoding];
+        
+        id value = [entity valueForKey:propNameString];
+        if ([value isEqual:compareValue]) {
+            //NSLog(@"NSParameterName %@ : %@", propNameString, value);
+            parameterName = propNameString;
+            break;
+        }
+    } // end for.
+    free(properties);
+    
+    return parameterName;
+}
 
 @end
 

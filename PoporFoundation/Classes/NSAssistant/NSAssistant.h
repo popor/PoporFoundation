@@ -2,14 +2,17 @@
 //  NSAssistant.h
 //  PoporFoundation
 //
-//  Created by popor on 12-3-19.
-//V1.0
+//  Created by popor on 2012-3-19.
+//
 
 #import <Foundation/Foundation.h>
 #import "Os+pPrefix.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 该类的所有方法, 均不支持识别 SuperClass, runtime 原生不支持, 否则代码维护非常空难.
+ */
 @interface NSAssistant : NSObject
 
 /*
@@ -29,6 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)setVC:(VC_CLASS * _Nullable)vc dic:(id _Nullable)dic;
 + (void)setEntity:(id _Nullable)entity dic:(id _Nullable)dic;
+
+/**
+ 根据compareValue 得到 这个参数的名称
+ */
++ (NSString *)paraNameOf:(id _Nullable)entity equal:(id)compareValue;
 
 @end
 
