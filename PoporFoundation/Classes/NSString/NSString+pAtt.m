@@ -94,11 +94,12 @@
     NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     if (lineSpacing>-1) {
         paragraphStyle.lineSpacing = lineSpacing;
-        [attString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
     }
     
     [paragraphStyle setAlignment:textAlignment];
     [paragraphStyle setLineBreakMode:lineBreakMode];
+    
+    [attString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
     
     [self appendAttributedString:attString];
 }
@@ -167,13 +168,13 @@
 }
 
 /**
-*  普通信息
-*
-*  @param text 文本
-*  @param bigGap 大间隔宽度,默认为6
-*  @param smallGap 大间隔宽度,默认为0
-*  @param separateNumber 间隔分割间隔, 默认为4, 针对银行卡号
-*/
+ *  普通信息
+ *
+ *  @param text 文本
+ *  @param bigGap 大间隔宽度,默认为6
+ *  @param smallGap 大间隔宽度,默认为0
+ *  @param separateNumber 间隔分割间隔, 默认为4, 针对银行卡号
+ */
 + (NSMutableAttributedString *)separateText:(NSString *)text bigGap:(NSInteger)bigGap smallGap:(NSInteger)smallGap separateNumber:(NSInteger)separateNumber {
     if (text.length <= 0) {
         return [NSMutableAttributedString new];
@@ -203,13 +204,13 @@
 }
 
 /**
-*  金钱信息
-*
-*  @param text 文本
-*  @param bigGap 大间隔宽度,默认为6
-*  @param smallGap 大间隔宽度,默认为0
-*  @param separateNumber 间隔分割间隔, 默认为4, 针对中国数字习惯
-*/
+ *  金钱信息
+ *
+ *  @param text 文本
+ *  @param bigGap 大间隔宽度,默认为6
+ *  @param smallGap 大间隔宽度,默认为0
+ *  @param separateNumber 间隔分割间隔, 默认为4, 针对中国数字习惯
+ */
 + (NSMutableAttributedString *)separateMoneyText:(NSString *)text bigGap:(NSInteger)bigGap smallGap:(NSInteger)smallGap separateNumber:(NSInteger)separateNumber {
     if (text.length <= 0) {
         return [NSMutableAttributedString new];
