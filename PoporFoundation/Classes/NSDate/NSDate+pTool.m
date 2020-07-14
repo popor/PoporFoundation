@@ -194,11 +194,11 @@
 #pragma mark - 时钟text
 + (NSString *)clockText:(NSTimeInterval)time {
     NSInteger hour = floor(time / 3600.0);
-    CGFloat minute = floor(time / 60.0);
+    CGFloat minute = fmod(time, 60.0);
     CGFloat second = fmod(time, 60.0);
     
     if (hour > 0) {
-        return [NSString stringWithFormat:@"%li:%02.0f:%02.0f", hour, minute, second];
+        return [NSString stringWithFormat:@"%02li:%02.0f:%02.0f", hour, minute, second];
     } else {
         return [NSString stringWithFormat:@"%02.0f:%02.0f", minute, second];
     }
