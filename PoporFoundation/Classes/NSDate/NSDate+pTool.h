@@ -81,6 +81,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 获取时差
 + (NSInteger)getZoneHour;
 
+#pragma mark - 时钟text
++ (NSString *)clockText:(NSTimeInterval)time;
+
 @end
 
 NS_ASSUME_NONNULL_END
