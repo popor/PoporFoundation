@@ -35,6 +35,7 @@
 		861F1A86C2D0922C9C36C0C4 /* Pods_PoporFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A055FC732BD7FDF7F31F446 /* Pods_PoporFoundation_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		AE0D875951BDF7656410177D /* Pods_PoporFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541D61E079F08EC962B07CCC /* Pods_PoporFoundation_Example.framework */; };
+		C3CA6BF724C3D13F008D304B /* AttVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CA6BF624C3D13F008D304B /* AttVC.m */; };
 		E4FB4C56243766DB00DBA817 /* NSTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FB4C55243766DB00DBA817 /* NSTimerVC.m */; };
 		F157F62D45B29F55FE33F27D /* Pods_PoporFoundationMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AF0E04F900F18E6EA06377 /* Pods_PoporFoundationMac.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA995ABB33031BCCA677BEB8 /* Pods-PoporFoundationTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV.debug.xcconfig"; sourceTree = "<group>"; };
 		B7938C6C8126F8C60A9EE694 /* Pods-PoporFoundationTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundationTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundationTV/Pods-PoporFoundationTV.release.xcconfig"; sourceTree = "<group>"; };
+		C3CA6BF524C3D13F008D304B /* AttVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttVC.h; sourceTree = "<group>"; };
+		C3CA6BF624C3D13F008D304B /* AttVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttVC.m; sourceTree = "<group>"; };
 		D8AF0E04F900F18E6EA06377 /* Pods_PoporFoundationMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporFoundationMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DF27F2DCBE6AF686353637 /* Pods-PoporFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E4FB4C54243766DB00DBA817 /* NSTimerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerVC.h; sourceTree = "<group>"; };
@@ -280,6 +283,7 @@
 				6003F5A5195388D20070C39A /* PoporFoundationViewController.h */,
 				6003F5A6195388D20070C39A /* PoporFoundationViewController.m */,
 				E4FB4C53243766B400DBA817 /* NSTimerVC */,
+				C3CA6BF424C3D112008D304B /* AttVC */,
 			);
 			name = "Example for PoporFoundation";
 			path = PoporFoundation;
@@ -323,6 +327,15 @@
 				2212B2D6CC4EC4A6BAA5CE72 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		C3CA6BF424C3D112008D304B /* AttVC */ = {
+			isa = PBXGroup;
+			children = (
+				C3CA6BF524C3D13F008D304B /* AttVC.h */,
+				C3CA6BF624C3D13F008D304B /* AttVC.m */,
+			);
+			path = AttVC;
 			sourceTree = "<group>";
 		};
 		E406A9D820D4A672003B128F /* other */ = {
@@ -552,10 +565,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PoporFoundation_Example/Pods-PoporFoundation_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PoporFoundation-iOS/PoporFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -705,6 +720,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CA6BF724C3D13F008D304B /* AttVC.m in Sources */,
 				6003F59E195388D20070C39A /* PoporFoundationAppDelegate.m in Sources */,
 				E4FB4C56243766DB00DBA817 /* NSTimerVC.m in Sources */,
 				6003F5A7195388D20070C39A /* PoporFoundationViewController.m in Sources */,

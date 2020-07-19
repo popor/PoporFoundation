@@ -156,7 +156,7 @@
     
     [att addAttribute:(id)kCTKernAttributeName value:(__bridge id)numSmallGap range:NSMakeRange(0, text.length)];
     for (NSNumber * number in separateNumberArray) {
-        if (number.intValue < text.length) {
+        if (number.intValue+1 < text.length) {
             [att addAttribute:(id)kCTKernAttributeName value:(__bridge id)numBigGap range:NSMakeRange(number.intValue, 1)];
         }
     }

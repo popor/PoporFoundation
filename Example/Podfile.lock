@@ -42,9 +42,15 @@ PODS:
   - PoporFoundation/Os (1.17)
   - PoporFoundation/Prefix (1.17):
     - PoporFoundation/Os
+  - ReactiveObjC (3.1.1)
 
 DEPENDENCIES:
   - PoporFoundation (from `../`)
+  - ReactiveObjC
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ReactiveObjC
 
 EXTERNAL SOURCES:
   PoporFoundation:
@@ -52,7 +58,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   PoporFoundation: 7fabad9a5c7b6ff98b54bd97b57d6452a9ec9d72
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
-PODFILE CHECKSUM: adfea7f79e13eb3dbcb1e1d3599a14850f578875
+PODFILE CHECKSUM: 2dfe86bbd8940168d35af90a703b3a7c7265e383
 
 COCOAPODS: 1.9.3

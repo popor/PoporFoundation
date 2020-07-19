@@ -10,6 +10,7 @@
 
 #import "PoporFoundation.h"
 #import "NSTimerVC.h"
+#import "AttVC.h"
 
 @interface PoporFoundationViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -89,7 +90,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,6 +119,10 @@
             cell.textLabel.text = @"NSTimer";
             break;
         }
+        case 1: {
+            cell.textLabel.text = @"NSMutableAttributedString";
+            break;
+        }
         default:
             break;
     }
@@ -132,6 +137,10 @@
     switch (indexPath.row) {
         case 0: {
             [self.navigationController pushViewController:[NSTimerVC new] animated:YES];
+            break;
+        }
+        case 1: {
+            [self.navigationController pushViewController:[AttVC new] animated:YES];
             break;
         }
         default:

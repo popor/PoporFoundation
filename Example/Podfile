@@ -9,6 +9,8 @@ target 'PoporFoundation_Example' do
   pod 'PoporFoundation', :path => '../'
   #pod 'PoporFoundation/NSArray', :path => '../'
   
+  pod 'ReactiveObjC'
+  
   target 'PoporFoundation_Tests' do
     inherit! :search_paths
     
