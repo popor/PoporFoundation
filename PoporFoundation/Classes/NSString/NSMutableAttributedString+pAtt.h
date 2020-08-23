@@ -34,11 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSMutableAttributedString *(^)(NSMutableAttributedString *))att;
 
-- (NSMutableAttributedString *(^)(UIFont *))font;
+- (NSMutableAttributedString *(^)(FONT_CLASS *))font;
 
-- (NSMutableAttributedString *(^)(UIColor *))color;
+- (NSMutableAttributedString *(^)(COLOR_CLASS *))color;
 
-- (NSMutableAttributedString *(^)(UIColor *))bgColor;
+- (NSMutableAttributedString *(^)(COLOR_CLASS *))bgColor;
 
 - (NSMutableAttributedString *(^)(BOOL))underLine;
 

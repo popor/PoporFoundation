@@ -116,8 +116,8 @@
     };
 }
 
-- (NSMutableAttributedString *(^)(UIFont *))font {
-    return ^NSMutableAttributedString *(UIFont * font) {
+- (NSMutableAttributedString *(^)(FONT_CLASS *))font {
+    return ^NSMutableAttributedString *(FONT_CLASS * font) {
         if (font) {
             NSRange range = NSMakeRange(0, self.mutableString.length);
             [self addAttribute:NSFontAttributeName value:font range:range];
@@ -126,8 +126,8 @@
     };
 }
 
-- (NSMutableAttributedString *(^)(UIColor *))color {
-    return ^NSMutableAttributedString *(UIColor * color) {
+- (NSMutableAttributedString *(^)(COLOR_CLASS *))color {
+    return ^NSMutableAttributedString *(COLOR_CLASS * color) {
         if (color) {
             NSRange range = NSMakeRange(0, self.mutableString.length);
             [self addAttribute:NSForegroundColorAttributeName value:color range:range];
@@ -136,8 +136,8 @@
     };
 }
 
-- (NSMutableAttributedString *(^)(UIColor *))bgColor {
-    return ^NSMutableAttributedString *(UIColor * bgColor) {
+- (NSMutableAttributedString *(^)(COLOR_CLASS *))bgColor {
+    return ^NSMutableAttributedString *(COLOR_CLASS * bgColor) {
         if (bgColor) {
             NSRange range = NSMakeRange(0, self.mutableString.length);
             [self addAttribute:NSBackgroundColorAttributeName value:bgColor range:range];
