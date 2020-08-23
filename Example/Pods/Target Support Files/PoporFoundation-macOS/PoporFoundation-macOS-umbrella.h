@@ -27,6 +27,8 @@
 #import "NSObject+pAssign.h"
 #import "NSObject+pPerformSelector.h"
 #import "NSObject+pSwizzling.h"
+#import "NSMutableAttributedString+pAtt.h"
+#import "NSMutableParagraphStyle+pAtt.h"
 #import "NSString+pAtt.h"
 #import "NSString+pEmail.h"
 #import "NSString+pIDCard.h"

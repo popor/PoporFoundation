@@ -82,6 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSInteger)getZoneHour;
 
 #pragma mark - 时钟text
+// 时间为负数的话, 显示为 00:00
 + (NSString *)clockText:(NSTimeInterval)time;
 
 @end

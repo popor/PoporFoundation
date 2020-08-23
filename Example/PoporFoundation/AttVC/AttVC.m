@@ -8,11 +8,11 @@
 
 #import "AttVC.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-#import "NSString+pAtt.h"
+
+#import "NSMutableAttributedString+pAtt.h"
+#import "NSMutableParagraphStyle+pAtt.h"
 
 @interface AttVC ()
-
-
 
 @end
 
@@ -24,6 +24,8 @@
     
     //[self testAttFormdata];
     [self testTfAttFormdata];
+    
+    [self addAtt2];
 }
 
 - (void)testLAttFormdata {
@@ -93,6 +95,33 @@
     //
     //    }] ;
     
+}
+
+- (void)addAtt2 {
+    UILabel * oneL = ({
+        UILabel * oneL = [UILabel new];
+        oneL.frame               = CGRectMake(20, 220, 300, 200);
+        oneL.backgroundColor     = [UIColor whiteColor]; // ios8 之前
+        oneL.font                = [UIFont systemFontOfSize:15];
+        oneL.textColor           = [UIColor blackColor];
+        oneL.layer.masksToBounds = YES; // ios8 之后 lableLayer 问题
+        oneL.numberOfLines       = 0;
+        oneL.backgroundColor     = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+        
+        [self.view addSubview:oneL];
+        oneL;
+    });
+    
+    
+    NSMutableAttributedString * att = [NSMutableAttributedString new];
+    
+    att.att(PAttStr(@"wkq\n").font(oneL.font).color(UIColor.redColor));
+    att.att(PAttStr(@"00000000\n").font([UIFont systemFontOfSize:30]).color(UIColor.yellowColor));
+    att.att(PAttStr(@"wkq\n").font(oneL.font).color(UIColor.redColor).paraStyle(PAttStyle.pLineSpacing(40)));
+    att.att(PAttStr(@"00000000\n").font([UIFont systemFontOfSize:25]).color(UIColor.yellowColor).paraStyle(PAttStyle.pLineSpacing(40).pTextAlignment(NSTextAlignmentRight)));
+    
+    att.font([UIFont systemFontOfSize:20]);
+    oneL.attributedText = att;
 }
 
 @end
