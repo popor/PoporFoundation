@@ -80,11 +80,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSMutableAttributedString *)separateMoneyText:(NSString *)text bigGap:(NSInteger)bigGap smallGap:(NSInteger)smallGap separateNumber:(NSInteger)separateNumber;
 
-
-#pragma mark - Size Department
-- (CGSize)sizeWithWidth:(CGFloat)width;
-
-
 @end
 
 NS_ASSUME_NONNULL_END
