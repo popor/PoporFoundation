@@ -5,11 +5,11 @@
 //  Created by popor on 2020/8/23.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define PAttStyle       [NSMutableParagraphStyle new]
+#define PAttStyle [NSMutableParagraphStyle new]
 
 @interface NSMutableParagraphStyle (pAtt)
 
