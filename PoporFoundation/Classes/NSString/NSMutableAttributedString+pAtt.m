@@ -192,8 +192,8 @@
     if (text.length <= 0) {
         return [NSMutableAttributedString new];
     }
-    if (bigGap <= 0) {
-        bigGap = 6;
+    if (bigGap < 0) {
+        bigGap = 0;
     }
     if (smallGap < 0) {
         smallGap = 0;
