@@ -84,6 +84,15 @@
     [self appendAttributedString:attString];
 }
 
+- (void)addImage:(IMAGE_CLASS * _Nullable)image bounds:(CGRect)bounds {
+    NSTextAttachment *attach = [[NSTextAttachment alloc] init];
+    attach.image  = image; //设置图片
+    attach.bounds = bounds; //设置图片大小、位置
+    NSAttributedString * imageAtt = [NSAttributedString attributedStringWithAttachment:attach];
+    
+    [self appendAttributedString:imageAtt];
+}
+
 // 用于纠正不同字体之间的文字,不会行居中的问题,用于•
 - (void)setBaselineOffsetMaxFont:(CGFloat)maxFont miniFont:(CGFloat)miniFont range:(NSRange)range
 {
