@@ -176,4 +176,14 @@
     }
 }
 
+// 假如小数点个数为.00, 则不显示小数点后的数字
++ (NSString *)simplePrice:(CGFloat)price {
+    NSString * priceStr = [NSString stringWithFormat:@"%.02f", price];
+    if ([priceStr hasSuffix:@".00"]) {
+        return [NSString stringWithFormat:@"%li", (long)price];
+    } else {
+        return priceStr;
+    }
+}
+
 @end

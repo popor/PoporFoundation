@@ -46,6 +46,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (COLOR_CLASS *)toColor;
 
+// 假如小数点个数为.00, 则不显示小数点后的数字
++ (NSString *)simplePrice:(CGFloat)price;
+
 @end
 
 NS_ASSUME_NONNULL_END
