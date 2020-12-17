@@ -207,4 +207,31 @@
     }
 }
 
+/**
+ 如果secondKey为nil, 则不显示秒部分, 同理于minuteKey.
+ 假如secondKey非空, 则minuteKey不能为空
+ */
++ (NSString *)clockText:(NSTimeInterval)time hour:(NSString *)hourKey minute:(NSString *_Nullable)minuteKey second:(NSString *_Nullable)secondKey {
+    NSInteger hour = floor(time / 3600);
+    CGFloat minute = fmod(floor(time/60), 60);
+    CGFloat second = fmod(time, 60);
+    
+    if (hour < 0 || minute < 0 || second < 0) {
+        minute = 0;
+        second = 0;
+    }
+    
+    NSMutableString * clockText = [NSMutableString new];
+    if (hour > 0) {
+        [clockText appendFormat:@"%li%@", hour, hourKey];
+    }
+    if (minuteKey) {
+        [clockText appendFormat:@"%02.0f%@", minute, minuteKey];
+    }
+    if (secondKey) {
+        [clockText appendFormat:@"%02.0f%@", second, secondKey];
+    }
+    return clockText;
+}
+
 @end

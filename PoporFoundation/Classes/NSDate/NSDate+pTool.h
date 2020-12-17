@@ -85,6 +85,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 时间为负数的话, 显示为 00:00
 + (NSString *)clockText:(NSTimeInterval)time;
 
+/**
+ 如果secondKey为nil, 则不显示秒部分, 同理于minuteKey.
+ 假如secondKey非空, 则minuteKey不能为空
+ */
++ (NSString *)clockText:(NSTimeInterval)time hour:(NSString *)hourKey minute:(NSString *_Nullable)minuteKey second:(NSString *_Nullable)secondKey;
+
 @end
 
 NS_ASSUME_NONNULL_END
