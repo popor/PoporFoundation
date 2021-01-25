@@ -1,6 +1,6 @@
 //
 //  FeedbackGeneratorTool.h
-//  hywj
+//  PoporFoundation
 //
 //  Created by popor on 2020/12/23.
 //  Copyright © 2020 popor. All rights reserved.
@@ -10,11 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#if TARGET_OS_MACCATALYST
-
-@interface FeedbackGeneratorTool : NSObject @end
-
-#else
+#if TARGET_OS_IOS
 
 #define FeedbackShakePhone  [FeedbackGeneratorTool shakePhone];
 
@@ -43,6 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isDeviceSupportFeedback;
 
 @end
+
+#else
+
+@interface FeedbackGeneratorTool : NSObject @end
 
 #endif
 

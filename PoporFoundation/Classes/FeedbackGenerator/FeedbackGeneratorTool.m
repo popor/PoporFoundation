@@ -1,6 +1,6 @@
 //
 //  FeedbackGeneratorTool.m
-//  hywj
+//  PoporFoundation
 //
 //  Created by popor on 2020/12/23.
 //  Copyright © 2020 popor. All rights reserved.
@@ -8,11 +8,7 @@
 
 #import "FeedbackGeneratorTool.h"
 
-#if TARGET_OS_MACCATALYST
-
-@implementation FeedbackGeneratorTool @end
-
-#else
+#if TARGET_OS_IOS
 
 @implementation FeedbackGeneratorTool
 
@@ -155,6 +151,12 @@
     return [NSString stringWithFormat:@"%@-%@", NSStringFromClass([self class]), @"shake"];
 }
 
+@end
+
+#else
+
+@implementation FeedbackGeneratorTool @end
+
 #endif
 
-@end
+
