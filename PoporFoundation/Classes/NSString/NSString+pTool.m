@@ -21,6 +21,15 @@
 }
 
 #pragma mark - 正则部分
+/*
+ NSString * text = @"Liu De Hua";
+ NSString * reg0 = @"(\\w)\\w*\\s*";
+ NSString * reg1 = @"$1"; // $0 是自身, $1是第一个小括号里面的东西
+ 
+ text = [text replaceWithREG:reg0 newString:reg1];
+ 
+ theNewString 可以是string, 也可以是reg.
+ */
 - (NSString *)replaceWithREG:(NSString * _Nonnull)reg newString:(NSString * _Nonnull)theNewString {
     if (!self) {
         return nil;
