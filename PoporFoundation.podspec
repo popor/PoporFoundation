@@ -161,4 +161,9 @@ Pod::Spec.new do |s|
     s.subspec 'NSFileManager' do |ss|
         ss.source_files = 'PoporFoundation/Classes/NSFileManager/*.{h,m}'
     end
+    
+    s.subspec 'FeedbackGenerator' do |ss|
+      ss.source_files = 'PoporFoundation/Classes/FeedbackGenerator/*.{h,m}'
+    end
+    
 end

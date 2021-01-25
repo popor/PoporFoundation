@@ -21,6 +21,9 @@ FOUNDATION_EXPORT const unsigned char PoporFoundationExtensionVersionString[];
  
  //*/
 
+// - 触感反馈
+#import "FeedbackGeneratorTool.h"
+
 // - KVO
 #import "NSObject+pSafeKVO.h"
 

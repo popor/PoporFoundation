@@ -318,6 +318,10 @@
     {
       "name": "NSFileManager",
       "source_files": "PoporFoundation/Classes/NSFileManager/*.{h,m}"
+    },
+    {
+      "name": "FeedbackGenerator",
+      "source_files": "PoporFoundation/Classes/FeedbackGenerator/*.{h,m}"
     }
   ]
 }

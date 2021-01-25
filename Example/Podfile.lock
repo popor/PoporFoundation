@@ -1,5 +1,6 @@
 PODS:
   - PoporFoundation (1.21):
+    - PoporFoundation/FeedbackGenerator (= 1.21)
     - PoporFoundation/KVO (= 1.21)
     - PoporFoundation/NSArray (= 1.21)
     - PoporFoundation/NSAssistant (= 1.21)
@@ -14,6 +15,7 @@ PODS:
     - PoporFoundation/NSURL (= 1.21)
     - PoporFoundation/Os (= 1.21)
     - PoporFoundation/Prefix (= 1.21)
+  - PoporFoundation/FeedbackGenerator (1.21)
   - PoporFoundation/KVO (1.21)
   - PoporFoundation/NSArray (1.21):
     - PoporFoundation/NSObject
@@ -57,9 +59,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFoundation: dc0999db26642dd31bde8629dd641da498713d36
+  PoporFoundation: aba57bf141f6f16fe6bf1a99dd19cd16c76fbb94
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
 PODFILE CHECKSUM: 2dfe86bbd8940168d35af90a703b3a7c7265e383
 
-COCOAPODS: 1.10.0.beta.2
+COCOAPODS: 1.10.1
