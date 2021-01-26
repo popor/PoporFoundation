@@ -1,6 +1,6 @@
 {
   "name": "PoporFoundation",
-  "version": "1.23",
+  "version": "1.24",
   "summary": "1.Some safe function with runtime, NSArray, NSDictionary, NSURL etc. 2.Some useful tools",
   "homepage": "https://github.com/popor/PoporFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporFoundation.git",
-    "tag": "1.23"
+    "tag": "1.24"
   },
   "requires_arc": true,
   "ios": {
@@ -320,8 +320,8 @@
       "source_files": "PoporFoundation/Classes/NSFileManager/*.{h,m}"
     },
     {
-      "name": "FeedbackGenerator",
-      "source_files": "PoporFoundation/Classes/FeedbackGenerator/*.{h,m}"
+      "name": "PFeedbackGenerator",
+      "source_files": "PoporFoundation/Classes/PFeedbackGenerator/*.{h,m}"
     }
   ]
 }

@@ -1,5 +1,5 @@
 //
-//  FeedbackGeneratorTool.h
+//  PFeedbackGenerator.h
 //  PoporFoundation
 //
 //  Created by popor on 2020/12/23.
@@ -12,13 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #if TARGET_OS_IOS
 
-#define FeedbackShakePhone  [FeedbackGeneratorTool shakePhone];
+#define PFeedbackShakePhone  [PFeedbackGenerator shakePhone];
+#define PFeedbackShakeLight  [PFeedbackGenerator shakeLight];
+#define PFeedbackShakeMedium [PFeedbackGenerator shakeMedium];
+#define PFeedbackShakeHeavy  [PFeedbackGenerator shakeHeavy];
 
-#define FeedbackShakeLight  [FeedbackGeneratorTool shakeLight];
-#define FeedbackShakeMedium [FeedbackGeneratorTool shakeMedium];
-#define FeedbackShakeHeavy  [FeedbackGeneratorTool shakeHeavy];
-
-@interface FeedbackGeneratorTool : NSObject
+@interface PFeedbackGenerator : NSObject
 
 @property (nonatomic        ) BOOL shakeEnable;
 @property (nonatomic, strong) UISelectionFeedbackGenerator * _Nullable selectionFG API_AVAILABLE(ios(10.0));
@@ -42,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #else
 
-@interface FeedbackGeneratorTool : NSObject @end
+@interface PFeedbackGenerator : NSObject @end
 
 #endif
 

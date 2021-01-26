@@ -1,20 +1,20 @@
 //
-//  FeedbackGeneratorTool.m
+//  PFeedbackGenerator.m
 //  PoporFoundation
 //
 //  Created by popor on 2020/12/23.
 //  Copyright © 2020 popor. All rights reserved.
 //
 
-#import "FeedbackGeneratorTool.h"
+#import "PFeedbackGenerator.h"
 
 #if TARGET_OS_IOS
 
-@implementation FeedbackGeneratorTool
+@implementation PFeedbackGenerator
 
 + (instancetype)share {
     static dispatch_once_t once;
-    static FeedbackGeneratorTool * instance;
+    static PFeedbackGenerator * instance;
     dispatch_once(&once, ^{
         instance = [self new];
         instance.shakeEnable = [[self class] get__shake];
@@ -28,7 +28,7 @@
         if (!fg) {
             fg = [UISelectionFeedbackGenerator new];
         }
-        FeedbackGeneratorTool * tool = [FeedbackGeneratorTool share];
+        PFeedbackGenerator * tool = [PFeedbackGenerator share];
         
         if (tool.shakeEnable) {
             [fg selectionChanged];
@@ -42,7 +42,7 @@
         if (!fg) {
             fg = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
         }
-        FeedbackGeneratorTool * tool = [FeedbackGeneratorTool share];
+        PFeedbackGenerator * tool = [PFeedbackGenerator share];
         
         if (tool.shakeEnable) {
             [fg impactOccurred];
@@ -56,7 +56,7 @@
         if (!fg) {
             fg = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
         }
-        FeedbackGeneratorTool * tool = [FeedbackGeneratorTool share];
+        PFeedbackGenerator * tool = [PFeedbackGenerator share];
         
         if (tool.shakeEnable) {
             [fg impactOccurred];
@@ -70,7 +70,7 @@
         if (!fg) {
             fg = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
         }
-        FeedbackGeneratorTool * tool = [FeedbackGeneratorTool share];
+        PFeedbackGenerator * tool = [PFeedbackGenerator share];
         
         if (tool.shakeEnable) {
             [fg impactOccurred];
@@ -105,7 +105,7 @@
 
 + (void)selectionFgPrepare {
     if (@available(iOS 10, *)) {
-        FeedbackGeneratorTool * share = [FeedbackGeneratorTool share];
+        PFeedbackGenerator * share = [PFeedbackGenerator share];
         if (!share.selectionFG) {
             share.selectionFG = [UISelectionFeedbackGenerator new];
         }
@@ -115,7 +115,7 @@
 
 + (void)selectionFgChange {
     if (@available(iOS 10, *)) {
-        FeedbackGeneratorTool * share = [FeedbackGeneratorTool share];
+        PFeedbackGenerator * share = [PFeedbackGenerator share];
         if (!share.selectionFG) {
             [self selectionFgPrepare];
         }
@@ -125,7 +125,7 @@
 
 + (void)selectionFgEnd {
     if (@available(iOS 10, *)) {
-        FeedbackGeneratorTool * share = [FeedbackGeneratorTool share];
+        PFeedbackGenerator * share = [PFeedbackGenerator share];
         if (share.selectionFG) {
             share.selectionFG = nil;
         }
@@ -155,7 +155,7 @@
 
 #else
 
-@implementation FeedbackGeneratorTool @end
+@implementation PFeedbackGenerator @end
 
 #endif
 

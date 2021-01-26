@@ -11,7 +11,6 @@
 #endif
 
 #import "PoporFoundation.h"
-#import "FeedbackGeneratorTool.h"
 #import "NSObject+pSafeKVO.h"
 #import "NSArray+pJsonDic.h"
 #import "NSArray+pSwizzling.h"
@@ -41,6 +40,7 @@
 #import "NSTimer+pSafe.h"
 #import "NSURL+pSwizzling.h"
 #import "Os+pPrefix.h"
+#import "PFeedbackGenerator.h"
 #import "Block+pPrefix.h"
 #import "Color+pPrefix.h"
 #import "Font+pPrefix.h"
