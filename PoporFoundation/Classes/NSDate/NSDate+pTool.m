@@ -201,7 +201,7 @@
         return @"00:00";
     }
     if (hour > 0) {
-        return [NSString stringWithFormat:@"%02li:%02.0f:%02.0f", hour, minute, second];
+        return [NSString stringWithFormat:@"%02li:%02.0f:%02.0f", (long)hour, minute, second];
     } else {
         return [NSString stringWithFormat:@"%02.0f:%02.0f", minute, second];
     }
@@ -223,7 +223,7 @@
     
     NSMutableString * clockText = [NSMutableString new];
     if (hour > 0) {
-        [clockText appendFormat:@"%li%@", hour, hourKey];
+        [clockText appendFormat:@"%li%@", (long)hour, hourKey];
     }
     if (minuteKey) {
         [clockText appendFormat:@"%02.0f%@", minute, minuteKey];

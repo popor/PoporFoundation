@@ -118,6 +118,11 @@
 #pragma mark 空格URL
 - (NSString *)toUrlEncode {
     // https://www.jianshu.com/p/ffbb95e01489
+    
+    // 为了屏蔽pod警告, 单独处理了tvOS模式, 目前不太针对tvOS模式.
+#if TARGET_OS_TV
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+#else
     return CFBridgingRelease
     (
      CFURLCreateStringByAddingPercentEscapes
@@ -129,8 +134,21 @@
       kCFStringEncodingUTF8
       )
      ) ;
-    // 下面的方法,多次转换后,会不一样.不够安全.
-    //return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+#endif
+    
+    //    return CFBridgingRelease
+    //    (
+    //     CFURLCreateStringByAddingPercentEscapes
+    //     (
+    //      kCFAllocatorDefault,
+    //      (CFStringRef)self,
+    //      (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
+    //      NULL,
+    //      kCFStringEncodingUTF8
+    //      )
+    //     ) ;
+    //    // 下面的方法,多次转换后,会不一样.不够安全.
+    //    //return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
 }
 
 - (NSString *)toUtf8Encode {
