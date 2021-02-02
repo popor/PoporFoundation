@@ -58,6 +58,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 假如小数点个数为.00, 则不显示小数点后的数字
 + (NSString *)simplePrice:(CGFloat)price;
 
+#pragma mark 【获取人性化容量】
++ (NSString *)getHumanSize:(CGFloat)fileSizeFloat;
++ (void)fileSize:(NSInteger)fileSize complete:(void (^ __nullable)(CGFloat sizeFloat, NSString * sizeUnit))complete ;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
