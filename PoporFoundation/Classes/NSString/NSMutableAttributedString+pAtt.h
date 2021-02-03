@@ -73,6 +73,20 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSMutableAttributedString *)separateText:(NSString *)text bigGap:(NSInteger)bigGap smallGap:(NSInteger)smallGap separateNumber:(NSInteger)separateNumber;
 
 /**
+ *  普通信息
+ *
+ *  @param text 文本
+ *  @param bigGap 大间隔宽度,默认为6
+ *  @param smallGap 大间隔宽度,默认为0
+ *  @param separateNumber 间隔分割间隔, 默认为4, 针对银行卡号
+ *  @param reverseSort 分割bigGap是正序还是反序方向
+ */
++ (NSMutableAttributedString *)separateText:(NSString *)text
+                                     bigGap:(NSInteger)bigGap
+                                   smallGap:(NSInteger)smallGap
+                             separateNumber:(NSInteger)separateNumber
+                                reverseSort:(BOOL)reverseSort;
+/**
  *  金钱信息
  *
  *  @param text 文本
@@ -81,6 +95,24 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param separateNumber 间隔分割间隔, 默认为4, 针对中国数字习惯
  */
 + (NSMutableAttributedString *)separateMoneyText:(NSString *)text bigGap:(NSInteger)bigGap smallGap:(NSInteger)smallGap separateNumber:(NSInteger)separateNumber;
+
+/**
+ *  金钱信息
+ *
+ *  @param text 文本
+ *  @param bigGap 大间隔宽度,默认为6
+ *  @param smallGap 大间隔宽度,默认为0
+ *  @param separateNumber 间隔分割间隔, 默认为4, 针对中国数字习惯
+ *  @param checkZero      是否检查多个0开头
+ *  @param checkPoint     是否检查.开头
+ */
++ (NSMutableAttributedString *)separateMoneyText:(NSString *)text
+                                          bigGap:(NSInteger)bigGap
+                                        smallGap:(NSInteger)smallGap
+                                  separateNumber:(NSInteger)separateNumber
+                                       checkZero:(BOOL)checkZero
+                                      checkPoint:(BOOL)checkPoint
+;
 
 @end
 

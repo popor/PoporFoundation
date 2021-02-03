@@ -262,6 +262,20 @@
  *  @param separateNumber 间隔分割间隔, 默认为4, 针对银行卡号
  */
 + (NSMutableAttributedString *)separateText:(NSString *)text bigGap:(NSInteger)bigGap smallGap:(NSInteger)smallGap separateNumber:(NSInteger)separateNumber {
+    return [self separateText:text
+                       bigGap:bigGap
+                     smallGap:smallGap
+               separateNumber:separateNumber
+                  reverseSort:NO];
+    
+}
+
++ (NSMutableAttributedString *)separateText:(NSString *)text
+                                     bigGap:(NSInteger)bigGap
+                                   smallGap:(NSInteger)smallGap
+                             separateNumber:(NSInteger)separateNumber
+                                reverseSort:(BOOL)reverseSort
+{
     if (text.length <= 0) {
         return [NSMutableAttributedString new];
     }
@@ -279,8 +293,14 @@
     CFNumberRef numBigGap           = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt8Type, &bigGap);
     
     [att addAttribute:(id)kCTKernAttributeName value:(__bridge id)numSmallGap range:NSMakeRange(0, text.length)];
-    for (NSInteger i = separateNumber-1; i<text.length; i = i+separateNumber ) {
-        [att addAttribute:(id)kCTKernAttributeName value:(__bridge id)numBigGap range:NSMakeRange(i, 1)];
+    if (reverseSort) {
+        for (NSInteger i = text.length -1 -separateNumber; i>=0; i = i-separateNumber ) {
+            [att addAttribute:(id)kCTKernAttributeName value:(__bridge id)numBigGap range:NSMakeRange(i, 1)];
+        }
+    } else {
+        for (NSInteger i = separateNumber-1; i<text.length; i = i+separateNumber ) {
+            [att addAttribute:(id)kCTKernAttributeName value:(__bridge id)numBigGap range:NSMakeRange(i, 1)];
+        }
     }
     
     CFRelease(numSmallGap);
@@ -298,6 +318,30 @@
  *  @param separateNumber 间隔分割间隔, 默认为4, 针对中国数字习惯
  */
 + (NSMutableAttributedString *)separateMoneyText:(NSString *)text bigGap:(NSInteger)bigGap smallGap:(NSInteger)smallGap separateNumber:(NSInteger)separateNumber {
+    return [self separateMoneyText:text
+                            bigGap:bigGap
+                          smallGap:smallGap
+                    separateNumber:separateNumber
+                         checkZero:YES
+                        checkPoint:YES];
+}
+/**
+ *  金钱信息
+ *
+ *  @param text 文本
+ *  @param bigGap 大间隔宽度,默认为6
+ *  @param smallGap 大间隔宽度,默认为0
+ *  @param separateNumber 间隔分割间隔, 默认为4, 针对中国数字习惯
+ *  @param checkZero      是否检查多个0开头
+ *  @param checkPoint     是否检查.开头
+ */
++ (NSMutableAttributedString *)separateMoneyText:(NSString *)text
+                                          bigGap:(NSInteger)bigGap
+                                        smallGap:(NSInteger)smallGap
+                                  separateNumber:(NSInteger)separateNumber
+                                       checkZero:(BOOL)checkZero
+                                      checkPoint:(BOOL)checkPoint
+{
     if (text.length <= 0) {
         return [NSMutableAttributedString new];
     }
@@ -312,17 +356,21 @@
     }
     
     // 纠正异常金钱值
-    if ([text hasPrefix:@"0"] && text.length != 1){
-        NSString * temp = [text replaceWithREG:@"^0+" newString:@""];
-        if (temp.length == 0) {
-            text = @"0";
-        }else{
-            text = temp;
+    if (checkZero) {
+        if ([text hasPrefix:@"0"] && text.length != 1){
+            NSString * temp = [text replaceWithREG:@"^0+" newString:@""];
+            if (temp.length == 0) {
+                text = @"0";
+            }else{
+                text = temp;
+            }
         }
     }
     
-    if ([text hasPrefix:@"."]) {
-        text = [NSString stringWithFormat:@"0%@", text];
+    if (checkPoint) {
+        if ([text hasPrefix:@"."]) {
+            text = [NSString stringWithFormat:@"0%@", text];
+        }
     }
     
     NSMutableAttributedString * att = [[NSMutableAttributedString alloc] initWithString:text];
